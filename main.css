@@ -1,0 +1,64 @@
+	@font-face {
+  	font-family: 'Century';
+  	src: url('tw.ttf');
+	}
+
+	.headline {
+		position:absolute;
+		top: 25px;
+		right: 50px;
+		font-family: "Century";
+		font-size: 30px;
+	}
+
+	#fantasy{
+		position:absolute;
+		top: 50px;
+		right:10px;
+	}
+
+	#fantasy_examples{
+		position:absolute;
+		top: 130px;
+		right:170px;
+		z-index: 1;
+
+	}
+
+	#image img { 
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-top: 60px;
+		width: 683px;
+	}
+	#container {
+		width:683px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	#buttons {
+		margin-top: 60px;
+		font-family: "Century";
+		font-size: 125px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width:360px;
+	}
+
+	#text {
+		font-family: "Century";
+		width:380px;
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+
+	}
+	#sweden {
+		display: block;
+		margin-left: 3px;
+		margin-top: 2px;
+	}

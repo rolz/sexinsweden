@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Presentation</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	@font-face {
+  	font-family: 'Century';
+  	src: url('tw.ttf');
+	}
 
-	<title>Meat & balls</title>
+	#image img { 
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		margin-top: 60px;
+		width: 683px;
+	}
+	#container {
+		width:683px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	#buttons {
+		margin-top: 60px;
+		font-family: "Century";
+		font-size: 125px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width:360px;
+	}
+
+	#text {
+		font-family: "Century";
+		width:380px;
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+
+	}
+	#sweden {
+		display: block;
+		margin-left: 3px;
+		margin-top: 2px;
+	}
+
+
+		</style>
 </head>
+<body>
+<div>
+	<img  id="sweden" src="sweden.png" width="100px">
+</div>
+<div id="container">
+<div id="image">
+<img src="screw.png" width="683px">
 
-<body style="text-align:center;">
-	<div id="skrollr-body">
-		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="900px" height="1000px">
-			<path
-				style="fill:none;stroke:#005A9B;stroke-width:9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:10000;stroke-dashoffset:0"
-				data-0="stroke-dashoffset:10000;" data-end="stroke-dashoffset:0;"
+</div>
+<div id="text">
+<a>WHAT SOUND DO YOU MAKE WHEN YOU HAVE SEX?</a>
+</div>
+<div id="buttons">
+<audio id="audio1" src="audio/1.m4a"></audio>
+<audio id="audio2" src="audio/2.m4a"></audio>
+<audio id="audio3" src="audio/3.m4a"></audio>
 
-				d="M261,82c0,0-182,61-122,174s199-131,328-80
-	S246,467,107,409s1097-55,474,71s-422-122-216-38s369-194,329-224s-366-65-238-96s327-135,316,5s-97,260,55,246
-	S622-34.589,446,55.706S18,263,55,83"
-			/>
-			<path
-				style="fill:none;stroke:#FDD300;stroke-width:9;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:10000;stroke-dashoffset:0"
-				data-0="stroke-dashoffset:10000;" data-end="stroke-dashoffset:0;"
-
-				d="M263,85c0,0-182,61-122,174s199-131,328-80
-	S248,470,109,412s1097-55,474,71s-422-122-216-38s369-194,329-224s-366-65-238-96s327-135,316,5s-97,260,55,246
-	S624-31.589,448,58.706S20,266,57,86"
-			/>
-		</svg>
-	</div>
-
-	<script type="text/javascript" src="skrollr.min.js"></script>
-	<script type="text/javascript">
-	skrollr.init({
-		forceHeight: false
-	});
-	</script>
+<span id="but1" onmouseover="document.getElementById('audio1').play()"><a>Å</a></span>
+<span id="but2" onmouseover="document.getElementById('audio2').play()"><a>Ä</a></span>
+<span id="but3" onmouseover="document.getElementById('audio3').play()"><a>Ö</a></span>
+</div>
+</div>
 </body>
-
 </html>

@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
-  var canvasWidth = 125;        // The widht of the canvas
-  var canvasHeight = 125;       // The height of the canvas
+  var canvasWidth = 120;        // The widht of the canvas
+  var canvasHeight = 120;       // The height of the canvas
   var scrImg = new Image();
-  scrImg.src = '../assets/img/screw/screw.png';
+  scrImg.src = '../assets/img/screw/screw.svg';
   var c = document.getElementById("screw");
   var ctx = c.getContext("2d");
   var degrees = 0;
@@ -22,14 +22,13 @@ $(document).ready(function() {
     }
 
     function drawImageRot(img,x,y,width,height,deg){
-        
-      if (degrees == 360) {
+      if (degrees == 361) {
           return;
         } else {
           degrees += 1
+          ctx.clearRect(0,0, 120, 120)
         }
-
-        ctx.restore();
+        
         //Convert degrees to radian 
         var rad = deg * Math.PI / 180;
 
@@ -41,6 +40,7 @@ $(document).ready(function() {
 
         //draw the image    
         ctx.drawImage(img,width / 2 * (-1),height / 2 * (-1),width,height);
+
         
 
         //reset the canvas  
@@ -49,8 +49,6 @@ $(document).ready(function() {
         
         
         console.log(degrees);
-        
-        // drawImageRot(scrImg,0,0,125,125,degrees);
     }
   
 });

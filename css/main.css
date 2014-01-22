@@ -9,7 +9,7 @@
 	}
 
 	.headline {
-		width:1000px;
+		width:90%;
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
@@ -18,8 +18,8 @@
 		font-size: 40px;
 	}
 
-	.main-container {
-
+	#main-container {
+		width:100%;
 	}
 
 	#fantasy{

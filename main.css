@@ -4,11 +4,13 @@
 	}
 
 	.headline {
-		position:absolute;
-		top: 1em;
-		left: 1em;
+		width:1000px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		position:relative;
 		font-family: "Century";
-		font-size: 30px;
+		font-size: 40px;
 	}
 
 	#fantasy{
@@ -40,23 +42,17 @@
 	#fantasy_text{
 		position:absolute;
 		left:48em;
-		top: 0em;
-
-	}
-	#fantasy_percentage{
+		top: 4em;
 		font-family: "Century";
+	}
+
+	#fantasy_percentage{
 		font-size: 150px;
 
-	}
-	#fantasize_about{
-		font-family: "TW Cen MT";
-		font-size: 40px;
-		white-space:nowrap;
 	}
 
 	#fantasy_type{
-		font-family: "Century";
-		font-size: 150px;
+		font-size: 40px;
 	}
 
 	#image img { 

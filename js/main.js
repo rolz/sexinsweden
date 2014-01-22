@@ -1,7 +1,7 @@
 var fantasyImagesArray=[
 
 {fileName:"thinking_about_sm.svg",percent:"10%", fantasyType:"S&M", fontSize:"150px"},
-{fileName:"thinking_about_dressing_up.svg",percent:"11%", fantasyType:"dressing up",fontSize:"130px"},
+{fileName:"thinking_about_dressing_up.svg",percent:"11%", fantasyType:"dressing up",fontSize:"70px"},
 {fileName:"thinking_about_group_sex.svg",percent:"13%", fantasyType:"group sex",fontSize:"140px"},
 {fileName:"thinking_about_masturbating.svg",percent:"14%", fantasyType:"masturbation",fontSize:"80px"},
 {fileName:"thinking_about_roleplay.svg",percent:"16%", fantasyType:"roleplay",fontSize:"130px"},
@@ -38,13 +38,12 @@ if(counter!=-1){
 });
 
 function HTMLWrite(number){
-	 $( "#fantasy_examples" ).html( "<img src='fantasy_images/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
+	$( "#fantasy_examples" ).html( "<img src='fantasy_images/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
 	$( "#fantasy_percentage" ).html( fantasyImagesArray[number].percent );
  	$( "#fantasy_type" ).html( fantasyImagesArray[number].fantasyType ); 
-	$( "#fantasy_type" ).css( "font-size", function( index ) {
-  index=fantasyImagesArray[number].fontSize;
-  return index;
-
-});
-	console.log(counter)
+//	$( "#fantasy_type" ).css( "font-size", function( index ) {
+//  index=fantasyImagesArray[number].fontSize;
+//  return index;
+//
+//});
 }

@@ -24,6 +24,7 @@
 		z-index: 1;
 
 	}
+
 	#left_arrow{
 		position:absolute;
 		bottom: 14em;
@@ -36,7 +37,27 @@
 		left:39em;
 		z-index: 1;
 	}
+	#fantasy_text{
+		position:absolute;
+		left:48em;
+		top: 0em;
 
+	}
+	#fantasy_percentage{
+		font-family: "Century";
+		font-size: 150px;
+
+	}
+	#fantasize_about{
+		font-family: "TW Cen MT";
+		font-size: 40px;
+		white-space:nowrap;
+	}
+
+	#fantasy_type{
+		font-family: "Century";
+		font-size: 150px;
+	}
 
 	#image img { 
 		margin-left: auto;

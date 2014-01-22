@@ -1,27 +1,50 @@
-var fantasyImagesArray=["thinking_about_sm.svg","thinking_about_dressing_up.svg","thinking_about_group_sex.svg","thinking_about_masturbating.svg","thinking_about_roleplay.svg","thinking_about_watching.svg","thinking_about_nothing.svg"]
+var fantasyImagesArray=[
+
+{fileName:"thinking_about_sm.svg",percent:"10%", fantasyType:"S&M", fontSize:"150px"},
+{fileName:"thinking_about_dressing_up.svg",percent:"11%", fantasyType:"dressing up",fontSize:"130px"},
+{fileName:"thinking_about_group_sex.svg",percent:"13%", fantasyType:"group sex",fontSize:"140px"},
+{fileName:"thinking_about_masturbating.svg",percent:"14%", fantasyType:"masturbation",fontSize:"80px"},
+{fileName:"thinking_about_roleplay.svg",percent:"16%", fantasyType:"roleplay",fontSize:"130px"},
+{fileName:"thinking_about_watching.svg",percent:"17%", fantasyType:"watching others have sex",fontSize:"80px"},
+{fileName:"thinking_about_nothing.svg",percent:"12%", fantasyType:"nothing",fontSize:"130px"}
+
+]
 var counter=0;
-console.log("testing")
+
 $(document).ready(function(){
 $( "#right_arrow").click(function() {
   counter+=1;
 if(counter<fantasyImagesArray.length){
-	$( "#fantasy_examples" ).html( "<img src='fantasy_images/"+fantasyImagesArray[counter]+"' width='300px'>" );
+  	HTMLWrite(counter)
+
   }
   else{
- 	$( "#fantasy_examples" ).html( "<img src='fantasy_images/"+fantasyImagesArray[0]+"' height='300px'>" );
-  	counter=1;
+  	counter=0;
+  	HTMLWrite(counter)
   }
 });
 $( "#left_arrow").click(function() {
 	counter-=1
 if(counter!=-1){
-	$( "#fantasy_examples" ).html( "<img src='fantasy_images/"+fantasyImagesArray[counter]+"' width='300px'>" );
-  }
+  	HTMLWrite(counter)
+ }
   else{
   	counter=fantasyImagesArray.length-1
- 	$( "#fantasy_examples" ).html( "<img src='fantasy_images/"+fantasyImagesArray[counter]+"' height='300px'>" );
+  	HTMLWrite(counter)
   }
 
 });
 
 });
+
+function HTMLWrite(number){
+	 $( "#fantasy_examples" ).html( "<img src='fantasy_images/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
+	$( "#fantasy_percentage" ).html( fantasyImagesArray[number].percent );
+ 	$( "#fantasy_type" ).html( fantasyImagesArray[number].fantasyType ); 
+	$( "#fantasy_type" ).css( "font-size", function( index ) {
+  index=fantasyImagesArray[number].fontSize;
+  return index;
+
+});
+	console.log(counter)
+}

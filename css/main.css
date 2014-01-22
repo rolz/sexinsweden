@@ -18,6 +18,10 @@
 		font-size: 40px;
 	}
 
+	.main-container {
+
+	}
+
 	#fantasy{
 		position:absolute;
 		bottom: 1em;
@@ -61,7 +65,7 @@
 		font-family: 'Bread';
 	}
 
-	#image img { 
+	#image img {
 		margin-left: auto;
 		margin-right: auto;
 		display: block;

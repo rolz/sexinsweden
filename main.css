@@ -5,25 +5,38 @@
 
 	.headline {
 		position:absolute;
-		top: 25px;
-		right: 50px;
+		top: 1em;
+		left: 1em;
 		font-family: "Century";
 		font-size: 30px;
 	}
 
 	#fantasy{
 		position:absolute;
-		top: 50px;
-		right:10px;
+		bottom: 1em;
+		left:1em;
 	}
 
 	#fantasy_examples{
 		position:absolute;
-		top: 130px;
-		right:170px;
+		bottom: 6em;
+		left:19em;
 		z-index: 1;
 
 	}
+	#left_arrow{
+		position:absolute;
+		bottom: 14em;
+		left:14em;
+		z-index: 1;
+	}
+		#right_arrow{
+		position:absolute;
+		bottom: 14em;
+		left:39em;
+		z-index: 1;
+	}
+
 
 	#image img { 
 		margin-left: auto;

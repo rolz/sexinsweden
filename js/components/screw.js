@@ -1,29 +1,30 @@
+//Declaring variables
+var degrees = 0;
+var canvasWidth = 120;        // The widht of the canvas
+var canvasHeight = 120;   
+var scrImg = new Image();
+scrImg.src = '../assets/img/screw/screw.svg';
+var c = document.getElementById("screw");
+var ctx = c.getContext("2d");    // The height of the canvas
 
-$(document).ready(function() {
-  var canvasWidth = 120;        // The widht of the canvas
-  var canvasHeight = 120;       // The height of the canvas
-  var scrImg = new Image();
-  scrImg.src = '../assets/img/screw/screw.svg';
-  var c = document.getElementById("screw");
-  var ctx = c.getContext("2d");
-  var degrees = 0;
+$('#screw').click(canvasApp);
 
-  scrImg.onload = function() {
-    canvasApp();
-  };
-
-  // $("#screw").click(drawImageRot(scrImg,0,0,125,125,degrees));
   function canvasApp() {
     window.setInterval(drawScreen, 1);
   }
     
   function drawScreen() {
+
+    
+    // console.log(ctx);
+    
       drawImageRot(scrImg,0,0,canvasHeight,canvasWidth,degrees);
     }
 
     function drawImageRot(img,x,y,width,height,deg){
       if (degrees == 361) {
           return;
+          degrees = 0
         } else {
           degrees += 1
           ctx.clearRect(0,0, 120, 120)
@@ -49,6 +50,9 @@ $(document).ready(function() {
         
         
         console.log(degrees);
+
     }
+
+
   
-});
+// });

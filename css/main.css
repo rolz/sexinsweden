@@ -1,6 +1,6 @@
 	@font-face {
   	font-family: 'Century';
-  	src: url('tw.ttf');
+  	src: url('../assets/fonts/headerfont.ttf');
 	}
 
 	.headline {

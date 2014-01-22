@@ -8,19 +8,19 @@ var lW = canvasWidth/50;
 var lineEnd = canvasWidth/4
 var radCirc = center - lW;
 var c = document.getElementById("screw");
+var d = document.getElementById("screwtext");
 var ctx = c.getContext("2d");    
 var degrees = 0;
 window.onload = canvasApp();
 c.onclick = drawRevolution;
-
-
+var times = 0;
+d.innerHTML = "<h1>"+times+"</h1>";
 
 function canvasApp() {
   drawScreen();
 }
     
 function drawScreen() {
-
   // reset canvas
   ctx.setTransform(1,0,0,1,0,0);
   ctx.clearRect(0,0, 300, 300);
@@ -49,6 +49,8 @@ function drawScreen() {
 function drawRevolution() {
   if (degrees == 360) {
       degrees = 0
+      times += 1
+      d.innerHTML = "<h1>"+times+"</h1>";
       clearInterval(timer);
       return null;
   } else if (degrees == 0) {

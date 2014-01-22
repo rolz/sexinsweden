@@ -3,6 +3,11 @@
   	src: url('../assets/fonts/headerfont.ttf');
 	}
 
+	@font-face {
+		font-family: 'Bread';
+		src: url('../assets/fonts/textfont.ttf');
+	}
+
 	.headline {
 		width:1000px;
 		margin-left: auto;
@@ -53,6 +58,7 @@
 
 	#fantasy_type{
 		font-size: 40px;
+		font-family: 'Bread';
 	}
 
 	#image img { 

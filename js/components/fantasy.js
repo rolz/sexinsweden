@@ -39,9 +39,9 @@ if(counter!=-1){
 });
 
 function HTMLWrite(number){
-	$( "#fantasy_examples" ).html( "<img src='../assets/img/fantasy/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
+	$( "#fantasy_examples" ).html( "<img src='assets/img/fantasy/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
 	$( "#fantasy_percentage" ).html( fantasyImagesArray[number].percent );
- 	$( "#fantasy_type" ).html( fantasyImagesArray[number].fantasyType ); 
+ 	$( "#fantasy_type" ).html( fantasyImagesArray[number].fantasyType );
 //	$( "#fantasy_type" ).css( "font-size", function( index ) {
 //  index=fantasyImagesArray[number].fontSize;
 //  return index;

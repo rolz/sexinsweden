@@ -31,9 +31,30 @@
             </div>
         </div>
         <div class="section">
-            <div id="FUCKYEAH">
-                <h1>FUCK YEAH IT WORKS</h1>
+            <div id="fantasy-headline">
+                WHAT DO SWEDES FANTASIZE ABOUT?
             </div>
+            <div id="fantasy-container">
+                <img id="fantasy-bubble" src="assets/img/fantasy/bubble.svg">
+                <div id="fantasy_examples">
+                    <img src="assets/img/fantasy/thinking_about_sm.svg">
+                </div>
+                <div id="left_arrow">
+                    <img src="assets/nav/left_arrow.svg">
+                </div>
+                <div id="right_arrow">
+                    <img src="assets/nav/right_arrow.svg">
+                </div>
+                <div id="fantasy_text">
+                    <div id="fantasy_percentage">
+                        10%
+                    </div>
+                    <div id="fantasy_type">
+                        &nbspS&M
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!--scripts-->
@@ -46,7 +67,17 @@
         var controller = $.superscrollorama();
         // individual element tween examples
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
+
+        controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
+
+        controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
+
+
+
         });
+
+
         </script>
+        <script type="text/javascript" src="js/components/fantasy.js"></script>
     </body>
 </html>

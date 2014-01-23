@@ -9,15 +9,6 @@
 }
 
 /*Common Elements*/
-.headline {
-	width:90%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	position:relative;
-	font-family: "Century";
-	font-size: 40px;
-}
 
 .section {
 	height: 100%;
@@ -29,7 +20,7 @@
 #intro-container {
 	overflow: hidden;
 	width:683px;
-	height:700px;
+	height:720px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -74,23 +65,31 @@
 
 
 /*Fantasy*/
-#fantasy{
-	position:absolute;
-	bottom: 5%;
-	left:5%;
+#fantasy-headline {
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position:relative;
+	font-family: "Century";
+	font-size: 40px;
+}
+
+#fantasy-container{
+	position:relative;
+	margin-top: 200px;
+
 }
 
 #fantasy-bubble {
-	width: 44.500em;
+	width: 712px;
 }
 
 #fantasy_examples{
 	position:absolute;
-	width: 100%;
-	bottom: 6em;
-	left:19em;
+	bottom: 100px;
+	left:304px;
 	z-index: 1;
-
 }
 
 #fantasy_examples img {
@@ -99,8 +98,8 @@
 
 #left_arrow{
 	position:absolute;
-	bottom: 14em;
-	left:14em;
+	bottom: 224px;
+	left:224px;
 	z-index: 1;
 }
 
@@ -110,8 +109,8 @@
 
 #right_arrow{
 	position:absolute;
-	bottom: 14em;
-	left:39em;
+	bottom: 224px;
+	left:624px;
 	z-index: 1;
 }
 
@@ -122,8 +121,8 @@
 
 #fantasy_text{
 	position:absolute;
-	left:48em;
-	top: 4em;
+	left:768px;
+	top: 64px;
 	font-family: "Century";
 }
 
@@ -217,154 +216,18 @@ output {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 
-	/*Fantasy*/
-	#fantasy-bubble {
-		width: 40.000em;
-	}
-
-	#fantasy_examples{
-		position:absolute;
-		width: 100%;
-		bottom: 6em;
-		left:17em;
-		z-index: 1;
-
-	}
-
-	#fantasy_examples img {
-		height:260px;
-	}
-
-	#left_arrow{
-		position:absolute;
-		bottom: 14em;
-		left:12em;
-		z-index: 1;
-	}
-
-	#left_arrow img {
-		height:40px;
-	}
-
-	#right_arrow{
-		position:absolute;
-		bottom: 14em;
-		left:36em;
-		z-index: 1;
-	}
-
-	#right_arrow img {
-		height:40px;
-	}
-
-	#fantasy_text{
-		position:absolute;
-		left:6em;
-		top:-14em;
-		font-family: "Century";
-	}
 
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 
-	/*Fantasy*/
-	#fantasy-bubble {
-		width: 30.000em;
-	}
 
-	#fantasy_examples{
-		position:absolute;
-		width: 100%;
-		bottom: 4.5em;
-		left:12em;
-		z-index: 1;
-
-	}
-
-	#fantasy_examples img {
-		height:220px;
-	}
-
-	#left_arrow{
-		position:absolute;
-		bottom: 9.5em;
-		left:8.7em;
-		z-index: 1;
-	}
-
-	#left_arrow img {
-		height:40px;
-	}
-
-	#right_arrow{
-		position:absolute;
-		bottom: 9.5em;
-		left:26.7em;
-		z-index: 1;
-	}
-
-	#right_arrow img {
-		height:40px;
-	}
-
-	#fantasy_text{
-		position:absolute;
-		left:5em;
-		top:-15em;
-		font-family: "Century";
-	}
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-	/*Fantasy*/
-	#fantasy-bubble {
-		display:none;
-	}
 
-	#fantasy_examples{
-		position:absolute;
-		width: 100%;
-		bottom: 3.5em;
-		left:6em;
-		z-index: 1;
-
-	}
-
-	#fantasy_examples img {
-		height:220px;
-	}
-
-	#left_arrow{
-		position:absolute;
-		bottom: 8.5em;
-		left:4em;
-		z-index: 1;
-	}
-
-	#left_arrow img {
-		height:40px;
-	}
-
-	#right_arrow{
-		position:absolute;
-		bottom: 8.5em;
-		left:20em;
-		z-index: 1;
-	}
-
-	#right_arrow img {
-		height:40px;
-	}
-
-	#fantasy_text{
-		position:absolute;
-		left:5em;
-		top:-30em;
-		font-family: "Century";
-	}
 }
 

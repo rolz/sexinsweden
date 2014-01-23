@@ -19,6 +19,11 @@
 	font-size: 40px;
 }
 
+.section {
+	height: 1600px;
+	padding-top: 100px;
+}
+
 /*Landing Page*/
 
 #image img {
@@ -28,7 +33,8 @@
 	margin-top: 60px;
 	width: 683px;
 }
-#container {
+#intro-container {
+	overflow: hidden;
 	width:683px;
 	margin-left: auto;
 	margin-right: auto;

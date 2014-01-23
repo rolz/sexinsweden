@@ -4,6 +4,7 @@
         <title>Fantasy</title>
         <meta charset="utf-8">
         <!--Main Stylesheet-->
+        <link rel="stylesheet" href="../css/normalize.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="../css/main.css">
     </head>
     <body>
@@ -32,7 +33,22 @@
         </div>
 
         <!--SCRIPTS-->
+        <script type="text/javascript" src="../js/vendor/TweenMax.min.js"></script>
         <script src="../js/vendor/jquery-2.0.3.min.js"></script>
+        <script>window.jQuery || document.write('<script src=""../js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
+        <script src="../js/vendor/jquery.superscrollorama.js"></script>
         <script type="text/javascript" src="../js/components/fantasy.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                var controller = $.superscrollorama();
+                // individual element tween examples
+                controller.addTween('#fade-it', TweenMax.from( $('#fade-it'), .5, {css:{opacity: 0}}));
+                controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
+                controller.addTween('#spin-it', TweenMax.from( $('#spin-it'), .25, {css:{opacity:0, rotation: 720}, ease:Quad.easeOut}));
+                controller.addTween('#scale-it', TweenMax.fromTo( $('#scale-it'), .25, {css:{opacity:0, fontSize:'20px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'240px'}, ease:Quad.easeInOut}));
+                controller.addTween('#smush-it', TweenMax.fromTo( $('#smush-it'), .25, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 100); // 100 px offset for better timing
+            });
+        </script>
     </body>
 </html>

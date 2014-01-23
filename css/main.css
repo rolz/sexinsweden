@@ -20,26 +20,33 @@
 }
 
 .section {
-	height: 1600px;
-	padding-top: 100px;
+	height: 100%;
+	margin: 50px 20px 20px 20px;
 }
 
 /*Landing Page*/
 
-#image img {
+#intro-container {
+	overflow: hidden;
+	width:683px;
+	height:700px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+#jumbo-image img {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 	margin-top: 60px;
 	width: 683px;
 }
-#intro-container {
-	overflow: hidden;
-	width:683px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
+
+#sex-sounds {
+
 }
+
 #buttons {
 	margin-top: 60px;
 	font-family: "Century";

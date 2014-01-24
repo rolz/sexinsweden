@@ -1,104 +1,233 @@
-	@font-face {
-  	font-family: 'Century';
-  	src: url('../assets/fonts/headerfont.ttf');
-	}
+@font-face {
+	font-family: 'Century';
+	src: url('../assets/fonts/headerfont.ttf');
+}
 
-	@font-face {
-		font-family: 'Bread';
-		src: url('../assets/fonts/textfont.ttf');
-	}
+@font-face {
+	font-family: 'Bread';
+	src: url('../assets/fonts/textfont.ttf');
+}
 
-	.headline {
-		width:90%;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-		position:relative;
-		font-family: "Century";
-		font-size: 40px;
-	}
+/*Common Elements*/
 
-	#main-container {
-		width:100%;
-	}
+.section {
+	height: 100%;
+	margin: 50px 20px 20px 20px;
+}
 
-	#fantasy{
-		position:absolute;
-		bottom: 1em;
-		left:1em;
-	}
+/*Landing Page*/
 
-	#fantasy_examples{
-		position:absolute;
-		bottom: 6em;
-		left:19em;
-		z-index: 1;
+#intro-container {
+	overflow: hidden;
+	width:683px;
+	height:720px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
 
-	}
+#jumbo-image img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 60px;
+	width: 683px;
+}
 
-	#left_arrow{
-		position:absolute;
-		bottom: 14em;
-		left:14em;
-		z-index: 1;
-	}
-		#right_arrow{
-		position:absolute;
-		bottom: 14em;
-		left:39em;
-		z-index: 1;
-	}
-	#fantasy_text{
-		position:absolute;
-		left:48em;
-		top: 4em;
-		font-family: "Century";
-	}
+#sex-sounds {
 
-	#fantasy_percentage{
-		font-size: 150px;
+}
 
-	}
+#buttons {
+	margin-top: 60px;
+	font-family: "Century";
+	font-size: 125px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width:360px;
+}
 
-	#fantasy_type{
-		font-size: 40px;
-		font-family: 'Bread';
-	}
+#text {
+	font-family: "Century";
+	width:380px;
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 
-	#image img {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		margin-top: 60px;
-		width: 683px;
-	}
-	#container {
-		width:683px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-	}
-	#buttons {
-		margin-top: 60px;
-		font-family: "Century";
-		font-size: 125px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		width:360px;
-	}
+}
+#sweden {
+	display: block;
+	margin-left: 3px;
+	margin-top: 2px;
+}
 
-	#text {
-		font-family: "Century";
-		width:380px;
-		margin-top: 25px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
 
-	}
-	#sweden {
-		display: block;
-		margin-left: 3px;
-		margin-top: 2px;
-	}
+/*Fantasy*/
+#fantasy-headline {
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position:relative;
+	font-family: "Century";
+	font-size: 40px;
+}
+
+#fantasy-container{
+	position:relative;
+	margin-top: 200px;
+
+}
+
+#fantasy-bubble {
+	width: 712px;
+}
+
+#fantasy_examples{
+	position:absolute;
+	bottom: 100px;
+	left:304px;
+	z-index: 1;
+}
+
+#fantasy_examples img {
+	height:300px;
+}
+
+#left_arrow{
+	position:absolute;
+	bottom: 224px;
+	left:224px;
+	z-index: 1;
+}
+
+#left_arrow img {
+	height:60px;
+}
+
+#right_arrow{
+	position:absolute;
+	bottom: 224px;
+	left:624px;
+	z-index: 1;
+}
+
+#right_arrow img {
+	height:60px;
+}
+
+
+#fantasy_text{
+	position:absolute;
+	left:768px;
+	top: 64px;
+	font-family: "Century";
+}
+
+#fantasy_percentage{
+	font-size: 150px;
+
+}
+
+#fantasy_type{
+	font-size: 40px;
+	font-family: 'Bread';
+}
+
+	/* MOOSE */
+* {margin: 0; padding: 0;}
+#canvas {
+display: block;
+z-index: 1;
+}
+
+#moose_head{
+	margin:auto;
+	z-index: 10;
+	position:absolute;
+	top:0; left:0; bottom:0; right:0;
+}
+
+
+form {
+  font-family: century;
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 20px
+}
+
+form > div {
+  position: relative;
+  margin: 0 0 10px;
+  z-index: 10;
+}
+
+label {
+  display: block;
+  margin: 0 0 10px;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 15px;
+  background: #fff;
+  overflow: hidden;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  position: relative;
+  z-index: 3;
+  width: 15px;
+  height: 15px;
+  background: #000000;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb:after {
+  content: '';
+  width: 500px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: 1;
+  background: #999999;
+}
+
+output {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
+}
+

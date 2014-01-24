@@ -6,6 +6,7 @@ var fantasyImagesArray=[
 {fileName:"thinking_about_masturbating.svg",percent:"14%", fantasyType:"masturbation",fontSize:"80px"},
 {fileName:"thinking_about_roleplay.svg",percent:"16%", fantasyType:"roleplay",fontSize:"130px"},
 {fileName:"thinking_about_watching.svg",percent:"17%", fantasyType:"watching others have sex",fontSize:"80px"},
+{fileName:"thinking_about_colleague.svg",percent:"12%", fantasyType:"colleagues",fontSize:"130px"},
 {fileName:"thinking_about_nothing.svg",percent:"12%", fantasyType:"nothing",fontSize:"130px"}
 
 ]
@@ -38,9 +39,9 @@ if(counter!=-1){
 });
 
 function HTMLWrite(number){
-	$( "#fantasy_examples" ).html( "<img src='../assets/img/fantasy/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
+	$( "#fantasy_examples" ).html( "<img src='assets/img/fantasy/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
 	$( "#fantasy_percentage" ).html( fantasyImagesArray[number].percent );
- 	$( "#fantasy_type" ).html( fantasyImagesArray[number].fantasyType ); 
+ 	$( "#fantasy_type" ).html( fantasyImagesArray[number].fantasyType );
 //	$( "#fantasy_type" ).css( "font-size", function( index ) {
 //  index=fantasyImagesArray[number].fontSize;
 //  return index;

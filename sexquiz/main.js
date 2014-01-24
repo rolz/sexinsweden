@@ -52,6 +52,14 @@ $( document ).ready(function() {
 
     /* Question 6 Fantasy*/
 
+    // Set the interval to be 5 seconds
+    var t = setInterval(function(){
+        $("#fantasyCarousel ul").animate({marginLeft:-480},1000,function(){
+            $(this).find("li:last").after($(this).find("li:first"));
+            $(this).css({marginLeft:0});
+        })
+    },2000);
+
     var fantasyImagesArray=[
 
     {fileName:"thinking_about_sm.svg",percent:"10%", fantasyType:"S&M", fantasyValue:"5",fontSize:"150px"},

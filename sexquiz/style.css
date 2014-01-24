@@ -1,58 +1,42 @@
 /*Fantasy*/
 
-#fantasy-container{
-    position:absolute;
-    margin-top: 200px;
+#fantasyCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
 
+#fantasyCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
 }
 
-#fantasy_examples{
-    position:relative;
-    bottom: 100px;
-    left:200px;
-    z-index: 1;
+#fantasyCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 280px;
+    list-style: none;
+    float:  left;
 }
 
-#fantasy_examples img {
+#fantasyCarousel img {
     height:300px;
 }
 
-#left_arrow{
-    position:absolute;
-    bottom: 224px;
-    left:50px;
-    z-index: 1;
-}
-
-#left_arrow img {
-    height:60px;
-}
-
-#right_arrow{
-    position:absolute;
-    bottom: 224px;
-    left:624px;
-    z-index: 1;
-}
-
-#right_arrow img {
-    height:60px;
-}
 
 
-#fantasy_text{
-    position:absolute;
-    left:768px;
-    top: 64px;
-    font-family: "Century";
-}
 
-#fantasy_percentage{
-    font-size: 150px;
 
-}
 
-#fantasy_type{
-    font-size: 40px;
-    font-family: 'Bread';
-}
+
+
+
+
+
+
+
+
+
+
+
+

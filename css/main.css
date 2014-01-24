@@ -149,19 +149,27 @@ z-index: 1;
 	position:absolute;
 	top:0; left:0; bottom:0; right:0;
 }
+#moose_antlers{
+	margin:auto;
+	z-index: 11;
+	position:absolute;
+	top:0; left:0; bottom:0; right:0;
+}
+
 
 
 form {
   font-family: century;
   width: 300px;
   margin: 0 auto;
+  position: relative;
   padding-top: 20px
 }
 
 form > div {
   position: relative;
   margin: 0 0 10px;
-  z-index: 10;
+  z-index: 12;
 }
 
 label {

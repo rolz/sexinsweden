@@ -1,0 +1,44 @@
+.grid-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+
+.grid {
+  margin: 0 auto;
+}
+
+.item {
+  color: white;
+  display: table;
+  font-size: 1.4em;
+  margin: 5px;
+  width: 260px;
+}
+
+.position_title {
+  position: relative;  
+  vertical-align: middle;
+  color: #000000
+}
+
+.i1{
+  background: #ffffff;
+  height: 280px;
+  border: 1px solid #CCCCCC
+}
+
+
+.expand {
+  transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+  -webkit-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+  height: 100%;
+  width: 100%;
+  left: 0 !important;
+  top: 0 !important;
+  z-index: 99;
+  text-indent: -9999px;
+}

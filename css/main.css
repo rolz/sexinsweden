@@ -234,3 +234,50 @@ output {
 
 }
 
+/*POSITIONS*/
+.grid-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+
+.grid {
+  margin: 0 auto;
+}
+
+.item {
+  color: white;
+  display: table;
+  font-size: 20px;
+  margin: 5px;
+  width: 260px;
+}
+
+.position_title {
+  font-family: "Century";
+  position: relative;  
+  color: #000000;
+  padding-left:10px;
+}
+
+.i1{
+  background: #ffffff;
+  height: 280px;
+  border: 1px solid #CCCCCC
+}
+
+
+.expand {
+  transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+  -webkit-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+  height: 630px;
+  width: 100%;
+  left: 0 !important;
+  top: 0 !important;
+  z-index: 99;
+  text-indent: -9999px;
+}
+

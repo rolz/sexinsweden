@@ -41,6 +41,20 @@
 
 }
 
+#screwtext, #screw {
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none; 
+}
+
+#screw, #screwtext {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 #buttons {
 	margin-top: 60px;
 	font-family: "Century";
@@ -140,7 +154,9 @@
 }
 
 #gender {
-  width: 100%
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #gender img {
@@ -150,7 +166,7 @@
 
 	/* MOOSE */
 
-#moose_head, #moose_antlers{
+#moose_head, #moose_antlers {
     margin:0 0 0 -200px; /* where 400px is width offset is / 2) */
     position:absolute;
     top:0;left:50%;

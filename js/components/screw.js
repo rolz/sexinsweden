@@ -49,7 +49,7 @@ function drawScrew() {
 function clickScrew() {
   window.cancelAnimationFrame(drawRevolution);
   times += 1;
-  d.innerHTML = "<h1>"+times+"</h1>";
+  d.innerHTML = "<center><h2>"+times+"</h2></center>";
   drawRevolution();
 }
 

@@ -36,6 +36,7 @@
 	width: 683px;
 }
 
+
 #sex-sounds {
 
 }
@@ -153,7 +154,8 @@
 
 #moose_head, #moose_antlers {
     margin:0 0 0 -200px; /* where 400px is width offset is / 2) */
-    position:absolute;top:0;left:50%;
+    position:absolute;
+    top:0;left:50%;
 }
 
 #moose_antlers{
@@ -299,4 +301,32 @@ h3{
   z-index: 99;
   text-indent: -9999px;
 }
+/*ENOUGH SEX*/
 
+.enough-sex-grid-container {
+  margin: 0 auto;
+  max-width: 900px;
+  overflow: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+
+.enough-sex-grid {
+  margin: 0 auto;
+}
+
+.enough-sex-item {
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+  width: 400px;
+  background: #ffffff;
+}
+
+.enough-sex-title {
+  font-family: "Century";
+  position: relative;  
+  color: #000000;
+  padding-left:10px;
+}

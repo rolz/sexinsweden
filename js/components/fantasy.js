@@ -12,7 +12,6 @@ var fantasyImagesArray=[
 ]
 var counter=0;
 
-$(document).ready(function(){
 $( "#right_arrow").click(function() {
   counter+=1;
 if(counter<fantasyImagesArray.length){
@@ -36,7 +35,6 @@ if(counter!=-1){
 
 });
 
-});
 
 function HTMLWrite(number){
 	$( "#fantasy_examples" ).html( "<img src='assets/img/fantasy/"+fantasyImagesArray[number].fileName+"' height='300px'>" );

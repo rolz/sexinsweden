@@ -11,8 +11,8 @@
 /*Common Elements*/
 
 .section {
-	height: 100%;
 	margin: 50px 20px 20px 20px;
+	position: relative;
 }
 
 /*Landing Page*/
@@ -137,17 +137,21 @@
 }
 
 	/* MOOSE */
+.moose_container{
+	   width:960px;
+   margin:0 auto;
 
+}
 #moose_head{
-	margin:auto;
+	margin: 0 auto;
 	z-index: 10;
-	position:relative;
+	position:absolute;
 	top:0; left:0; bottom:0; right:0;
 }
 #moose_antlers{
-	margin:auto;
+	margin: 0 auto;
 	z-index: 11;
-	position:relative;
+	position:absolute;
 	top:0; left:0; bottom:0; right:0;
 }
 
@@ -236,8 +240,8 @@ output {
 
 /*POSITIONS*/
 .grid-container {
-  position: relative;
-  width: 100%;
+	margin: 0 auto;
+  max-width: 60em;
   overflow: hidden;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -250,10 +254,11 @@ output {
 
 .item {
   color: white;
-  display: table;
   font-size: 20px;
   margin: 5px;
   width: 260px;
+  background: #ffffff;
+  border: 1px solid #CCCCCC;
 }
 
 .position_title {
@@ -263,17 +268,26 @@ output {
   padding-left:10px;
 }
 
-.i1{
-  background: #ffffff;
-  height: 280px;
-  border: 1px solid #CCCCCC
+.price_tag { 
+   position: absolute; 
+   top:10px;
+   right:10px;
+   width: 60px; /* for IE 6 */
+}
+
+h3{ 
+   position: absolute; 
+   bottom: -14px; 
+   left: 8px;  
+   width: 100%; 
+   color: black;
 }
 
 
 .expand {
   transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
   -webkit-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
-  height: 630px;
+  height: 98%;
   width: 100%;
   left: 0 !important;
   top: 0 !important;

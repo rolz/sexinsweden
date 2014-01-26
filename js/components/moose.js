@@ -6,7 +6,7 @@ var age=18;
 	  	age=this.value
 	  if(age%10==0){
 	    var number=age/10
-		$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='150px'>" );
+		$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='300px'>" );
 	  }
 	  }).trigger("change");
 	});

@@ -1,14 +1,11 @@
 //Elements
 var c = document.getElementById("screw");
 var d = document.getElementById("screwtext");
-var more = document.getElementById("more");
-var less = document.getElementById("less");
 
 //Declaring variables
 var canvasWidth = 150;        // The width of the canvas
 var canvasHeight = canvasWidth;       // The height of the canvas
 var radian = Math.PI/180;
-var speed = 10000;
 var center = canvasWidth/2;
 var lW = canvasWidth/50;
 var lineEnd = canvasWidth/4
@@ -52,7 +49,7 @@ function drawScrew() {
 function clickScrew() {
   window.cancelAnimationFrame(drawRevolution);
   times += 1;
-  d.innerHTML = "<h1>"+times+"</h1>";
+  d.innerHTML = "<center><h2>"+times+"</h2></center>";
   drawRevolution();
 }
 

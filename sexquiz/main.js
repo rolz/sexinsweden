@@ -3,9 +3,22 @@ $( document ).ready(function() {
 
     /* User's Sex */
 
-    $( ".q1 button" ).click(function() {
-        var valueQ1 = $( this ).val();
-        console.log("q1" + "=" + valueQ1);
+    var userResponse = {};
+
+    $( ".q0 button" ).click(function() {
+        var valueQ0 = $( this ).val();
+        console.log(valueQ0);
+
+        if (valueQ0 == "m" || valueQ0 == "f") {
+            userResponse["sex"] = valueQ0;
+        }
+        else {
+            var randomSex = ["m","f"];
+            var random = Math.floor(Math.random()*randomSex.length);
+            userResponse["sex"] = randomSex[random];
+        }
+
+        console.log(userResponse);
     });
 
     // Possibe result 1=Man, 2=Female, 3=Other(random man or woman)
@@ -16,41 +29,58 @@ $( document ).ready(function() {
     //Male results array
 
     var male = [
-    {q2:{a1:["e","d"],a2:["h","b"], a3:["f","g"]}},
-    {q3:{a1:["d","f"],a2:["h","g"], a3:["c","e"]}},
-    {q4:{a1:["a","b"],a2:["e","f"], a3:["d","g"], a4:["c","h"]}},
-    {q5:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
-    {q6:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    {q1:{a1:["e","d"],a2:["h","b"], a3:["f","g"]}},
+    {q2:{a1:["d","f"],a2:["h","g"], a3:["c","e"]}},
+    {q3:{a1:["a","b"],a2:["e","f"], a3:["d","g"], a4:["c","h"]}},
+    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
+    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
     ];
 
     //Female results array
 
     var female = [
-    {q2:{a1:["a","b"],a2:["g","d"], a3:["f","c"]}},
-    {q3:{a1:["d","c"],a2:["f","h"], a3:["a","g"]}},
-    {q4:{a1:["c","e"],a2:["f","h"], a3:["a","d"], a4:["b","g"]}},
-    {q5:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
-    {q6:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    {q1:{a1:["a","b"],a2:["g","d"], a3:["f","c"]}},
+    {q2:{a1:["d","c"],a2:["f","h"], a3:["a","g"]}},
+    {q3:{a1:["c","e"],a2:["f","h"], a3:["a","d"], a4:["b","g"]}},
+    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
+    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
     ];
 
 
     /* Prudeness */
 
-    $(".q2 button").click(function() {
-        var valueQ2 = $( this ).val();
-        console.log("q2" + "=" + valueQ2);
+    // **** add male and female key pairs
 
+    $(".q1 button").click(function() {
+        var valueQ1 = $( this ).val();
+        answerM = male[0].q1[valueQ1];
+        answerF = female[0].q1[valueQ1];
+        console.log("male answer is "+male[0].q1[valueQ1]);
+        console.log("female answer is "+female[0].q1[valueQ1]);
+
+        userResponse.push(answerM,answerF);
+        console.log(userResponse);
     });
 
     /* Lose Virginity */
 
-    $(".q3 button").click(function() {
-        var valueQ3 = $( this ).val();
-        console.log("q3" + "=" + valueQ3);
+    $(".q2 button").click(function() {
+        var valueQ2 = $( this ).val();
+        answerM = male[1].q2[valueQ2];
+        answerF = female[1].q2[valueQ2];
+        console.log("male answer is "+male[1].q2[valueQ2]);
+        console.log("female answer is "+female[1].q2[valueQ2]);
 
+        if (userResponse[0] == "m" ) {
+            userResponse.push(answerM);
+        }
+        else {
+            userResponse.push(answerF);
+        }
     });
 
     /* Sex Per Month */
+    // ****choose scales
 
     $(function(){
         var $select = $(".1-100");
@@ -59,17 +89,36 @@ $( document ).ready(function() {
         }
     });
 
-    $(".q4 button").click(function() {
-        var valueQ4 = $(".q4 select").val();
-        console.log("q4" + "=" +valueQ4);
+    $(".q3 button").click(function() {
+        var valueQ3 = $(".q3 select").val();
+        answerM = male[2].q3[valueQ3];
+        answerF = female[2].q3[valueQ3];
+        console.log("male answer is "+male[2].q3[valueQ3]);
+        console.log("female answer is "+female[2].q3[valueQ3]);
 
+        if (userResponse[0] == "m" ) {
+            userResponse.push(answerM);
+        }
+        else {
+            userResponse.push(answerF);
+        }
     });
 
     /* Question 5 Positions*/
 
-    $(".q5 button").click(function() {
-        var valueQ5 = $( this ).val();
-        console.log("q5" + "=" + valueQ5);
+    $(".q4 button").click(function() {
+        var valueQ4 = $( this ).val();
+        answerM = male[3].q4[valueQ4];
+        answerF = female[3].q4[valueQ4];
+        console.log("male answer is "+male[3].q4[valueQ4]);
+        console.log("female answer is "+female[3].q4[valueQ4]);
+
+        if (userResponse[0] == "m" ) {
+            userResponse.push(answerM);
+        }
+        else {
+            userResponse.push(answerF);
+        }
     });
 
     /* Question 6 Fantasy*/
@@ -83,7 +132,6 @@ $( document ).ready(function() {
     },4000);
 
     // Set the interval to 4 seconds for text
-
     var u = setInterval(function(){
         $("#fantasyPercentageCarousel ul").animate({marginLeft:-480},1000,function(){
             $(this).find("li:last").after($(this).find("li:first"));
@@ -100,10 +148,42 @@ $( document ).ready(function() {
 
     //Submit Fantasy answer
 
-    $(".q6 button").click(function() {
-        var valueQ6 = $("#fantasyImageCarousel li").val();
-        console.log("q6"+"="+valueQ6);
+    $(".q5 button").click(function() {
+        var valueQ5 = $("#fantasyImageCarousel li").val();
+        answerM = male[4].q5["a"+valueQ5];
+        answerF = female[4].q5["a"+valueQ5];
+        console.log("male answer is "+male[4].q5["a"+valueQ5]);
+        console.log("female answer is "+female[4].q5["a"+valueQ5]);
+
+        if (userResponse[0] == "m" ) {
+            userResponse.push(answerM);
+        }
+        else {
+            userResponse.push(answerF);
+        }
+
+        console.log(userResponse);
     });
+
+
+    /*Submit to Visit Sweden and Get Result*/
+
+    // get results according to sex now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Simone's Code
 

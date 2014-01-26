@@ -1,17 +1,42 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    /* User Sex */
+    /* User's Sex */
 
     $( ".q1 button" ).click(function() {
         var valueQ1 = $( this ).val();
         console.log("q1" + "=" + valueQ1);
     });
 
+    // Possibe result 1=Man, 2=Female, 3=Other(random man or woman)
+    // Whatever you choose here effects the path of the rest of the quiz.
+
+    /*Quiz Data Set*/
+
+    //Male results array
+
+    var male = [
+    {q2:{a1:["e","d"],a2:["h","b"], a3:["f","g"]}},
+    {q3:{a1:["d","f"],a2:["h","g"], a3:["c","e"]}},
+    {q4:{a1:["a","b"],a2:["e","f"], a3:["d","g"], a4:["c","h"]}},
+    {q5:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
+    {q6:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    ];
+
+    //Female results array
+
+    var female = [
+    {q2:{a1:["a","b"],a2:["g","d"], a3:["f","c"]}},
+    {q3:{a1:["d","c"],a2:["f","h"], a3:["a","g"]}},
+    {q4:{a1:["c","e"],a2:["f","h"], a3:["a","d"], a4:["b","g"]}},
+    {q5:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
+    {q6:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    ];
+
+
     /* Prudeness */
 
-    $(".q2 button").click(function(e) {
-        e.preventDefault();
+    $(".q2 button").click(function() {
         var valueQ2 = $( this ).val();
         console.log("q2" + "=" + valueQ2);
 
@@ -19,8 +44,7 @@ $( document ).ready(function() {
 
     /* Lose Virginity */
 
-    $(".q3 button").click(function(e) {
-        e.preventDefault();
+    $(".q3 button").click(function() {
         var valueQ3 = $( this ).val();
         console.log("q3" + "=" + valueQ3);
 
@@ -35,8 +59,7 @@ $( document ).ready(function() {
         }
     });
 
-    $(".q4 button").click(function(e) {
-        e.preventDefault();
+    $(".q4 button").click(function() {
         var valueQ4 = $(".q4 select").val();
         console.log("q4" + "=" +valueQ4);
 
@@ -44,41 +67,45 @@ $( document ).ready(function() {
 
     /* Question 5 Positions*/
 
-    $(".q5 button").click(function(e) {
-        e.preventDefault();
+    $(".q5 button").click(function() {
         var valueQ5 = $( this ).val();
         console.log("q5" + "=" + valueQ5);
     });
 
     /* Question 6 Fantasy*/
 
-    // Set the interval to be 2 seconds for Fantasy Images
+    // Set the interval to be 4 seconds for Fantasy Images
     var t = setInterval(function(){
         $("#fantasyImageCarousel ul").animate({marginLeft:-480},1000,function(){
             $(this).find("li:last").after($(this).find("li:first"));
             $(this).css({marginLeft:0});
         })
-    },2000);
+    },4000);
+
+    // Set the interval to 4 seconds for text
 
     var u = setInterval(function(){
         $("#fantasyPercentageCarousel ul").animate({marginLeft:-480},1000,function(){
             $(this).find("li:last").after($(this).find("li:first"));
             $(this).css({marginLeft:0});
         })
-    },2000);
+    },4000);
 
     var v = setInterval(function(){
         $("#fantasyNameCarousel ul").animate({marginLeft:-480},1000,function(){
             $(this).find("li:last").after($(this).find("li:first"));
             $(this).css({marginLeft:0});
         })
-    },2000);
+    },4000);
 
-    $( "#fantasyCarousel li" ).each(function( index ) {
-      console.log( index + ": " + $( this ).val() );
+    //Submit Fantasy answer
+
+    $(".q6 button").click(function() {
+        var valueQ6 = $("#fantasyImageCarousel li").val();
+        console.log("q6"+"="+valueQ6);
     });
 
-    // Set the interval to 2 seconds for text
+    // Simone's Code
 
     var fantasyImagesArray=[
 
@@ -126,11 +153,6 @@ $( document ).ready(function() {
     //  return index;
     //
     //});
-
-        $(".q6 button").click(function() {
-            var valueQ6 = fantasyImagesArray[number].fantasyValue;
-            console.log("q6"+"="+valueQ6);
-        });
     };
 
 });

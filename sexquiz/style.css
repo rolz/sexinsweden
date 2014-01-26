@@ -1,17 +1,19 @@
 /*Fantasy*/
 
-#fantasyCarousel {
+/*Images*/
+
+#fantasyImageCarousel {
         width: 400px;
         overflow:hidden;
     }
 
-#fantasyCarousel ul {
+#fantasyImageCarousel ul {
     width: 4200px;
     padding: 0;
     margin: 0;
 }
 
-#fantasyCarousel ul li {
+#fantasyImageCarousel ul li {
     width:480px;
     text-align: center;
     height: 280px;
@@ -19,9 +21,52 @@
     float:  left;
 }
 
-#fantasyCarousel img {
+#fantasyImageCarousel img {
     height:300px;
 }
+
+/*Percentages*/
+
+#fantasyPercentageCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyPercentageCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
+}
+
+#fantasyPercentageCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 20px;
+    list-style: none;
+    float:  left;
+}
+
+/*Names*/
+
+#fantasyNameCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyNameCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
+}
+
+#fantasyNameCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 20px;
+    list-style: none;
+    float:  left;
+}
+
 
 
 

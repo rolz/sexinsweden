@@ -52,13 +52,33 @@ $( document ).ready(function() {
 
     /* Question 6 Fantasy*/
 
-    // Set the interval to be 5 seconds
+    // Set the interval to be 2 seconds for Fantasy Images
     var t = setInterval(function(){
-        $("#fantasyCarousel ul").animate({marginLeft:-480},1000,function(){
+        $("#fantasyImageCarousel ul").animate({marginLeft:-480},1000,function(){
             $(this).find("li:last").after($(this).find("li:first"));
             $(this).css({marginLeft:0});
         })
     },2000);
+
+    var u = setInterval(function(){
+        $("#fantasyPercentageCarousel ul").animate({marginLeft:-480},1000,function(){
+            $(this).find("li:last").after($(this).find("li:first"));
+            $(this).css({marginLeft:0});
+        })
+    },2000);
+
+    var v = setInterval(function(){
+        $("#fantasyNameCarousel ul").animate({marginLeft:-480},1000,function(){
+            $(this).find("li:last").after($(this).find("li:first"));
+            $(this).css({marginLeft:0});
+        })
+    },2000);
+
+    $( "#fantasyCarousel li" ).each(function( index ) {
+      console.log( index + ": " + $( this ).val() );
+    });
+
+    // Set the interval to 2 seconds for text
 
     var fantasyImagesArray=[
 

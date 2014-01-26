@@ -5,10 +5,10 @@ var more = document.getElementById("more");
 var less = document.getElementById("less");
 
 //Declaring variables
-var canvasWidth = 300;        // The width of the canvas
+var canvasWidth = 150;        // The width of the canvas
 var canvasHeight = canvasWidth;       // The height of the canvas
 var radian = Math.PI/180;
-var speed = 10;
+var speed = 10000;
 var center = canvasWidth/2;
 var lW = canvasWidth/50;
 var lineEnd = canvasWidth/4
@@ -16,11 +16,10 @@ var radCirc = center - lW;
 var ctx = c.getContext("2d");    
 var degrees = 0;
 window.onload = canvasApp();
-c.onclick = drawRevolution;
+c.onclick = clickScrew;
 // less.onclick = unscrew;
 var times = 0;
 var status = 1;
-var angle = 0;
 
 function canvasApp() {
   resetCanvas();
@@ -28,7 +27,7 @@ function canvasApp() {
 }
 
 function drawScrew() {
-  
+  var angle = degrees * radian;
   // draw circle
   ctx.beginPath();
   ctx.strokeStyle = "black";
@@ -50,27 +49,18 @@ function drawScrew() {
   drawLine(0,lineEnd*-1,0,0);
 }
 
+function clickScrew() {
+  window.cancelAnimationFrame(drawRevolution);
+  times += 1;
+  d.innerHTML = "<h1>"+times+"</h1>";
+  drawRevolution();
+}
+
 function drawRevolution() {
-
-  if (degrees == 360 || degrees == -360) {
-    degrees = 0;
-    clearInterval(timer);
-    // timer= setInterval(function(){drawRevolution()},speed);
-    // return null;
-
-  } else if (degrees == 0) {
-    times += 1;
-    d.innerHTML = "<h1>"+times+"</h1>";
-    timer= setInterval(function(){drawRevolution()},speed);
-    degrees += 2
-    angle = degrees * radian;
-  
-  } else {
-    degrees += 2
-    angle = degrees * radian;
-  }
+  degrees += 0.4;
   resetCanvas();
   drawScrew();
+  window.requestAnimationFrame(drawRevolution);
 };
 
 function drawLine(startX, startY, endX, endY) {

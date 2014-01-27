@@ -77,23 +77,37 @@
             </div>
         </div>
 
+        <!--WHEN DID YOU LOSE YOUR VIRGINITY Q2-->
+        <div class="section">Page 5 - When did you pop your lingonberry</br>
+            <div class="q2">
+                <p>Q2: When did you lose your virginity?</p>
+                <button class="virginity" id="too-young" value="a1">Too Young</button>
+                <button class="virginity" id="average" value="a2">Average</button>
+                <button class="virginity" id="too-late" value="a3">Too Late</button>
+                <button class="virginity" id="no-answer" value="a4">No Answer</button>
+            </div>
+            </br>
+        </div>
 
-        <div class="section">Page 5 - When did you pop your lingonberry</div>
 
+        <!--WHEN SWEDES LOST THEIR VIRGINITY-->
         <div class="section lingonberry-section">Page 6 - When swedes lost their virginity
 
             <div id="lingonberry">
                 <img src="assets/img/jam/jam.svg" height="500px">
             </div>
         </div>
+
+        <!--HOW OFTEN DO YOU HAVE SEX EACH MONTH Q3-->
         <div class="section">Page 7 - How many times do you have sex each month?<br>
+            <!--ask Jonathan about how to pull out the value-->
             <canvas id="screw" width=150 height=150></canvas><div id="screwtext"><center><h2>0</h2></center></div>
         </div>
 
-
+        <!--HOW OFTEN SEX EACH MONTH STATS-->
         <div class="section">Page 8 - Swedes your age have sex this many times</div>
 
-
+        <!--TYPES OF SEX Q4-->
         <div class="section">
             <div class="headline">
                 <a>HOW DO SWEDES LIKE SCREWING?</a>
@@ -201,12 +215,15 @@
                 </div>
             </div>
             <br> <br> <br>
+
+            <!--SWEDES FAVORITE POSITION : MISSIONARY-->
+            <div class="section">Page 11 - Swedes Favorite Position</div>
+
+            <!--SMACKEN-->
             <div class="section">Page 10 - Taste is like the ass</div>
 
 
-            <div class="section">Page 11 - Different sex positions and user preference</div>
-
-
+            <!--SWEDISH SEX SOUNDS-->
             <div class="section">Page 12 - Swedish sex sounds
                 <div id="sex-sounds">
                     <div class="headline">
@@ -223,32 +240,54 @@
                 </div>
             </div>
 
-
+            <!--FANTASIES-->
             <div class="section">Page 13 - Swedes fantisize about<br>
 
                 <div class="headline">
                     WHAT DO SWEDES FANTASIZE ABOUT?
                 </div>
-                <div id="fantasy-container">
-                    <img id="fantasy-bubble" src="assets/img/fantasy/bubble.svg">
-                    <div id="fantasy_examples">
-                        <img src="assets/img/fantasy/thinking_about_sm.svg">
+                <div class="q5">
+                    <p>Q5: What's your favorite fantasy?</p></br>
+                    <button class="fantasy" id="submit">Submit</button>
+                    <div class="fantasy" id="fantasyImageCarousel">
+                        <ul>
+                            <li id="smFantasy" value="5"><img src="assets/img/fantasy/thinking_about_sm.svg"/></li>
+                            <li id="dressing-up" value="6"><img src="assets/img/fantasy/thinking_about_dressing_up.svg"/></li>
+                            <li id="group-sex" value="2"><img src="assets/img/fantasy/thinking_about_group_sex.svg"/></li>
+                            <li id="masturbating" value="1"><img src="assets/img/fantasy/thinking_about_masturbating.svg"/></li>
+                            <li id="roleplay" value="3"><img src="assets/img/fantasy/thinking_about_roleplay.svg"/></li>
+                            <li id="voyeur" value="7"><img src="assets/img/fantasy/thinking_about_watching.svg"/></li>
+                            <li id="colleague" value="4"><img src="assets/img/fantasy/thinking_about_colleague.svg"/></li>
+                            <li id="nothingFantasy" value="8"><img src="assets/img/fantasy/thinking_about_nothing.svg"/></li>
+                        </ul>
                     </div>
-                    <div id="left_arrow">
-                        <img src="assets/nav/left_arrow.svg">
+                    <div class="fantasy" id="fantasyPercentageCarousel">
+                        <ul>
+                            <li id="smFantasy">10%</li>
+                            <li id="dressing-up">11%</li>
+                            <li id="group-sex">13%</li>
+                            <li id="masturbating">14%</li>
+                            <li id="roleplay">16%</li>
+                            <li id="voyeur">17%</li>
+                            <li id="colleague">12%</li>
+                            <li id="nothingFantasy">12%</li>
+                        </ul>
                     </div>
-                    <div id="right_arrow">
-                        <img src="assets/nav/right_arrow.svg">
+                    <div class="fantasy" id="fantasyNameCarousel">
+                        <ul>
+                            <li id="smFantasy">S&M</li>
+                            <li id="dressing-up">Dressing Up</li>
+                            <li id="group-sex">Group Sex</li>
+                            <li id="masturbating">Masturbation</li>
+                            <li id="roleplay">Roleplay</li>
+                            <li id="voyeur">Voyeurism</li>
+                            <li id="colleague">Colleague</li>
+                            <li id="nothingFantasy">No Fantasies</li>
+                        </ul>
                     </div>
-                    <div id="fantasy_text">
-                        <div id="fantasy_percentage">
-                            10%
-                        </div>
-                        <div id="fantasy_type">
-                            &nbspS&M
-                        </div>
-                    </div>
-                </div>
+                    <button class="fantasy" id="no-answer" value="a9">No Answer</button>
+            </div>
+
             </div>
 
             <div class="section">Page 14 - Masturbation</div>
@@ -297,6 +336,7 @@
             <script type="text/javascript" src="js/components/moose.js"></script>
             <script type="text/javascript" src="js/components/fantasy.js"></script>
             <script type="text/javascript" src="js/components/positions.js"></script>
+            <script type="text/javascript" src="js/components/sexquiz.js"></script>
             <script>
             $(document).ready(function() {
             var controller = $.superscrollorama();

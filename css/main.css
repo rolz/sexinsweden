@@ -45,19 +45,29 @@
 
 }
 
-#screwtext, #screw {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-}
-
-#screw, #screwtext {
-  width: 150px;
+.screwHolder {
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
+
+#screwYou, #screwYouText, #screwThem, #screwThemText {
+  width: 250px;
+  float: left;
+  -moz-user-select: none; 
+  -khtml-user-select: none; 
+  -webkit-user-select: none; 
+  -o-user-select: none; 
+}
+
+#reset {
+  width: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 #buttons {
 	margin-top: 60px;
@@ -119,6 +129,17 @@
 	position:relative;
 	font-family: "Century";
 	font-size: 40px;
+}
+
+.headline1 {
+  width:250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+  text-align: center;
+  position:relative;
+  font-family: "Century";
+  font-size: 60px;
 }
 
 /*Fantasy*/

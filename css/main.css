@@ -46,10 +46,10 @@
 }
 
 #screwtext, #screw {
-  -moz-user-select: none; 
-  -khtml-user-select: none; 
-  -webkit-user-select: none; 
-  -o-user-select: none; 
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 #screw, #screwtext {
@@ -120,65 +120,73 @@
 	font-size: 40px;
 }
 
-#fantasy-container{
-	position:relative;
-	margin-top: 200px;
+/*Fantasy*/
 
+/*Images*/
+
+#fantasyImageCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyImageCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
 }
 
-#fantasy-bubble {
-	width: 712px;
+#fantasyImageCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 280px;
+    list-style: none;
+    float:  left;
 }
 
-#fantasy_examples{
-	position:absolute;
-	bottom: 100px;
-	left:304px;
-	z-index: 1;
+#fantasyImageCarousel img {
+    height:300px;
 }
 
-#fantasy_examples img {
-	height:300px;
+/*Percentages*/
+
+#fantasyPercentageCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyPercentageCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
 }
 
-#left_arrow{
-	position:absolute;
-	bottom: 224px;
-	left:224px;
-	z-index: 1;
+#fantasyPercentageCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 20px;
+    list-style: none;
+    float:  left;
 }
 
-#left_arrow img {
-	height:60px;
+/*Names*/
+
+#fantasyNameCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyNameCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
 }
 
-#right_arrow{
-	position:absolute;
-	bottom: 224px;
-	left:624px;
-	z-index: 1;
-}
-
-#right_arrow img {
-	height:60px;
-}
-
-
-#fantasy_text{
-	position:absolute;
-	left:768px;
-	top: 64px;
-	font-family: "Century";
-}
-
-#fantasy_percentage{
-	font-size: 150px;
-
-}
-
-#fantasy_type{
-	font-size: 40px;
-	font-family: 'Bread';
+#fantasyNameCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 20px;
+    list-style: none;
+    float:  left;
 }
 
 #gender {
@@ -317,21 +325,21 @@ output {
 .position_title {
   font-family: "Century";
   font-size: 20px;
-  position: relative;  
+  position: relative;
   color: #000000;
   padding-left:10px;
   width:10px;
 }
 
-.price_tag { 
-   position: absolute; 
+.price_tag {
+   position: absolute;
    top:10px;
    right:10px;
    width: 60px; /* for IE 6 */
 }
 
 .add-to-cart-div {
-   position: absolute; 
+   position: absolute;
    bottom:17px;
    right:10px;
   font-size:11px;
@@ -375,12 +383,12 @@ output {
 	font-family:"Verdana";
 
 }
-h3{ 
+h3{
    display:inline;
-   position: absolute; 
-   bottom: -12px; 
-   left: 9px;  
-   width: 100%; 
+   position: absolute;
+   bottom: -12px;
+   left: 9px;
+   width: 100%;
    color: black;
 }
 
@@ -425,7 +433,7 @@ h3{
 
 .enough-sex-title {
   font-family: "Century";
-  position: relative;  
+  position: relative;
   color: #000000;
   padding-left:10px;
 }

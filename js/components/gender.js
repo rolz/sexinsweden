@@ -2,7 +2,7 @@ window.onload = function(){
 
 $(document).ready(function() {
 $("#female-gender").click(function() {
-	console.log("female")
+$("#female-gender").width(700);
 
 });
 

@@ -81,6 +81,7 @@ $( document ).ready(function() {
     // With Answer
 
     $(".q3 #submit").click(function() {
+        // find val of canvas maybe use document ready function
         var initValueQ3 = $(".q3 #screwText").text();
         console.log(initValueQ3);
 

@@ -13,7 +13,7 @@
 .section {
 	margin: 50px 20px 20px 20px;
 	position: relative;
-	height:500px;
+	height:600px;
   font-family: 'Century';
 }
 
@@ -41,18 +41,27 @@
 
 }
 
-#screwtext, #screw {
+.screwHolder {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#screwYou, #screwYouText, #screwThem, #screwThemText {
+  width: 250px;
+  float: left;
   -moz-user-select: none; 
   -khtml-user-select: none; 
   -webkit-user-select: none; 
   -o-user-select: none; 
 }
 
-#screw, #screwtext {
-  width: 150px;
+#reset {
+  width: 60px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  display: block;
 }
 
 #buttons {
@@ -99,6 +108,17 @@
 	position:relative;
 	font-family: "Century";
 	font-size: 40px;
+}
+
+.headline1 {
+  width:250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+  text-align: center;
+  position:relative;
+  font-family: "Century";
+  font-size: 60px;
 }
 
 #fantasy-container{
@@ -215,13 +235,13 @@ input[type="range"] {
   height: 7px;
   background: #fff;
   overflow: hidden;
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;*/
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  /*-webkit-appearance: none;*/
   position: relative;
-  z-index: 3;
+  /*z-index: 3;*/
   width: 15px;
   height: 15px;
   background: #000000;

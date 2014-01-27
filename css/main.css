@@ -13,7 +13,7 @@
 .section {
 	margin: 50px 20px 20px 20px;
 	position: relative;
-	height:600px;
+	height:500px;
   font-family: 'Century';
 }
 
@@ -36,32 +36,27 @@
 	width: 683px;
 }
 
+.bread-text{
+  font-family: "Verdana";
+  font-size: 40px;
+}
 
 #sex-sounds {
 
 }
 
-.screwHolder {
-  width: 500px;
+#screwtext, #screw {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+#screw, #screwtext {
+  width: 150px;
   margin-left: auto;
   margin-right: auto;
   display: block;
-}
-
-#screwYou, #screwYouText, #screwThem, #screwThemText {
-  width: 250px;
-  float: left;
-  -moz-user-select: none; 
-  -khtml-user-select: none; 
-  -webkit-user-select: none; 
-  -o-user-select: none; 
-}
-
-#reset {
-  width: 60px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #buttons {
@@ -89,9 +84,25 @@
 	margin-top: 2px;
 }
 
+#average-amount-of-sexpartners{
+  margin:auto 0;
+  margin-top: 200px;
+  text-align: center;
+}
+
+#average-amount-of-sexpartners-buttons{
+  margin-top: 70px;
+  padding-left: 50px;
+  font-size: 20px;
+  float: left;
+}
+
+
+
 /*jam jars*/
 #lingonberry{
 	position:absolute;
+  margin-top:30px;
 	margin-bottom: 2800px;
 	left:0; right:0; bottom:0;top:0;
 }
@@ -110,76 +121,73 @@
 	font-size: 40px;
 }
 
-.headline1 {
-  width:250px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -20px;
-  text-align: center;
-  position:relative;
-  font-family: "Century";
-  font-size: 60px;
+/*Fantasy*/
+
+/*Images*/
+
+#fantasyImageCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyImageCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
 }
 
-#fantasy-container{
-	position:relative;
-	margin-top: 200px;
-
+#fantasyImageCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 280px;
+    list-style: none;
+    float:  left;
 }
 
-#fantasy-bubble {
-	width: 712px;
+#fantasyImageCarousel img {
+    height:300px;
 }
 
-#fantasy_examples{
-	position:absolute;
-	bottom: 100px;
-	left:304px;
-	z-index: 1;
+/*Percentages*/
+
+#fantasyPercentageCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyPercentageCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
 }
 
-#fantasy_examples img {
-	height:300px;
+#fantasyPercentageCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 20px;
+    list-style: none;
+    float:  left;
 }
 
-#left_arrow{
-	position:absolute;
-	bottom: 224px;
-	left:224px;
-	z-index: 1;
+/*Names*/
+
+#fantasyNameCarousel {
+        width: 400px;
+        overflow:hidden;
+    }
+
+#fantasyNameCarousel ul {
+    width: 4200px;
+    padding: 0;
+    margin: 0;
 }
 
-#left_arrow img {
-	height:60px;
-}
-
-#right_arrow{
-	position:absolute;
-	bottom: 224px;
-	left:624px;
-	z-index: 1;
-}
-
-#right_arrow img {
-	height:60px;
-}
-
-
-#fantasy_text{
-	position:absolute;
-	left:768px;
-	top: 64px;
-	font-family: "Century";
-}
-
-#fantasy_percentage{
-	font-size: 150px;
-
-}
-
-#fantasy_type{
-	font-size: 40px;
-	font-family: 'Bread';
+#fantasyNameCarousel ul li {
+    width:480px;
+    text-align: center;
+    height: 20px;
+    list-style: none;
+    float:  left;
 }
 
 #gender {
@@ -235,13 +243,13 @@ input[type="range"] {
   height: 7px;
   background: #fff;
   overflow: hidden;
-  /*-webkit-appearance: none;*/
+  -webkit-appearance: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  /*-webkit-appearance: none;*/
+  -webkit-appearance: none;
   position: relative;
-  /*z-index: 3;*/
+  z-index: 3;
   width: 15px;
   height: 15px;
   background: #000000;
@@ -318,26 +326,28 @@ output {
 .position_title {
   font-family: "Century";
   font-size: 20px;
-  position: relative;  
+  position: relative;
   color: #000000;
   padding-left:10px;
   width:10px;
 }
 
-.price_tag { 
-   position: absolute; 
+.price_tag {
+   position: absolute;
    top:10px;
    right:10px;
    width: 60px; /* for IE 6 */
 }
 
-.add-to-chart-div {
-   position: absolute; 
+.add-to-cart-div {
+   position: absolute;
    bottom:17px;
    right:10px;
+  font-size:11px;
+
 
 }
-.add-to-chart {
+.add-to-cart {
     background-color:#0076d1;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
@@ -349,21 +359,20 @@ output {
     width: 100%;
     color:#ffffff;
     font-family:Verdana;
-    font-size:11px;
     font-weight:bold;
     padding:7px 8px;
     text-decoration:none;
 
 }
-.add-to-chart:hover {
+.add-to-cart:hover {
     background-color:#0380e0;
 }
-.add-to-chart:active {
+.add-to-cart:active {
     position:relative;
     top:1px;
 }
 
-.chart{
+.cart{
 	position:absolute;
 	right:100px;
 }
@@ -375,17 +384,17 @@ output {
 	font-family:"Verdana";
 
 }
-h3{ 
+h3{
    display:inline;
-   position: absolute; 
-   bottom: -12px; 
-   left: 9px;  
-   width: 100%; 
+   position: absolute;
+   bottom: -12px;
+   left: 9px;
+   width: 100%;
    color: black;
 }
 
 .expand {
-  /*background-image: url('../assets/img/positions/69-info.svg');*/
+  background-repeat: no-repeat;
   transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
   -webkit-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
   height: 98%;
@@ -425,7 +434,7 @@ h3{
 
 .enough-sex-title {
   font-family: "Century";
-  position: relative;  
+  position: relative;
   color: #000000;
   padding-left:10px;
 }

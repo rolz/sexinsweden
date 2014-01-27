@@ -82,7 +82,7 @@ $( document ).ready(function() {
 
     $(".q3 #submit").click(function() {
         // find val of canvas maybe use document ready function
-        var initValueQ3 = $(".q3 #screwText").text();
+        var initValueQ3 = $(".q3 #screwYouText").text();
         console.log(initValueQ3);
 
         if (initValueQ3 <= 2) {

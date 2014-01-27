@@ -80,7 +80,6 @@ $( document ).ready(function() {
 
     $(".q3 button").click(function() {
         var initValueQ3 = $(".q3 select").val();
-        console.log(initValueQ3);
 
         if (initValueQ3 <= 2) {
             var valueQ3 = "a1";
@@ -163,35 +162,136 @@ $( document ).ready(function() {
             answerQ4 = userResponse.q4[userResponse.sex];
             answerQ5 = userResponse.q5[userResponse.sex];
 
+            //View all answers
+
             var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
             console.log(userAnswersArray);
 
-            var finalUserAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5)
-                    .reduce(function(last, now) {
-                        var index = last[0].indexOf(now);
+            //Count answers
 
-                        if (index === -1) {
-                          last[0].push(now);
-                          last[1].push(1);
-                        } else {
-                          last[1][index] += 1;
-                        }
-                        return last;
-                      }, [[], []])
-                    .reduce(function(last, now, index, context) {
-                        var zip = [];
-                        last.forEach(function(word, i) {
-                          zip.push([word, context[1][i]])
-                        });
-                        return zip;
-                      });
-
+            var finalUserAnswersArray = _.chain(userAnswersArray).countBy().pairs().object().value();
             console.log(finalUserAnswersArray);
+
+            // Sort into objects with Key Pairs
+
+           var finalUserAnswersObject = _.map(finalUserAnswersArray, function(value, key) {
+                return {id: key, count: value};
+            });
+
+           console.log(finalUserAnswersObject);
+
+            function multiplemax(arr, compare) {
+              var groups = _.groupBy(arr, compare);
+              var keys = _.keys(groups);
+              var max = _.max(keys);
+              return groups[max];
+            };
+
+            var valueResponses = multiplemax(finalUserAnswersObject, "count");
+            console.log(valueResponses);
+            console.log(valueResponses.length);
+
+            getCity(valueResponses);
 
         }
         else {
             console.log("Looks like you have not chosen your sex.")
-        }
+        };
+
+        function getCity(values) {
+
+            // log city id
+            console.log(values[0].id);
+
+            var citiesArray = [
+                {id:"a", cityName:"Åre", cityPop:"1417", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
+                {id:"b", cityName:"Leksand", cityPop:"5934", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
+                {id:"c", cityName:"Gävle", cityPop:"71 033", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
+                {id:"d", cityName:"Kiruna", cityPop:"18 148", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
+                {id:"e", cityName:"Visby", cityPop:"22 593", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
+                {id:"f", cityName:"Stockholm", cityPop:"871 592", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
+                {id:"g", cityName:"Malmö", cityPop:"303 873", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
+                {id:"h", cityName:"Göteborg", cityPop:"532 247", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"}
+            ];
+
+            // If only one object then select city
+            // Switch case and choose city.
+            var cityResponse;
+
+            if (values.length === 1) {
+                var cityId = values[0].id;
+                switch(cityId) {
+                    case "a":
+                        var cityResponse = citiesArray[0].cityName;
+                        break;
+                    case "b":
+                        var cityResponse = citiesArray[1].cityName;
+                        break;
+                    case "c":
+                        var cityResponse = citiesArray[2].cityName;
+                        break;
+                    case "d":
+                        var cityResponse = citiesArray[3].cityName;
+                        break;
+                    case "e":
+                        var cityResponse = citiesArray[4].cityName;
+                        break;
+                    case "f":
+                        var cityResponse = citiesArray[5].cityName;
+                        break;
+                    case "g":
+                        var cityResponse = citiesArray[6].cityName;
+                        break;
+                    case "h":
+                        var cityResponse = citiesArray[7].cityName;
+                        break;
+                }
+                console.log(cityResponse);
+            }
+            else {
+                console.log("More than 1 value");
+
+                // Randomize City Id's for when user has multiple id's with same count
+
+                function random(array){
+                  return array[ _.random(0, array.length-1) ]
+                };
+
+                var randomId = random(values);
+                console.log(randomId);
+                var cityId = randomId.id;
+
+                //Switch Case and choose city
+
+                switch(cityId) {
+                    case "a":
+                        var cityResponse = citiesArray[0].cityName;
+                        break;
+                    case "b":
+                        var cityResponse = citiesArray[1].cityName;
+                        break;
+                    case "c":
+                        var cityResponse = citiesArray[2].cityName;
+                        break;
+                    case "d":
+                        var cityResponse = citiesArray[3].cityName;
+                        break;
+                    case "e":
+                        var cityResponse = citiesArray[4].cityName;
+                        break;
+                    case "f":
+                        var cityResponse = citiesArray[5].cityName;
+                        break;
+                    case "g":
+                        var cityResponse = citiesArray[6].cityName;
+                        break;
+                    case "h":
+                        var cityResponse = citiesArray[7].cityName;
+                        break;
+                }
+                console.log(cityResponse);
+            };
+        };
     });
 
 
@@ -223,6 +323,7 @@ $( document ).ready(function() {
     {fileName:"thinking_about_nothing.svg",percent:"12%", fantasyType:"nothing", fantasyValue:"8",fontSize:"130px"}
 
     ]
+
     var counter=0;
 
     $( "#right_arrow").click(function() {

@@ -80,6 +80,15 @@
 	margin-top: 2px;
 }
 
+/*jam jars*/
+#lingonberry{
+	position:absolute;
+	margin-bottom: 2800px;
+	left:0; right:0; bottom:0;top:0;
+}
+.lingonberry-section{
+	height:4000px;
+}
 
 /*Fantasy*/
 #headline {

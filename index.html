@@ -22,7 +22,7 @@
         
         <div class="section">
             <div id="headline">
-                <a>ARE YOU A?</a>
+                <a>CHOOSE YOUR GENDER</a>
             </div>
             <div id="gender">
                 
@@ -59,11 +59,14 @@
         
         <div class="section">Page 5 - When did you pop your lingonberry</div>
         
+        <div class="section lingonberry-section">Page 6 - When swedes lost their virginity
         
-        <div class="section">Page 6 - When swedes lost their virginity</div>
-        
-        
-        <div class="section">Page 7 - How often do you have sex each month?<br>
+            <div id="lingonberry">
+                <img src="assets/img/jam/jam.svg" height="500px">
+            </div>
+        </div>
+
+        <div class="section">Page 7 - How many times do you have sex each month?<br>
             <canvas id="screw" width=150 height=150></canvas><div id="screwtext"><center><h2>0</h2></center></div>
 
         </div>
@@ -272,9 +275,15 @@
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
 
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
-
-        });
-
+        
+    controller.pin($('#lingonberry'), 3000, {
+      anim: (new TimelineLite())
+        .append(
+          TweenMax.to($('#lingonberry'), .5, 
+            {css:{left: -2800}})
+        )
+    });
+});
 
         </script>
     </body>

@@ -25,10 +25,9 @@
                 <a>CHOOSE YOUR GENDER</a>
             </div>
             <div id="gender">
-                
-                    <img src="assets/img/gender/female.svg"></img>
-                    <img src="assets/img/gender/male.svg"></img>
-                    <img src="assets/img/gender/other.svg"></img>
+                    <img id="female-gender" src="assets/img/gender/female.svg"></img>
+                    <img id="male-gender" src="assets/img/gender/male.svg"></img>
+                    <img id="other-gender" src="assets/img/gender/other.svg"></img>
             </div>
             
         </div>
@@ -62,14 +61,14 @@
                 The average Swede has slept with <p style="font-family:Century; font-size:100px; display:inline">13</p> partners. <br> <br>
                 Is that a lot? <br>
             <div id="average-amount-of-sexpartners-buttons" >
-                <button type="button" onclick="return false" value="bit much" class="add-to-chart">Bit much</button>
+                <button type="button" onclick="return false" value="bit much" class="add-to-cart">Bit much</button>
                         </div>
     
             <div id="average-amount-of-sexpartners-buttons">
-                <button type="button" onclick="return false" value="just about right" class="add-to-chart">Just about right</button>
+                <button type="button" onclick="return false" value="just about right" class="add-to-cart">Just about right</button>
                         </div>
             <div id="average-amount-of-sexpartners-buttons">
-                <button type="button" onclick="return false" value="way too few" class="add-to-chart">Way too few</button>
+                <button type="button" onclick="return false" value="way too few" class="add-to-cart">Way too few</button>
                         </div>
 
             </div>
@@ -114,8 +113,8 @@
             <img src="assets/img/positions/pricetag.svg">
             <h3>8% </h3>
         </div>
-            <div class="add-to-chart-div">
-                <button type="button" onclick="return false" value="69" class="add-to-chart">Favorite</button>
+            <div class="add-to-cart-div">
+                <button type="button" onclick="return false" value="69" class="add-to-cart">Favorite</button>
             </div>
 
         <p class="position_title">
@@ -133,8 +132,8 @@
             <img src="assets/img/positions/pricetag.svg">
             <h3>3% </h3>
         </div>
-            <div class="add-to-chart-div">
-                <button type="button" onclick="return false" value="S&M" class="add-to-chart">Favorite</button>
+            <div class="add-to-cart-div">
+                <button type="button" onclick="return false" value="S&M" class="add-to-cart">Favorite</button>
             </div>
        
         <p class="position_title">
@@ -151,8 +150,8 @@
             <img src="assets/img/positions/pricetag.svg">
             <h3>38% </h3>
         </div>
-            <div class="add-to-chart-div">
-                <button type="button" onclick="return false" value="RODEO" class="add-to-chart">Favorite</button>
+            <div class="add-to-cart-div">
+                <button type="button" onclick="return false" value="RODEO" class="add-to-cart">Favorite</button>
             </div>
        
         <p class="position_title">
@@ -169,8 +168,8 @@
             <img src="assets/img/positions/pricetag.svg">
             <h3>38% </h3>
         </div>
-            <div class="add-to-chart-div">
-                <button type="button" onclick="return false" value="DOGGYSTYLE" class="add-to-chart">Favorite</button>
+            <div class="add-to-cart-div">
+                <button type="button" onclick="return false" value="DOGGYSTYLE" class="add-to-cart">Favorite</button>
             </div>
 
         <p class="position_title">
@@ -187,8 +186,8 @@
             <img src="assets/img/positions/pricetag.svg">
             <h3>34% </h3>
         </div>
-            <div class="add-to-chart-div">
-                <button type="button" onclick="return false" value="ORAL" class="add-to-chart">Favorite</button>
+            <div class="add-to-cart-div">
+                <button type="button" onclick="return false" value="ORAL" class="add-to-cart">Favorite</button>
             </div>
 
         <p class="position_title">
@@ -205,8 +204,8 @@
             <img src="assets/img/positions/pricetag.svg">
             <h3>5% </h3>
         </div>
-            <div class="add-to-chart-div">
-                <button type="button" onclick="return false" value="ANAL" class="add-to-chart">Favorite</button>
+            <div class="add-to-cart-div">
+                <button type="button" onclick="return false" value="ANAL" class="add-to-cart">Favorite</button>
             </div>
 
         <p class="position_title">
@@ -220,8 +219,8 @@
     <div class="favorite-position">
     </div>
 
-    <div class="chart">
-        <img src="assets/img/positions/chart.svg" width="70px">
+    <div class="cart">
+        <img src="assets/img/positions/cart.svg" width="70px">
     </div>
 
 </div>
@@ -333,6 +332,8 @@
         <script type="text/javascript" src="js/components/moose.js"></script>
         <script type="text/javascript" src="js/components/fantasy.js"></script>
         <script type="text/javascript" src="js/components/positions.js"></script>
+        <script type="text/javascript" src="js/components/gender.js"></script>
+
         <script>
         $(document).ready(function() {
         var controller = $.superscrollorama();

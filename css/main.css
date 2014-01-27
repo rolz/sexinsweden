@@ -330,7 +330,7 @@ output {
    width: 60px; /* for IE 6 */
 }
 
-.add-to-chart-div {
+.add-to-cart-div {
    position: absolute; 
    bottom:17px;
    right:10px;
@@ -338,7 +338,7 @@ output {
 
 
 }
-.add-to-chart {
+.add-to-cart {
     background-color:#0076d1;
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
@@ -355,15 +355,15 @@ output {
     text-decoration:none;
 
 }
-.add-to-chart:hover {
+.add-to-cart:hover {
     background-color:#0380e0;
 }
-.add-to-chart:active {
+.add-to-cart:active {
     position:relative;
     top:1px;
 }
 
-.chart{
+.cart{
 	position:absolute;
 	right:100px;
 }

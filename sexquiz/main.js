@@ -3,9 +3,22 @@ $( document ).ready(function() {
 
     /* User's Sex */
 
-    $( ".q1 button" ).click(function() {
-        var valueQ1 = $( this ).val();
-        console.log("q1" + "=" + valueQ1);
+    var userResponse = {};
+
+    $( ".q0 button" ).click(function() {
+        var valueQ0 = $( this ).val();
+        console.log(valueQ0);
+
+        if (valueQ0 == "m" || valueQ0 == "f") {
+            userResponse["sex"] = valueQ0;
+        }
+        else {
+            var randomSex = ["m","f"];
+            var random = Math.floor(Math.random()*randomSex.length);
+            userResponse["sex"] = randomSex[random];
+        }
+
+        console.log(userResponse);
     });
 
     // Possibe result 1=Man, 2=Female, 3=Other(random man or woman)
@@ -16,38 +29,44 @@ $( document ).ready(function() {
     //Male results array
 
     var male = [
-    {q2:{a1:["e","d"],a2:["h","b"], a3:["f","g"]}},
-    {q3:{a1:["d","f"],a2:["h","g"], a3:["c","e"]}},
-    {q4:{a1:["a","b"],a2:["e","f"], a3:["d","g"], a4:["c","h"]}},
-    {q5:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
-    {q6:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    {q1:{a1:["e","d"],a2:["h","b"], a3:["f","g"]}},
+    {q2:{a1:["d","f"],a2:["h","g"], a3:["c","e"]}},
+    {q3:{a1:["a","b"],a2:["e","f"], a3:["d","g"], a4:["c","h"]}},
+    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
+    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
     ];
 
     //Female results array
 
     var female = [
-    {q2:{a1:["a","b"],a2:["g","d"], a3:["f","c"]}},
-    {q3:{a1:["d","c"],a2:["f","h"], a3:["a","g"]}},
-    {q4:{a1:["c","e"],a2:["f","h"], a3:["a","d"], a4:["b","g"]}},
-    {q5:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
-    {q6:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    {q1:{a1:["a","b"],a2:["g","d"], a3:["f","c"]}},
+    {q2:{a1:["d","c"],a2:["f","h"], a3:["a","g"]}},
+    {q3:{a1:["c","e"],a2:["f","h"], a3:["a","d"], a4:["b","g"]}},
+    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
+    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
     ];
 
 
     /* Prudeness */
 
-    $(".q2 button").click(function() {
-        var valueQ2 = $( this ).val();
-        console.log("q2" + "=" + valueQ2);
+    // **** add male and female key pairs
 
+    $(".q1 button").click(function() {
+        var valueQ1 = $( this ).val();
+
+        userResponse["q1"] = {"m": male[0].q1[valueQ1], "f": female[0].q1[valueQ1]};
+
+        console.log(userResponse);
     });
 
     /* Lose Virginity */
 
-    $(".q3 button").click(function() {
-        var valueQ3 = $( this ).val();
-        console.log("q3" + "=" + valueQ3);
+    $(".q2 button").click(function() {
+        var valueQ2 = $( this ).val();
 
+        userResponse["q2"] = {"m": male[1].q2[valueQ2], "f": female[1].q2[valueQ2]};
+
+        console.log(userResponse);
     });
 
     /* Sex Per Month */
@@ -59,20 +78,42 @@ $( document ).ready(function() {
         }
     });
 
+    $(".q3 button").click(function() {
+        var initValueQ3 = $(".q3 select").val();
+        console.log(initValueQ3);
+
+        if (initValueQ3 <= 2) {
+            var valueQ3 = "a1";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        }
+        else if (initValueQ3 >= 3 && initValueQ3 <=6) {
+            var valueQ3 = "a2";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        }
+        else if (initValueQ3 >= 7 && initValueQ3 <= 15) {
+            var valueQ3 = "a3";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        }
+        else {
+            var valueQ3 = "a4";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        };
+
+        console.log(userResponse);
+
+    });
+
+    /* Question 4 Positions*/
+
     $(".q4 button").click(function() {
-        var valueQ4 = $(".q4 select").val();
-        console.log("q4" + "=" +valueQ4);
+        var valueQ4 = $( this ).val();
 
+        userResponse["q4"] = {"m": male[3].q4[valueQ4], "f": female[3].q4[valueQ4]};
+
+        console.log(userResponse);
     });
 
-    /* Question 5 Positions*/
-
-    $(".q5 button").click(function() {
-        var valueQ5 = $( this ).val();
-        console.log("q5" + "=" + valueQ5);
-    });
-
-    /* Question 6 Fantasy*/
+    /* Question 5 Fantasy*/
 
     // Set the interval to be 4 seconds for Fantasy Images
     var t = setInterval(function(){
@@ -83,7 +124,6 @@ $( document ).ready(function() {
     },4000);
 
     // Set the interval to 4 seconds for text
-
     var u = setInterval(function(){
         $("#fantasyPercentageCarousel ul").animate({marginLeft:-480},1000,function(){
             $(this).find("li:last").after($(this).find("li:first"));
@@ -100,10 +140,74 @@ $( document ).ready(function() {
 
     //Submit Fantasy answer
 
-    $(".q6 button").click(function() {
-        var valueQ6 = $("#fantasyImageCarousel li").val();
-        console.log("q6"+"="+valueQ6);
+    $(".q5 button").click(function() {
+        var valueQ5 = $("#fantasyImageCarousel li").val();
+
+        userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5["a"+valueQ5]};
+
+        console.log(userResponse);
     });
+
+
+    /*Submit to Visit Sweden and Get Result*/
+
+    // get results according to sex at this point in app
+
+    $("#finalResponseButton").click(function() {
+
+        if (userResponse["sex"] == "m" || userResponse["sex"] == "f" ) {
+
+            answerQ1 = userResponse.q1[userResponse.sex];
+            answerQ2 = userResponse.q2[userResponse.sex];
+            answerQ3 = userResponse.q3[userResponse.sex];
+            answerQ4 = userResponse.q4[userResponse.sex];
+            answerQ5 = userResponse.q5[userResponse.sex];
+
+            var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
+            console.log(userAnswersArray);
+
+            var finalUserAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5)
+                    .reduce(function(last, now) {
+                        var index = last[0].indexOf(now);
+
+                        if (index === -1) {
+                          last[0].push(now);
+                          last[1].push(1);
+                        } else {
+                          last[1][index] += 1;
+                        }
+                        return last;
+                      }, [[], []])
+                    .reduce(function(last, now, index, context) {
+                        var zip = [];
+                        last.forEach(function(word, i) {
+                          zip.push([word, context[1][i]])
+                        });
+                        return zip;
+                      });
+
+            console.log(finalUserAnswersArray);
+
+        }
+        else {
+            console.log("Looks like you have not chosen your sex.")
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Simone's Code
 

@@ -75,7 +75,7 @@
 			<g>
 				<path fill="#FFFFFF" stroke="#000000" stroke-width="5.3" stroke-miterlimit="10" d="M423.598,208.015l63.267,67.845
 					c-37.47,34.941-96.171,32.891-131.112-4.579s-32.891-96.171,4.579-131.112c17.536-16.353,39.289-24.921,63.267-24.921v92.767
-					H423.598z"/>
+					L423.598,208.015L423.598,208.015z"/>
 			</g>
 		</g>
 		<g>
@@ -103,7 +103,10 @@
 		</g>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 69.4615 74.8877)" enable-background="new    "><tspan x="0" y="0" font-family="'TwCenMT-Bold'" font-size="50">WOMEN</tspan><tspan x="174.561" y="0" font-family="'TwCenMT-Bold'" font-size="50" letter-spacing="-7">	</tspan><tspan x="180" y="0" font-family="'TwCenMT-Bold'" font-size="50" letter-spacing="22">			</tspan><tspan x="288" y="0" font-family="'TwCenMT-Bold'" font-size="50">BOTH</tspan></text>
+<text transform="matrix(1 0 0 1 69.4615 74.8877)" font-family="'TwCenMT-Bold'" font-size="50">WOMEN</text>
+<text transform="matrix(1 0 0 1 244.0225 74.8877)" font-family="'TwCenMT-Bold'" font-size="50" letter-spacing="-7"> </text>
+<text transform="matrix(1 0 0 1 249.4615 74.8877)" font-family="'TwCenMT-Bold'" font-size="50" letter-spacing="22">   </text>
+<text transform="matrix(1 0 0 1 357.4615 74.8877)" font-family="'TwCenMT-Bold'" font-size="50">BOTH</text>
 <text transform="matrix(1 0 0 1 482.9625 74.8877)" font-family="'TwCenMT-Bold'" font-size="50" letter-spacing="5"> </text>
 <text transform="matrix(1 0 0 1 501.4615 74.8877)" font-family="'TwCenMT-Bold'" font-size="50" letter-spacing="22"> </text>
 <text transform="matrix(1 0 0 1 537.4615 74.8877)" font-family="'TwCenMT-Bold'" font-size="50">   </text>
@@ -121,4 +124,5 @@
 <text transform="matrix(1 0 0 1 657.834 435.8025)" font-family="'Verdana'" font-size="40">of men </text>
 <text transform="matrix(1 0 0 1 127.586 490.8025)" font-family="'Verdana'" font-size="40">prefer the doggystyle position</text>
 <rect x="2300.614" y="1479.13" fill="#F43C11" width="793.22" height="473.204"/>
+<rect x="412.788" y="199.438" fill="#FFFFFF" width="8.14" height="13.495"/>
 </svg>

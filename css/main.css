@@ -385,7 +385,7 @@ h3{
 }
 
 .expand {
-  /*background-image: url('../assets/img/positions/69-info.svg');*/
+  background-repeat: no-repeat;
   transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
   -webkit-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
   height: 98%;

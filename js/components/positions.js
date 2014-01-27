@@ -24,6 +24,7 @@ $(document).ready(function ($) {
     if(className=="item masonry-brick expand"){
         var imageURL="assets/img/positions/"+positionName+"-info.svg"
         $('.expand').css('background-image','url('+imageURL+')')
+    
     }
 
     else{

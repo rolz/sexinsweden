@@ -81,9 +81,8 @@ $( document ).ready(function() {
     // With Answer
 
     $(".q3 #submit").click(function() {
-        var initValueQ3 = $(".q3 select").val();
-        var initValueQ3NoAnswer = $(".q3 #no-answer").val();
-        console.log(initValueQ3NoAnswer);
+        var initValueQ3 = $(".q3 #screwText").text();
+        console.log(initValueQ3);
 
         if (initValueQ3 <= 2) {
             var valueQ3 = "a1";
@@ -162,7 +161,6 @@ $( document ).ready(function() {
         console.log(userResponse);
     });
 
-    //No-Answer
     // No Answer
 
     $(".q5 #no-answer").click(function() {

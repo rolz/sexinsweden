@@ -53,12 +53,9 @@ $( document ).ready(function() {
 
     $(".q1 button").click(function() {
         var valueQ1 = $( this ).val();
-        answerM = male[0].q1[valueQ1];
-        answerF = female[0].q1[valueQ1];
-        console.log("male answer is "+male[0].q1[valueQ1]);
-        console.log("female answer is "+female[0].q1[valueQ1]);
 
-        userResponse.push(answerM,answerF);
+        userResponse["q1"] = {"m": male[0].q1[valueQ1], "f": female[0].q1[valueQ1]};
+
         console.log(userResponse);
     });
 
@@ -66,17 +63,10 @@ $( document ).ready(function() {
 
     $(".q2 button").click(function() {
         var valueQ2 = $( this ).val();
-        answerM = male[1].q2[valueQ2];
-        answerF = female[1].q2[valueQ2];
-        console.log("male answer is "+male[1].q2[valueQ2]);
-        console.log("female answer is "+female[1].q2[valueQ2]);
 
-        if (userResponse[0] == "m" ) {
-            userResponse.push(answerM);
-        }
-        else {
-            userResponse.push(answerF);
-        }
+        userResponse["q2"] = {"m": male[1].q2[valueQ2], "f": female[1].q2[valueQ2]};
+
+        console.log(userResponse);
     });
 
     /* Sex Per Month */
@@ -91,37 +81,24 @@ $( document ).ready(function() {
 
     $(".q3 button").click(function() {
         var valueQ3 = $(".q3 select").val();
-        answerM = male[2].q3[valueQ3];
-        answerF = female[2].q3[valueQ3];
-        console.log("male answer is "+male[2].q3[valueQ3]);
-        console.log("female answer is "+female[2].q3[valueQ3]);
 
-        if (userResponse[0] == "m" ) {
-            userResponse.push(answerM);
-        }
-        else {
-            userResponse.push(answerF);
-        }
+        userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+
+        //*** function to choose scales switch
+
     });
 
-    /* Question 5 Positions*/
+    /* Question 4 Positions*/
 
     $(".q4 button").click(function() {
         var valueQ4 = $( this ).val();
-        answerM = male[3].q4[valueQ4];
-        answerF = female[3].q4[valueQ4];
-        console.log("male answer is "+male[3].q4[valueQ4]);
-        console.log("female answer is "+female[3].q4[valueQ4]);
 
-        if (userResponse[0] == "m" ) {
-            userResponse.push(answerM);
-        }
-        else {
-            userResponse.push(answerF);
-        }
+        userResponse["q4"] = {"m": male[3].q4[valueQ4], "f": female[3].q4[valueQ4]};
+
+        console.log(userResponse);
     });
 
-    /* Question 6 Fantasy*/
+    /* Question 5 Fantasy*/
 
     // Set the interval to be 4 seconds for Fantasy Images
     var t = setInterval(function(){
@@ -150,17 +127,8 @@ $( document ).ready(function() {
 
     $(".q5 button").click(function() {
         var valueQ5 = $("#fantasyImageCarousel li").val();
-        answerM = male[4].q5["a"+valueQ5];
-        answerF = female[4].q5["a"+valueQ5];
-        console.log("male answer is "+male[4].q5["a"+valueQ5]);
-        console.log("female answer is "+female[4].q5["a"+valueQ5]);
 
-        if (userResponse[0] == "m" ) {
-            userResponse.push(answerM);
-        }
-        else {
-            userResponse.push(answerF);
-        }
+        userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5["a"+valueQ5]};
 
         console.log(userResponse);
     });
@@ -169,6 +137,47 @@ $( document ).ready(function() {
     /*Submit to Visit Sweden and Get Result*/
 
     // get results according to sex now
+
+    $("#finalResponseButton").click(function() {
+
+        if (userResponse["sex"] == "m" || userResponse["sex"] == "f" ) {
+
+            answerQ1 = userResponse.q1[userResponse.sex];
+            answerQ2 = userResponse.q2[userResponse.sex];
+            // answerQ3 = userResponse.q3[userResponse.sex];
+            answerQ4 = userResponse.q4[userResponse.sex];
+            answerQ5 = userResponse.q5[userResponse.sex];
+
+            var userAnswersArray = answerQ1.concat(answerQ2, answerQ4, answerQ5);
+            console.log(userAnswersArray);
+
+            var finalUserAnswersArray = answerQ1.concat(answerQ2, answerQ4, answerQ5)
+                    .reduce(function(last, now) {
+                        var index = last[0].indexOf(now);
+
+                        if (index === -1) {
+                          last[0].push(now);
+                          last[1].push(1);
+                        } else {
+                          last[1][index] += 1;
+                        }
+                        return last;
+                      }, [[], []])
+                    .reduce(function(last, now, index, context) {
+                        var zip = [];
+                        last.forEach(function(word, i) {
+                          zip.push([word, context[1][i]])
+                        });
+                        return zip;
+                      });
+
+            console.log(finalUserAnswersArray);
+
+        }
+        else {
+            console.log("Looks like you have not chosen your sex.")
+        }
+    });
 
 
 

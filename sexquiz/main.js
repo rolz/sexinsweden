@@ -70,7 +70,6 @@ $( document ).ready(function() {
     });
 
     /* Sex Per Month */
-    // ****choose scales
 
     $(function(){
         var $select = $(".1-100");
@@ -80,11 +79,27 @@ $( document ).ready(function() {
     });
 
     $(".q3 button").click(function() {
-        var valueQ3 = $(".q3 select").val();
+        var initValueQ3 = $(".q3 select").val();
+        console.log(initValueQ3);
 
-        userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        if (initValueQ3 <= 2) {
+            var valueQ3 = "a1";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        }
+        else if (initValueQ3 >= 3 && initValueQ3 <=6) {
+            var valueQ3 = "a2";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        }
+        else if (initValueQ3 >= 7 && initValueQ3 <= 15) {
+            var valueQ3 = "a3";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        }
+        else {
+            var valueQ3 = "a4";
+            userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+        };
 
-        //*** function to choose scales switch
+        console.log(userResponse);
 
     });
 
@@ -136,7 +151,7 @@ $( document ).ready(function() {
 
     /*Submit to Visit Sweden and Get Result*/
 
-    // get results according to sex now
+    // get results according to sex at this point in app
 
     $("#finalResponseButton").click(function() {
 
@@ -144,14 +159,14 @@ $( document ).ready(function() {
 
             answerQ1 = userResponse.q1[userResponse.sex];
             answerQ2 = userResponse.q2[userResponse.sex];
-            // answerQ3 = userResponse.q3[userResponse.sex];
+            answerQ3 = userResponse.q3[userResponse.sex];
             answerQ4 = userResponse.q4[userResponse.sex];
             answerQ5 = userResponse.q5[userResponse.sex];
 
-            var userAnswersArray = answerQ1.concat(answerQ2, answerQ4, answerQ5);
+            var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
             console.log(userAnswersArray);
 
-            var finalUserAnswersArray = answerQ1.concat(answerQ2, answerQ4, answerQ5)
+            var finalUserAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5)
                     .reduce(function(last, now) {
                         var index = last[0].indexOf(now);
 

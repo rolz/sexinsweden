@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-    /* User's Sex */
+    /* User's Sex : Q0*/
 
     var userResponse = {};
 
@@ -29,21 +29,21 @@ $( document ).ready(function() {
     //Male results array
 
     var male = [
-    {q1:{a1:["e","d"],a2:["h","b"], a3:["f","g"]}},
-    {q2:{a1:["d","f"],a2:["h","g"], a3:["c","e"]}},
-    {q3:{a1:["a","b"],a2:["e","f"], a3:["d","g"], a4:["c","h"]}},
-    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
-    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    {q1:{a1:["e","d"],a2:["h","b"], a3:["f","g"], a4:["a","b","c","d","e","f","g","h"]}},
+    {q2:{a1:["d","f"],a2:["h","g"], a3:["c","e"], a4:["a","b","c","d","e","f","g","h"]}},
+    {q3:{a1:["a","b"],a2:["e","f"], a3:["d","g"], a4:["c","h"], a5:["a","b","c","d","e","f","g","h"]}},
+    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"], a7:["a","b","c","d","e","f","g","h"]}},
+    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"], a9:["a","b","c","d","e","f","g","h"]}}
     ];
 
     //Female results array
 
     var female = [
-    {q1:{a1:["a","b"],a2:["g","d"], a3:["f","c"]}},
-    {q2:{a1:["d","c"],a2:["f","h"], a3:["a","g"]}},
-    {q3:{a1:["c","e"],a2:["f","h"], a3:["a","d"], a4:["b","g"]}},
-    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"]}},
-    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"]}}
+    {q1:{a1:["a","b"],a2:["g","d"], a3:["f","c"], a4:["a","b","c","d","e","f","g","h"]}},
+    {q2:{a1:["d","c"],a2:["f","h"], a3:["a","g"], a4:["a","b","c","d","e","f","g","h"]}},
+    {q3:{a1:["c","e"],a2:["f","h"], a3:["a","d"], a4:["b","g"], a5:["a","b","c","d","e","f","g","h"]}},
+    {q4:{a1:["g","a","h"],a2:["h","b","f"], a3:["b","a","d"], a4:["g","c","a"], a5:["b","c","h"], a6:["c","h","e"], a7:["a","b","c","d","e","f","g","h"]}},
+    {q5:{a1:["e","f","d"],a2:["h","a","c"], a3:["g","d","b"], a4:["b","f","c"], a5:["a","g","h"], a6:["g","e","d"], a7:["b","f","c"], a8:["e","a","b"], a9:["a","b","c","d","e","f","g","h"]}}
     ];
 
 
@@ -72,14 +72,18 @@ $( document ).ready(function() {
     /* Sex Per Month */
 
     $(function(){
-        var $select = $(".1-100");
-        for (i=1;i<=20;i++){
+        var $select = $(".1-20");
+        for (i=0;i<=20;i++){
             $select.append($('<option></option>').val(i).html(i))
         }
     });
 
-    $(".q3 button").click(function() {
+    // With Answer
+
+    $(".q3 #submit").click(function() {
         var initValueQ3 = $(".q3 select").val();
+        var initValueQ3NoAnswer = $(".q3 #no-answer").val();
+        console.log(initValueQ3NoAnswer);
 
         if (initValueQ3 <= 2) {
             var valueQ3 = "a1";
@@ -99,8 +103,19 @@ $( document ).ready(function() {
         };
 
         console.log(userResponse);
-
     });
+
+    // No Answer
+
+    $(".q3 #no-answer").click(function() {
+        var valueQ3 = $( this ).val();
+
+        userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
+
+        console.log(userResponse);
+    });
+
+
 
     /* Question 4 Positions*/
 
@@ -139,10 +154,21 @@ $( document ).ready(function() {
 
     //Submit Fantasy answer
 
-    $(".q5 button").click(function() {
+    $(".q5 #submit").click(function() {
         var valueQ5 = $("#fantasyImageCarousel li").val();
 
         userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5["a"+valueQ5]};
+
+        console.log(userResponse);
+    });
+
+    //No-Answer
+    // No Answer
+
+    $(".q5 #no-answer").click(function() {
+        var valueQ5 = $( this ).val();
+
+        userResponse["q5"] = {"m": male[4].q5[valueQ5], "f": female[4].q5[valueQ5]};
 
         console.log(userResponse);
     });
@@ -197,6 +223,8 @@ $( document ).ready(function() {
         else {
             console.log("Looks like you have not chosen your sex.")
         };
+
+        // Get City
 
         function getCity(values) {
 

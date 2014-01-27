@@ -1,6 +1,7 @@
 //Elements
 var c = document.getElementById("screw");
 var d = document.getElementById("screwtext");
+var r = document.getElementById("reset");
 
 //Declaring variables
 var canvasWidth = 150;        // The width of the canvas
@@ -14,13 +15,16 @@ var ctx = c.getContext("2d");
 var degrees = 0;
 window.onload = canvasApp();
 c.onclick = clickScrew;
-// less.onclick = unscrew;
+r.onclick = resetScrew;
 var times = 0;
 var status = 1;
+var render = window.requestAnimationFrame(drawRevolution);
+// var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
 
 function canvasApp() {
   resetCanvas();
-  drawScrew();
+  drawRevolution();
 }
 
 function drawScrew() {
@@ -47,7 +51,7 @@ function drawScrew() {
 }
 
 function clickScrew() {
-  window.cancelAnimationFrame(drawRevolution);
+  window.cancelAnimationFrame(render);
   times += 1;
   d.innerHTML = "<center><h2>"+times+"</h2></center>";
   drawRevolution();
@@ -57,7 +61,7 @@ function drawRevolution() {
   degrees += 0.4;
   resetCanvas();
   drawScrew();
-  window.requestAnimationFrame(drawRevolution);
+  requestAnimationFrame(drawRevolution);
 };
 
 function drawLine(startX, startY, endX, endY) {
@@ -74,4 +78,11 @@ function resetCanvas() {
   c.width=w;
   c.height=h;
   ctx.setTransform(1,0,0,1,0,0);
+}
+
+function resetScrew() {
+  // degrees = 0;
+  times = 0;
+  d.innerHTML = "<center><h2>"+times+"</h2></center>";
+  window.cancelAnimationFrame(drawRevolution);
 }

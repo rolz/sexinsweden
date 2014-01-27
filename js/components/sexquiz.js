@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
     var userResponse = {};
 
-    $( ".q0 button" ).click(function() {
+    $( ".q0 img" ).click(function() {
         var valueQ0 = $( this ).val();
         console.log(valueQ0);
 

@@ -1,78 +1,94 @@
 //Elements
-var c = document.getElementById("screw");
-var d = document.getElementById("screwtext");
+var c = document.getElementById("screwYou");
+var d = document.getElementById("screwYouText");
+var e = document.getElementById("screwThem");
+var f = document.getElementById("screwThemText");
 var r = document.getElementById("reset");
+var ctx = c.getContext("2d");
+var etx = e.getContext("2d");
 
 //Declaring variables
-var canvasWidth = 150;        // The width of the canvas
+var canvasWidth = 250;        // The width of the canvas
 var canvasHeight = canvasWidth;       // The height of the canvas
 var radian = Math.PI/180;
 var center = canvasWidth/2;
 var lW = canvasWidth/50;
 var lineEnd = canvasWidth/4
-var radCirc = center - lW;
-var ctx = c.getContext("2d");    
+var radCirc = center - lW;   
 var degrees = 0;
-window.onload = canvasApp();
-//c.onclick = clickScrew;
-//r.onclick = resetScrew;
+window.onload = screwYou();
+window.onload = screwThem();
+c.onclick = clickScrew;
+r.onclick = resetScrew;
 var times = 0;
 var status = 1;
 var render = window.requestAnimationFrame(drawRevolution);
 // var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 
-function canvasApp() {
-  resetCanvas();
+function screwYou() {
+  resetYou();
   drawRevolution();
 }
 
-function drawScrew() {
+function screwThem() {
+  resetThem();
+  drawSweden();
+}
+
+function drawScrew(canvas) {
   var angle = degrees * radian;
   // draw circle
-  ctx.beginPath();
-  ctx.strokeStyle = "black";
-  ctx.lineWidth = lW;
-  ctx.arc(center, center, radCirc, radian*0, radian*360, false)
-  ctx.stroke();
-  ctx.closePath();
+  canvas.beginPath();
+  canvas.strokeStyle = "black";
+  canvas.lineWidth = lW;
+  canvas.arc(center, center, radCirc, radian*0, radian*360, false)
+  canvas.stroke();
+  canvas.closePath();
 
   //set center
-  ctx.translate(center, center);
+  canvas.translate(center, center);
 
-  ctx.lineWidth = Math.floor(lW*3)
-  ctx.lineCap = "round";
+  canvas.lineWidth = Math.floor(lW*3)
+  canvas.lineCap = "round";
 
-  ctx.rotate(angle);
-  drawLine(0,0,lineEnd,0);
-  drawLine(0,0,0,lineEnd);
-  drawLine(lineEnd*-1,0,0,0);
-  drawLine(0,lineEnd*-1,0,0);
+  canvas.rotate(angle);
+  drawLine(canvas,0,0,lineEnd,0);
+  drawLine(canvas,0,0,0,lineEnd);
+  drawLine(canvas,lineEnd*-1,0,0,0);
+  drawLine(canvas,0,lineEnd*-1,0,0);
 }
 
 function clickScrew() {
   window.cancelAnimationFrame(render);
   times += 1;
-  d.innerHTML = "<center><h2>"+times+"</h2></center>";
+  d.innerHTML = "<center><h1>"+times+"</h1></center>";
   drawRevolution();
 }
 
 function drawRevolution() {
   degrees += 0.4;
-  resetCanvas();
-  drawScrew();
+  resetYou();
+  drawScrew(ctx);
   requestAnimationFrame(drawRevolution);
 };
 
-function drawLine(startX, startY, endX, endY) {
-  ctx.beginPath();
-  ctx.moveTo(startX, startY);
-  ctx.lineTo(endX, endY);
-  ctx.stroke();
-  ctx.closePath();
+function drawSweden() {
+  degrees += 0.4;
+  resetThem();
+  drawScrew(etx);
+  requestAnimationFrame(drawSweden);
+};
+
+function drawLine(canvas, startX, startY, endX, endY) {
+  canvas.beginPath();
+  canvas.moveTo(startX, startY);
+  canvas.lineTo(endX, endY);
+  canvas.stroke();
+  canvas.closePath();
 }
 
-function resetCanvas() {
+function resetYou() {
   var h=c.height;
   var w=c.width;
   c.width=w;
@@ -80,9 +96,17 @@ function resetCanvas() {
   ctx.setTransform(1,0,0,1,0,0);
 }
 
+function resetThem() {
+  var h=e.height;
+  var w=e.width;
+  e.width=w;
+  e.height=h;
+  etx.setTransform(1,0,0,1,0,0);
+}
+
 function resetScrew() {
   // degrees = 0;
   times = 0;
-  d.innerHTML = "<center><h2>"+times+"</h2></center>";
+  d.innerHTML = "<center><h1>"+times+"</h1></center>";
   window.cancelAnimationFrame(drawRevolution);
 }

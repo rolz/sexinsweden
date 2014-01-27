@@ -19,23 +19,19 @@
                 </div>
             </div>
         </div>
-
         <!--CHOOSE YOUR GENDER Q0-->
-
         <div class="section">
             <div class="headline">
                 <a>CHOOSE YOUR GENDER</a>
             </div>
             <div id="gender">
                 <div class="q0">
-                    <button class="sex" id="male" value="m"><img src="assets/img/gender/male.svg"></img></button>
-                    <button class="sex" id="female" value="f"><img src="assets/img/gender/female.svg"></img></button>
-                    <button class="sex" id="other" value="o"><img src="assets/img/gender/other.svg"></img></button>
+                    <img src="assets/img/gender/male.svg" class="sex" id="male" value="m"></img>
+                    <img src="assets/img/gender/female.svg" class="sex" id="female" value="f"></img>
+                    <img src="assets/img/gender/other.svg" class="sex" id="other" value="o"></img>
                 </div>
             </div>
-
         </div>
-
         <!---HOW OLD ARE YOU-->
         <div class="section">
             <div class="headline">
@@ -58,25 +54,25 @@
                 </div>
             </div>
         </div>
-
         <!--HOW PRUDE ARE YOU Q1-->
         <div class="section">
             <div class="bread-text" id="average-amount-of-sexpartners">
                 The average Swede has slept with <p style="font-family:Century; font-size:100px; display:inline">13</p> partners. <br> <br>
                 Is that a lot? <br>
-                <div id="average-amount-of-sexpartners-buttons" >
-                    <button type="button" onclick="return false" value="bit much" class="add-to-cart">Bit much</button>
-                </div>
-
-                <div id="average-amount-of-sexpartners-buttons">
-                    <button type="button" onclick="return false" value="just about right" class="add-to-cart">Just about right</button>
-                </div>
-                <div id="average-amount-of-sexpartners-buttons">
-                    <button type="button" onclick="return false" value="way too few" class="add-to-cart">Way too few</button>
+                <div class="q1">
+                    <div id="average-amount-of-sexpartners-buttons" >
+                        <button type="button" onclick="return false" value="a1" class="add-to-cart">Bit much</button>
+                    </div>
+                    <div id="average-amount-of-sexpartners-buttons">
+                        <button type="button" onclick="return false" value="a2" class="add-to-cart">Just about right</button>
+                    </div>
+                    <div id="average-amount-of-sexpartners-buttons">
+                        <button type="button" onclick="return false" value="a3" class="add-to-cart">Way too few</button>
+                    </div>
+                    <button class="prudeness" id="no-answer" value="a4">No Answer</button>
                 </div>
             </div>
         </div>
-
         <!--WHEN DID YOU LOSE YOUR VIRGINITY Q2-->
         <div class="section">Page 5 - When did you pop your lingonberry</br>
             <div class="q2">
@@ -88,49 +84,43 @@
             </div>
             </br>
         </div>
-
-
         <!--WHEN SWEDES LOST THEIR VIRGINITY-->
-        <div class="section lingonberry-section">            
+        <div class="section lingonberry-section">
             <div class="headline">
                 <a>WHEN DO SWEDES LOSE THEIR VIRGINITY?</a><br>
             </div>
-
-
             <div id="lingonberry">
                 <img src="assets/img/jam/jam.svg" height="500px">
             </div>
         </div>
-
         <!--HOW OFTEN DO YOU HAVE SEX EACH MONTH Q3-->
-        <div class="section">Page 7 - How many times do you have sex each month?<br>
-            <div class="q3">
-                <canvas id="screw" width=150 height=150></canvas><div id="screwtext"><center><h2 id="screwText">0</h2></center></div>
-                <button class="sex-per-month" id="no-answer" value="a5">No Answer</button>
-                <button class="sex-per-month" id="submit">Submit</button>
+        <div class="section"><div class="headline">HOW MANY TIMES DO YOU HAVE SEX EACH MONTH?</div>
+            <div class="screwHolder">
+                <canvas id="screwYou" width=250 height=250></canvas>
+                    <div id="screwYouText" class="headline1"><center><h1>0</h1></center></div>
             </div>
+            <div id="screwHolder"><button id="reset">reset</button></div>
         </div>
 
         <!--HOW OFTEN SEX EACH MONTH STATS-->
-        <div class="section">Page 8 - Swedes your age have sex this many times</div>
-
+         <div class="section"><div class="headline">SWEDES YOUR AGE HAVE SEX THIS MANY TIMES</div>
+            <div class="screwHolder">
+                <canvas id="screwThem" width=250 height=250></canvas>
+                    <div id="screwThemText" class="headline1"><center><h1>6</h1></center></div>
+            </div>
+            <div class="screwHolder"><button id="reset">reset</button></div>
+        </div>
         <!--TYPES OF SEX Q4-->
+        <!--SWEDES FAVORITE POSITION : MISSIONARY-->
+        <div class="section">Page 9 - Swedes Favorite Position</div>
+        <!--SMACKEN-->
+        <div class="section">Page 11 - Taste is like the ass</div>
 
-            <!--SWEDES FAVORITE POSITION : MISSIONARY-->
-            <div class="section">Page 9 - Swedes Favorite Position</div>
-
-            <!--SMACKEN-->
-            <div class="section">Page 10 - Taste is like the ass</div>
-
-            <!--SMACKEN-->
-            <div class="section">Page 11 - Taste is like the ass</div>
-           
-       <!--FAVORITE POSITIONS-->
+        <!--FAVORITE POSITIONS-->
         <div class="section">
             <div class="headline">
                 <a>HOW DO SWEDES LIKE SCREWING?</a>
             </div>
-
             <section class="grid-container">
                 <div class="grid">
                     <a href="#" onclick="return false">
@@ -158,7 +148,6 @@
                         <div class="add-to-cart-div">
                             <button type="button" onclick="return false" value="S&M" class="add-to-cart">Favorite</button>
                         </div>
-
                         <p class="position_title">
                         S&M
                         </p>
@@ -174,7 +163,6 @@
                         <div class="add-to-cart-div">
                             <button type="button" onclick="return false" value="RODEO" class="add-to-cart">Favorite</button>
                         </div>
-
                         <p class="position_title">
                         RODEO
                         </p>
@@ -232,140 +220,119 @@
                     <img src="assets/img/positions/cart.svg" width="70px">
                 </div>
             </div>
-            </div>
-
-            <br> <br> <br>
-
-            <!--SWEDISH SEX SOUNDS-->
-            <div class="section">Page 12 - Swedish sex sounds
-                <div id="sex-sounds">
-                    <div class="headline">
-                        <a>HOW DO SWEDES SOUND IN BED?</a>
-                    </div>
-                    <div id="buttons">
-                        <audio id="audio1" src="assets/audio/1.m4a"></audio>
-                        <audio id="audio2" src="assets/audio/2.m4a"></audio>
-                        <audio id="audio3" src="assets/audio/3.m4a"></audio>
-                        <span id="but1" onmouseover="document.getElementById('audio1').play()"><a>Å</a></span>
-                        <span id="but2" onmouseover="document.getElementById('audio2').play()"><a>Ä</a></span>
-                        <span id="but3" onmouseover="document.getElementById('audio3').play()"><a>Ö</a></span>
-                    </div>
-                </div>
-            </div>
-
-            <!--FANTASIES-->
-            <div class="section">Page 13 - Swedes fantisize about<br>
-
+        </div>
+        <br> <br> <br>
+        <!--SWEDISH SEX SOUNDS-->
+        <div class="section">Page 12 - Swedish sex sounds
+            <div id="sex-sounds">
                 <div class="headline">
-                    WHAT DO SWEDES FANTASIZE ABOUT?
+                    <a>HOW DO SWEDES SOUND IN BED?</a>
                 </div>
-                <div class="q5">
-                    <p>Q5: What's your favorite fantasy?</p></br>
-                    <button class="fantasy" id="submit">Submit</button>
-                    <div class="fantasy" id="fantasyImageCarousel">
-                        <ul>
-                            <li id="smFantasy" value="5"><img src="assets/img/fantasy/thinking_about_sm.svg"/></li>
-                            <li id="dressing-up" value="6"><img src="assets/img/fantasy/thinking_about_dressing_up.svg"/></li>
-                            <li id="group-sex" value="2"><img src="assets/img/fantasy/thinking_about_group_sex.svg"/></li>
-                            <li id="masturbating" value="1"><img src="assets/img/fantasy/thinking_about_masturbating.svg"/></li>
-                            <li id="roleplay" value="3"><img src="assets/img/fantasy/thinking_about_roleplay.svg"/></li>
-                            <li id="voyeur" value="7"><img src="assets/img/fantasy/thinking_about_watching.svg"/></li>
-                            <li id="colleague" value="4"><img src="assets/img/fantasy/thinking_about_colleague.svg"/></li>
-                            <li id="nothingFantasy" value="8"><img src="assets/img/fantasy/thinking_about_nothing.svg"/></li>
-                        </ul>
-                    </div>
-                    <div class="fantasy" id="fantasyPercentageCarousel">
-                        <ul>
-                            <li id="smFantasy">10%</li>
-                            <li id="dressing-up">11%</li>
-                            <li id="group-sex">13%</li>
-                            <li id="masturbating">14%</li>
-                            <li id="roleplay">16%</li>
-                            <li id="voyeur">17%</li>
-                            <li id="colleague">12%</li>
-                            <li id="nothingFantasy">12%</li>
-                        </ul>
-                    </div>
-                    <div class="fantasy" id="fantasyNameCarousel">
-                        <ul>
-                            <li id="smFantasy">S&M</li>
-                            <li id="dressing-up">Dressing Up</li>
-                            <li id="group-sex">Group Sex</li>
-                            <li id="masturbating">Masturbation</li>
-                            <li id="roleplay">Roleplay</li>
-                            <li id="voyeur">Voyeurism</li>
-                            <li id="colleague">Colleague</li>
-                            <li id="nothingFantasy">No Fantasies</li>
-                        </ul>
-                    </div>
-                    <button class="fantasy" id="no-answer" value="a9">No Answer</button>
+                <div id="buttons">
+                    <audio id="audio1" src="assets/audio/1.m4a"></audio>
+                    <audio id="audio2" src="assets/audio/2.m4a"></audio>
+                    <audio id="audio3" src="assets/audio/3.m4a"></audio>
+                    <span id="but1" onmouseover="document.getElementById('audio1').play()"><a>Å</a></span>
+                    <span id="but2" onmouseover="document.getElementById('audio2').play()"><a>Ä</a></span>
+                    <span id="but3" onmouseover="document.getElementById('audio3').play()"><a>Ö</a></span>
+                </div>
             </div>
-
+        </div>
+        <!--FANTASIES-->
+        <div class="section">Page 13 - Swedes fantisize about<br>
+            <div class="headline">
+                WHAT DO SWEDES FANTASIZE ABOUT?
             </div>
+            <div class="q5">
+                <p>Q5: What's your favorite fantasy?</p></br>
+                <button class="fantasy" id="no-answer" value="a9">No Answer</button>
+                <div class="fantasy" id="fantasyImageCarousel">
+                    <ul>
+                        <li id="smFantasy" value="5"><img src="assets/img/fantasy/thinking_about_sm.svg"/></li>
+                        <li id="dressing-up" value="6"><img src="assets/img/fantasy/thinking_about_dressing_up.svg"/></li>
+                        <li id="group-sex" value="2"><img src="assets/img/fantasy/thinking_about_group_sex.svg"/></li>
+                        <li id="masturbating" value="1"><img src="assets/img/fantasy/thinking_about_masturbating.svg"/></li>
+                        <li id="roleplay" value="3"><img src="assets/img/fantasy/thinking_about_roleplay.svg"/></li>
+                        <li id="voyeur" value="7"><img src="assets/img/fantasy/thinking_about_watching.svg"/></li>
+                        <li id="colleague" value="4"><img src="assets/img/fantasy/thinking_about_colleague.svg"/></li>
+                        <li id="nothingFantasy" value="8"><img src="assets/img/fantasy/thinking_about_nothing.svg"/></li>
+                    </ul>
+                </div>
+                <div class="fantasy" id="fantasyPercentageCarousel">
+                    <ul>
+                        <li id="smFantasy">10%</li>
+                        <li id="dressing-up">11%</li>
+                        <li id="group-sex">13%</li>
+                        <li id="masturbating">14%</li>
+                        <li id="roleplay">16%</li>
+                        <li id="voyeur">17%</li>
+                        <li id="colleague">12%</li>
+                        <li id="nothingFantasy">12%</li>
+                    </ul>
+                </div>
+                <div class="fantasy" id="fantasyNameCarousel">
+                    <ul>
+                        <li id="smFantasy">S&M</li>
+                        <li id="dressing-up">Dressing Up</li>
+                        <li id="group-sex">Group Sex</li>
+                        <li id="masturbating">Masturbation</li>
+                        <li id="roleplay">Roleplay</li>
+                        <li id="voyeur">Voyeurism</li>
+                        <li id="colleague">Colleague</li>
+                        <li id="nothingFantasy">No Fantasies</li>
+                    </ul>
+                </div>
 
-            <div class="section">Page 14 - Masturbation</div>
-
-
-            <div class="section">Page 15 - Want sex/Enough sex</div>
-            <div id="enough_sex">
-                38% think the don't have enough sex
-                <img src="assets/img/enough_sex/not_enough_sex.svg" height="400px">
-                1% think they have too much sex
-                <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
-                31% think they have enough sex
-                <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
-                10% are not sure
-                <img src="assets/img/enough_sex/not_sure.svg" height="400px">
+                <button class="fantasy" id="submit">Submit</button>
             </div>
-
-            <div class="section">Page 15.5 - How much sex are they having</div>
-
-
-            <div class="section">Page 16 - Are they satisfied</div>
-
-
-            <div class="section">Page 17 - Satisfaction correlation</div>
-
-
-            <div class="section">Page 17.5 - More sex = Happy swedes</div>
-
-            <div class="section">Page 18 - Closer look</div>
-
-            <div class="section">Page 18.5 - Equation</div>
-
-            <div class="section">Page 19 - Fucks needed</div>
-
-            <div class="section">Page 20 - Your city</div>
-
-
-            <div class="section">Page 21 - SLUT!</div>
-            <!--scripts-->
-            <script type="text/javascript" src="js/vendor/TweenMax.min.js"></script>
-            <script src="js/vendor/jquery-2.0.3.min.js"></script>
-            <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
-            <script src="js/vendor/jquery.superscrollorama.js"></script>
-            <script type="text/javascript" src="js/components/screw.js"></script>
-            <script src="js/vendor/jquery.masonry.min.js"></script>
-            <script type="text/javascript" src="js/components/moose.js"></script>
-            <script type="text/javascript" src="js/components/fantasy.js"></script>
-            <script type="text/javascript" src="js/components/positions.js"></script>
-            <script type="text/javascript" src="js/components/sexquiz.js"></script>
-            <script>
-            $(document).ready(function() {
-            var controller = $.superscrollorama();
-            // individual element tween examples
-            controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
-            controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
-            controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
-
-            controller.pin($('#lingonberry'), 3000, {
-            anim: (new TimelineLite())
-            .append(
-            TweenMax.to($('#lingonberry'), .5,
-            {css:{left: -2550}})
-            )
-            });
-            });
-            </script>
-        </body>
-    </html>
+        </div>
+        <div class="section">Page 14 - Masturbation</div>
+        <div class="section">Page 15 - Want sex/Enough sex</div>
+        <div id="enough_sex">
+            38% think the don't have enough sex
+            <img src="assets/img/enough_sex/not_enough_sex.svg" height="400px">
+            1% think they have too much sex
+            <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
+            31% think they have enough sex
+            <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
+            10% are not sure
+            <img src="assets/img/enough_sex/not_sure.svg" height="400px">
+        </div>
+        <div class="section">Page 15.5 - How much sex are they having</div>
+        <div class="section">Page 16 - Are they satisfied</div>
+        <div class="section">Page 17 - Satisfaction correlation</div>
+        <div class="section">Page 17.5 - More sex = Happy swedes</div>
+        <div class="section">Page 18 - Closer look</div>
+        <div class="section">Page 18.5 - Equation</div>
+        <div class="section">Page 19 - Fucks needed</div>
+        <div class="section">Page 20 - Your city</div>
+        <div class="section">Page 21 - SLUT!</div>
+        <!--scripts-->
+        <script type="text/javascript" src="js/vendor/TweenMax.min.js"></script>
+        <script src="js/vendor/jquery-2.0.3.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery.superscrollorama.js"></script>
+        <script type="text/javascript" src="js/components/screw.js"></script>
+        <script src="js/vendor/jquery.masonry.min.js"></script>
+        <script type="text/javascript" src="js/components/moose.js"></script>
+        <script type="text/javascript" src="js/components/fantasy.js"></script>
+        <script type="text/javascript" src="js/components/positions.js"></script>
+        <script type="text/javascript" src="js/components/sexquiz.js"></script>
+        <script>
+        $(document).ready(function() {
+        var controller = $.superscrollorama();
+        // individual element tween examples
+        controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
+        controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
+        controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
+        controller.pin($('#lingonberry'), 3000, {
+        anim: (new TimelineLite())
+        .append(
+        TweenMax.to($('#lingonberry'), .5,
+        {css:{left: -2800}})
+        )
+        });
+        });
+        </script>
+    </body>
+</html>

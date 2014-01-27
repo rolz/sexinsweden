@@ -22,19 +22,22 @@
                 <button class="prudeness" id="is-prude" value="a1">Yes</button>
                 <button class="prudeness" id="kinda-prude" value="a2">Kinda</button>
                 <button class="prudeness" id="not-prude" value="a3">Not</button>
+                <button class="prudeness" id="no-answer" value="a4">No Answer</button>
             </div>
             </br>
             <div class="q2">
                 <p>Q2: When did you lose your virginity?</p>
-                <button class="virginity" id="too-young" value="a1">Yes</button>
-                <button class="virginity" id="average" value="a2">Kinda</button>
-                <button class="virginity" id="too-late" value="a3">Not</button>
+                <button class="virginity" id="too-young" value="a1">Too Young</button>
+                <button class="virginity" id="average" value="a2">Average</button>
+                <button class="virginity" id="too-late" value="a3">Too Late</button>
+                <button class="virginity" id="no-answer" value="a4">No Answer</button>
             </div>
             </br>
             <div class="q3">
                 <p>Q3: Times you have sex per month?</p>
-                <select class="1-100"></select>
-                <button>Submit</button>
+                <select class="1-20"></select>
+                <button class="sex-per-month" id="no-answer" value="a5">No Answer</button>
+                <button class="sex-per-month" id="submit">Submit</button>
             </div>
             </br>
             <div class="q4">
@@ -45,12 +48,13 @@
                 <button class="position" id="sm" value="a4">S and M</button>
                 <button class="position" id="oral" value="a5">Oral</button>
                 <button class="position" id="anal" value="a6">Anal</button>
+                <button class="positioin" id="no-answer" value="a7">No Answer</button>
             </div>
             </br>
             <div class="q5">
                 <p>Q5: What's your favorite fantasy?</p></br>
-                <button id="fantasyButton">Submit</button>
-                <div id="fantasyImageCarousel">
+                <button class="fantasy" id="submit">Submit</button>
+                <div class="fantasy" id="fantasyImageCarousel">
                     <ul>
                         <li id="smFantasy" value="5"><img src="../assets/img/fantasy/thinking_about_sm.svg"/></li>
                         <li id="dressing-up" value="6"><img src="../assets/img/fantasy/thinking_about_dressing_up.svg"/></li>
@@ -62,7 +66,7 @@
                         <li id="nothingFantasy" value="8"><img src="../assets/img/fantasy/thinking_about_nothing.svg"/></li>
                     </ul>
                 </div>
-                <div id="fantasyPercentageCarousel">
+                <div class="fantasy" id="fantasyPercentageCarousel">
                     <ul>
                         <li id="smFantasy">10%</li>
                         <li id="dressing-up">11%</li>
@@ -74,7 +78,7 @@
                         <li id="nothingFantasy">12%</li>
                     </ul>
                 </div>
-                <div id="fantasyNameCarousel">
+                <div class="fantasy" id="fantasyNameCarousel">
                     <ul>
                         <li id="smFantasy">S&M</li>
                         <li id="dressing-up">Dressing Up</li>
@@ -86,14 +90,17 @@
                         <li id="nothingFantasy">No Fantasies</li>
                     </ul>
                 </div>
+                <button class="fantasy" id="no-answer" value="a9">No Answer</button>
         </div>
         </br>
+
             <p>Click for your final answer!</p>
             <button id="finalResponseButton">Submit</button>
 
 
 
         <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
         <script src="main.js"></script>
 
     </body>

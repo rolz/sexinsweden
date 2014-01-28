@@ -26,10 +26,15 @@ $(document).ready(function ($) {
     isFitWidth: true
   });
 
+  var $container = $('.gridCity').masonry({
+    columnWidth: 280,
+    itemSelector: '.postCard',
+    isFitWidth: true
+  });
 
   $('.item').click(function () {
 
-    var positionName=$(this).children()[3].innerText
+    var positionName=$(this).children()[3].innerText;
 
     $(this).toggleClass('expand');
     var className=$(this)[0].className
@@ -46,15 +51,39 @@ $(document).ready(function ($) {
 
   });
 
+  $('.postCard').click(function () {
+
+    var positionName=$(this).children()[3].innerText;
+
+    $(this).toggleClass('expand');
+    var className=$(this)[0].className
+    if(className=="postCard masonry-brick expand"){
+        var imageURL="assets/img/positions/"+positionName+"-info.svg"
+        $('.expand').css('background-image','url('+imageURL+')')
+
+    }
+
+    else{
+      $('.postCard').css('background-image','none')
+
+    }
+
+  });
+
+
+
+
+
+
   $('.q4 .blue-button').click(function () {
     event.stopPropagation()
       var favoriteSex = $(this).attr('name')
-      $( "div#favorite-position" ).html('You chose <p style="font-family:Century; display: inline; font-size:20px;">'+favoriteSex+ '</p> as your favorite type of sex') 
+      $( "div#favorite-position" ).html('You chose <p style="font-family:Century; display: inline; font-size:20px;">'+favoriteSex+ '</p> as your favorite type of sex')
   });
   $('.q5 .blue-button').click(function () {
     event.stopPropagation()
       var favoriteFantasy = $(this).attr('name')
-      $( "div#favorite-fantasy" ).html('You chose <p style="font-family:Century; display: inline ;font-size:20px;">'+favoriteFantasy+ '</p> as your favorite type of sex') 
+      $( "div#favorite-fantasy" ).html('You chose <p style="font-family:Century; display: inline ;font-size:20px;">'+favoriteFantasy+ '</p> as your favorite type of sex')
   });
 
 

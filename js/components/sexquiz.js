@@ -154,10 +154,10 @@ $( document ).ready(function() {
 
     //Submit Fantasy answer
 
-    $(".q5 #submit").click(function() {
-        var valueQ5 = $("#fantasyImageCarousel li").val();
+    $(".q5 button #fantasy").click(function() {
+        var valueQ5 = $( this ).val();
 
-        userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5["a"+valueQ5]};
+        userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5[valueQ5]};
 
         console.log(userResponse);
     });

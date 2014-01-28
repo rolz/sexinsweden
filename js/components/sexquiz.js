@@ -5,8 +5,8 @@ $( document ).ready(function() {
 
     var userResponse = {};
 
-    $( ".q0 button" ).click(function() {
-        var valueQ0 = $( this ).val();
+    $( ".q0 img" ).click(function() {
+        var valueQ0 = $( this ).attr("alt")
         console.log(valueQ0);
 
         if (valueQ0 == "m" || valueQ0 == "f") {

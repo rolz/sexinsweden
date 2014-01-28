@@ -28,9 +28,9 @@
         </div>
         <div id="gender">
             <div class="q0">
-                <button class="sex" id="male" value="m"><img src="assets/img/gender/male.svg"></button>
-                <button class="sex" id="female" value="f"><img src="assets/img/gender/female.svg"></button>
-                <button class="sex" id="other" value="o"><img src="assets/img/gender/other.svg"></button>
+                <img class="sex" id="male" src="assets/img/gender/male.svg" alt="m">
+                <img class="sex" id="male" src="assets/img/gender/female.svg" alt="f">
+                <img  class="sex" id="male" src="assets/img/gender/other.svg" alt="o">
             </div>
         </div>
     </div>
@@ -361,7 +361,7 @@
         <div class="headline" id="satisfied-fade-out"><p>HALF OF SWEDES ARE SATISFIED WITH THEIR SEX LIFE</p>
         </div>
         <div class="headline" id="satisfied-fade-in" style="top:-40px;"><p>HOW DO WE MAKE ALL OF THEM SATISFIED?</p>
-        </div> 
+        </div>
         <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg" height="400px">
         </div>
         <div class="centerImage" id="satisfied-fade-out"><img src="assets/img/satisfied/map-not-satisfied.svg" height="400px">
@@ -439,7 +439,7 @@
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
-        
+
         controller.pin($('#lingonberry'), 2000, {
             anim: (new TimelineLite())
             .append(

@@ -51,7 +51,8 @@ $(document).ready(function ($) {
 
   });
 
-  $('.postCard').click(function () {
+  //Switch to post card back
+  $('#postCard').click(function () {
 
     var positionName=$(this).children()[3].innerText;
 
@@ -69,10 +70,6 @@ $(document).ready(function ($) {
     }
 
   });
-
-
-
-
 
 
   $('.q4 .blue-button').click(function () {

@@ -237,7 +237,7 @@
 }
 
 #gender {
-  width: 600px;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -458,7 +458,7 @@ h3{
 
 
 /*ENOUGH SEX*/
-#enough-sex {
+.enough-sex {
   position:static;
   margin-top: 30px;
   left:0; right:0; bottom:0;top:0;
@@ -470,4 +470,8 @@ h3{
 .enough-sex-section {
   height:700px;
   width:6000px;
+}
+
+#enough-sex-1{
+  margin-bottom:1000px;
 }

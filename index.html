@@ -145,7 +145,7 @@
                                 <h3>39% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="MISSIONARY" class="add-to-cart">Click to learn more!</button>
+                                <button type="button" onclick="return false" value="MISSIONARY" class="add-to-cart" id="missionary">Click to learn more!</button>
                             </div>
                             <p class="position_title">
                                 MISSIONARY
@@ -188,7 +188,7 @@
                                 <h3>8% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="69" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" name="69" class="add-to-cart">Favorite</button>
                             </div>
                             <p class="position_title">
                                 69
@@ -203,7 +203,7 @@
                                 <h3>3% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="S&M" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" name="S&M" class="add-to-cart">Favorite</button>
                             </div>
                             <p class="position_title">
                                 S&M
@@ -218,7 +218,7 @@
                                 <h3>38% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="RODEO" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" name="RODEO" class="add-to-cart">Favorite</button>
                             </div>
                             <p class="position_title">
                                 RODEO
@@ -233,7 +233,7 @@
                                 <h3>38% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="DOGGYSTYLE" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" name="DOGGYSTYLE" class="add-to-cart">Favorite</button>
                             </div>
                             <p class="position_title">
                                 DOGGYSTYLE
@@ -248,7 +248,7 @@
                                 <h3>34% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="ORAL" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" name="ORAL" class="add-to-cart">Favorite</button>
                             </div>
                             <p class="position_title">
                                 ORAL
@@ -263,7 +263,7 @@
                                 <h3>5% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="ANAL" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" name="ANAL" class="add-to-cart">Favorite</button>
                             </div>
                             <p class="position_title">
                                 ANAL
@@ -356,23 +356,22 @@
 
     </div>
 
-    <div class="section"><div class="headline enough-sex-headline"><p>DO SWEDES HAVE ENOUGH SEX?</p> </div>
+    <div class="section"><div class="headline"><p>DO SWEDES HAVE ENOUGH SEX?</p> </div>
     <div class="enough-sex-section">
-        <div id="enough-sex" >
-            <img src="assets/img/enough_sex/not_enough_sex.svg" style="padding-left:450px;" height="400px">
-            <p class="bread-text" style="font-size:20px; padding-left:450px;">38% think the don't have enough sex</p>
+        <div class="enough-sex centerImage" id="enough-sex-1" >
+            <img src="assets/img/enough_sex/not_enough_sex.svg"height="400px">
+            <p class="bread-text" style="font-size:20px">38% think the don't have enough sex</p>
         </div>
-        <div id="enough-sex">
-
+        <div class="enough-sex" id="enough-sex-2">
             <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
             <p class="bread-text" style="font-size:20px;">1% think they have too much sex</p>
         </div>
-        <div id="enough-sex">
+        <div class="enough-sex" id="enough-sex-3">
 
             <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
             <p class="bread-text" style="font-size:20px;">31% think they have enough sex</p>
         </div>
-        <div id="enough-sex">
+        <div class="enough-sex" id="enough-sex-4">
 
             <img src="assets/img/enough_sex/not_sure.svg" height="400px">
             <p class="bread-text" style="font-size:20px;">10% are not sure</p>
@@ -439,7 +438,7 @@
                 TweenMax.to($('.enough-sex-section'), 0.1,
                     {css:{left: -3900}})
                 ),
-            offset: -100
+            offset:-100
 
         });
 

@@ -5,8 +5,8 @@ $( document ).ready(function() {
 
     var userResponse = {};
 
-    $( ".q0 button" ).click(function() {
-        var valueQ0 = $( this ).val();
+    $( ".q0 img" ).click(function() {
+        var valueQ0 = $( this ).attr("alt")
         console.log(valueQ0);
 
         if (valueQ0 == "m" || valueQ0 == "f") {
@@ -154,10 +154,10 @@ $( document ).ready(function() {
 
     //Submit Fantasy answer
 
-    $(".q5 #submit").click(function() {
-        var valueQ5 = $("#fantasyImageCarousel li").val();
+    $(".q5 button #fantasy").click(function() {
+        var valueQ5 = $( this ).val();
 
-        userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5["a"+valueQ5]};
+        userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5[valueQ5]};
 
         console.log(userResponse);
     });

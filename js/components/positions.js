@@ -36,7 +36,7 @@ $(document).ready(function ($) {
 
   $('.q4 .add-to-cart').click(function () {
     event.stopPropagation()
-      var favoriteSex = $(this).attr('value')
+      var favoriteSex = $(this).attr('name')
       $( "div.favorite-position" ).html('You chose <p style="font-family:Century; font-size:25px; display:inline">'+favoriteSex+ '</p> as your favorite type of sex')
   });
 

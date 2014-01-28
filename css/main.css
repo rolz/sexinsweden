@@ -45,6 +45,30 @@
 
 }
 
+#missionary {
+  width:400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#dictionary {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  /*border-style: */
+  width: 400px;
+  height: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+#dictionary p {
+  font-family: "Times New Roman";
+  font-size: 14pt;
+  font-style: italic;
+}
+
 .screwHolder {
   width: 500px;
   margin-left: auto;

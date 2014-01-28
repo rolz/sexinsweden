@@ -15,20 +15,27 @@ var center = canvasWidth/2;
 var lW = canvasWidth/50;
 var lineEnd = canvasWidth/4
 var radCirc = center - lW;   
+var start = 0;
 var degrees = 0;
 window.onload = screwYou();
-window.onload = screwThem();
+// window.onload = screwThem();
 c.onclick = clickScrew;
 r.onclick = resetScrew;
 var times = 0;
 var status = 1;
+var increment = 4;
+var speed = 2;
 var render = window.requestAnimationFrame(drawRevolution);
 // var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 
+function precise_round(num,decimals) {
+    return Math.round(num * Math.pow(10, decimals)) / Math.pow(10, decimals);
+}
+
 function screwYou() {
   resetYou();
-  drawRevolution();
+  drawRevolution(1);
 }
 
 function screwThem() {
@@ -62,12 +69,24 @@ function drawScrew(canvas) {
 function clickScrew() {
   window.cancelAnimationFrame(render);
   times += 1;
+  speed += 1;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
   drawRevolution();
+
 }
 
 function drawRevolution() {
-  degrees += 0.4;
+  if (degrees > 360) {
+    degrees = 0
+  } else {
+  var newspeed = (increment*speed)/10;
+  // console.log(newspeed);
+  newspeed = precise_round(newspeed, 1);
+  degrees += newspeed;
+  degrees = precise_round(degrees, 1);
+  // degrees = (degrees).toFixed(1);r
+  // console.log(degrees);
+};
   resetYou();
   drawScrew(ctx);
   requestAnimationFrame(drawRevolution);

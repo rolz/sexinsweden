@@ -18,14 +18,15 @@ var radCirc = center - lW;
 var start = 0;
 var degrees = 0;
 window.onload = screwYou();
-window.onload = screwThem();
+// window.onload = screwThem();
 c.onclick = clickScrew;
 r.onclick = resetScrew;
 var times = 0;
 var status = 1;
 var increment = 4;
-var speed = 2;
-var render = window.requestAnimationFrame(drawRevolution);
+var speed = 1;
+var rotSpeed = setInterval(function(){drawRevolution()},speed)
+// var render = window.requestAnimationFrame(drawRevolution);
 // var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 
@@ -35,7 +36,7 @@ function precise_round(num,decimals) {
 
 function screwYou() {
   resetYou();
-  drawRevolution();
+  rotSpeed;
 }
 
 function screwThem() {
@@ -67,12 +68,16 @@ function drawScrew(canvas) {
 }
 
 function clickScrew() {
+  window.clearInterval(rotSpeed);
   // window.cancelAnimationFrame(render);
   times += 1;
-  speed += 1;
+  speed = speed * 0.1;
+  console.log(speed);
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
-  drawRevolution();
-
+  rotSpeed = setInterval(function(){drawRevolution()},speed);
+  // drawRevolution();
+  // window.clearInterval(rotSpeed);
+  rotSpeed;
 }
 
 function drawRevolution() {
@@ -89,14 +94,14 @@ function drawRevolution() {
 };
   resetYou();
   drawScrew(ctx);
-  requestAnimationFrame(drawRevolution);
+  // requestAnimationFrame(drawRevolution);
 };
 
 function drawSweden() {
   degrees += 0.4;
   resetThem();
   drawScrew(etx);
-  requestAnimationFrame(drawSweden);
+  // requestAnimationFrame(drawSweden);
 };
 
 function drawLine(canvas, startX, startY, endX, endY) {
@@ -124,8 +129,13 @@ function resetThem() {
 }
 
 function resetScrew() {
-  // degrees = 0;
+  window.clearInterval(rotSpeed);
+  // window.cancelAnimationFrame(render);
   times = 0;
+  speed = 10;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
-  window.cancelAnimationFrame(drawRevolution);
+  rotSpeed = setInterval(function(){drawRevolution()},speed);
+  // drawRevolution();
+  // window.clearInterval(rotSpeed);
+  // rotSpeed;
 }

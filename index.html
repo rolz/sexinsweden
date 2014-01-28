@@ -134,8 +134,27 @@
     <div class="section">
         <div class="headline"><p>SWEDES LIKE MISSIONARY THE BEST</p>
         </div>
-        <div class="centerImage"><img src="assets/img/positions/bed.svg" width=400>
-        </div>
+
+            <div class="grid-container">
+                <div class="grid">
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/positions/bed.svg" width="400px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>39% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="MISSIONARY" class="add-to-cart">Click to learn more!</button>
+                            </div>
+                            <p class="position_title">
+                                MISSIONARY
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
         <div class="headline"><p>But as they say in sweden</p>
         </div>
         <div class="headline"><p>THE TASTE IS LIKE THE ASS</p>
@@ -332,21 +351,32 @@
         </div>
         <div class="centerImage"><img src="assets/img/masturbation/masturbation.svg" width="400px">
         </div>
-        <div class="headline"><p>Guy's who live with their parents masturbate the most</p>
+        <div class="headline"><p>Guys who live with their parents masturbate the most</p>
         </div>
 
     </div>
 
-    <div class="section"><p>Page 15 - Want sex/Enough sex</p>
-        <div id="enough_sex">
-            <p>38% think the don't have enough sex</p>
-            <img src="assets/img/enough_sex/not_enough_sex.svg" height="400px">
-            <p>1% think they have too much sex</p>
+    <div class="section"><div class="headline enough-sex-headline"><p>DO SWEDES HAVE ENOUGH SEX?</p> </div>
+    <div class="enough-sex-section">
+        <div id="enough-sex" >
+            <img src="assets/img/enough_sex/not_enough_sex.svg" style="padding-left:450px;" height="400px">
+            <p class="bread-text" style="font-size:20px; padding-left:450px;">38% think the don't have enough sex</p>
+        </div>
+        <div id="enough-sex">
+
             <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
-            <p>31% think they have enough sex</p>
+            <p class="bread-text" style="font-size:20px;">1% think they have too much sex</p>
+        </div>
+        <div id="enough-sex">
+
             <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
-            <p>10% are not sure</p>
+            <p class="bread-text" style="font-size:20px;">31% think they have enough sex</p>
+        </div>
+        <div id="enough-sex">
+
             <img src="assets/img/enough_sex/not_sure.svg" height="400px">
+            <p class="bread-text" style="font-size:20px;">10% are not sure</p>
+
         </div>
     </div>
 
@@ -395,13 +425,24 @@
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
-        controller.pin($('#lingonberry'), 3000, {
+        controller.pin($('#lingonberry'), 2000, {
             anim: (new TimelineLite())
             .append(
                 TweenMax.to($('#lingonberry'), .5,
                     {css:{left: -2800}})
                 )
         });
+
+        controller.pin($('.enough-sex-section'), 2000, {
+            anim: (new TimelineLite())
+            .append(
+                TweenMax.to($('.enough-sex-section'), 0.1,
+                    {css:{left: -3900}})
+                ),
+            offset: -100
+
+        });
+
     });
     </script>
 </body>

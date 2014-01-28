@@ -18,7 +18,7 @@ var radCirc = center - lW;
 var start = 0;
 var degrees = 0;
 window.onload = screwYou();
-// window.onload = screwThem();
+window.onload = screwThem();
 c.onclick = clickScrew;
 r.onclick = resetScrew;
 var times = 0;
@@ -35,7 +35,7 @@ function precise_round(num,decimals) {
 
 function screwYou() {
   resetYou();
-  drawRevolution(1);
+  drawRevolution();
 }
 
 function screwThem() {
@@ -67,7 +67,7 @@ function drawScrew(canvas) {
 }
 
 function clickScrew() {
-  window.cancelAnimationFrame(render);
+  // window.cancelAnimationFrame(render);
   times += 1;
   speed += 1;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
@@ -79,10 +79,10 @@ function drawRevolution() {
   if (degrees > 360) {
     degrees = 0
   } else {
-  var newspeed = (increment*speed)/10;
-  // console.log(newspeed);
-  newspeed = precise_round(newspeed, 1);
-  degrees += newspeed;
+  // var newspeed = (increment*speed)/10;
+  // // console.log(newspeed);
+  // newspeed = precise_round(newspeed, 1);
+  degrees += 0.4;
   degrees = precise_round(degrees, 1);
   // degrees = (degrees).toFixed(1);r
   // console.log(degrees);

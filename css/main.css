@@ -13,7 +13,7 @@
 .section {
 	margin: 50px 20px 20px 20px;
 	position: relative;
-	height:500px;
+	height:600px;
   font-family: 'Century';
 }
 
@@ -43,6 +43,30 @@
 
 #sex-sounds {
 
+}
+
+.centerImage {
+  width:400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#dictionary {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  /*border-style: */
+  width: 400px;
+  height: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+#dictionary p {
+  font-family: "Times New Roman";
+  font-size: 14pt;
+  font-style: italic;
 }
 
 .screwHolder {
@@ -129,6 +153,7 @@
 	position:relative;
 	font-family: "Century";
 	font-size: 40px;
+  display: block;
 }
 
 .headline1 {
@@ -233,6 +258,7 @@
 #moose_antlers{
     margin:0 0 0 -206px; /* let's guess second image was 200px wide */
 }
+
 form output{
 position: relative;
 left:41%;
@@ -262,11 +288,13 @@ label {
 input[type="range"] {
   width: 100%;
   height: 7px;
-  background: #fff;
-  overflow: hidden;
-  -webkit-appearance: none;
+  /*width: 500px;*/
+  /*background: #fff;*/
+  /*overflow: hidden;*/
+  /*-webkit-appearance: none;*/
 }
 
+/*
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   position: relative;
@@ -289,7 +317,7 @@ input[type="range"]::-webkit-slider-thumb:after {
   right: 15px;
   z-index: 1;
   background: #999999;
-}
+}*/
 
 output {
   position: absolute;

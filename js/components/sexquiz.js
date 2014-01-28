@@ -5,7 +5,7 @@ $( document ).ready(function() {
 
     var userResponse = {};
 
-    $( ".q0 img" ).click(function() {
+    $( ".q0 button" ).click(function() {
         var valueQ0 = $( this ).val();
         console.log(valueQ0);
 
@@ -81,7 +81,8 @@ $( document ).ready(function() {
     // With Answer
 
     $(".q3 #submit").click(function() {
-        var initValueQ3 = $(".q3 #screwText").text();
+        // find val of canvas maybe use document ready function
+        var initValueQ3 = $(".q3 #screwYouText").text();
         console.log(initValueQ3);
 
         if (initValueQ3 <= 2) {

@@ -14,8 +14,8 @@ $(document).ready(function ($) {
     isFitWidth: true
   });
 
-      
-  $('.item').click(function () { 
+
+  $('.item').click(function () {
 
     var positionName=$(this).children()[3].innerText
 
@@ -24,7 +24,7 @@ $(document).ready(function ($) {
     if(className=="item masonry-brick expand"){
         var imageURL="assets/img/positions/"+positionName+"-info.svg"
         $('.expand').css('background-image','url('+imageURL+')')
-    
+
     }
 
     else{
@@ -34,13 +34,13 @@ $(document).ready(function ($) {
 
   });
 
-  $('.add-to-cart').click(function () {
+  $('.q4 .add-to-cart').click(function () {
     event.stopPropagation()
       var favoriteSex = $(this).attr('value')
       $( "div.favorite-position" ).html('You chose <p style="font-family:Century; font-size:25px; display:inline">'+favoriteSex+ '</p> as your favorite type of sex')
   });
 
 
-  
+
 });
 }

@@ -506,3 +506,9 @@ h3{
 .help-hidden{
   visibility: hidden;
 }
+
+#new-home-town-button{
+  width:200px;
+  height:70px;
+  margin: 0 auto;
+}

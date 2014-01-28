@@ -357,13 +357,15 @@
 
     </div>
 
-    <div class="section">
-        <div class="headline"><p>HALF OF SWEDES ARE SATISFIED WITH THEIR SEX LIFE</p>
+    <div class="section" id="satisfied">
+        <div class="headline" id="satisfied-fade-out"><p>HALF OF SWEDES ARE SATISFIED WITH THEIR SEX LIFE</p>
+        </div>
+        <div class="headline" id="satisfied-fade-in" style="top:-40px;"><p>HOW DO WE MAKE ALL OF THEM SATISFIED?</p>
         </div> 
-    </div>
-
-    <div class="section"><p>Page 17 - Satisfaction correlation</p>
-    </div>
+        <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg" height="400px">
+        </div>
+        <div class="centerImage" id="satisfied-fade-out"><img src="assets/img/satisfied/map-not-satisfied.svg" height="400px">
+        </div>
 
 
     <div class="section"><div class="headline"><p>DO SWEDES HAVE ENOUGH SEX?</p> </div>
@@ -436,6 +438,7 @@
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
+        
         controller.pin($('#lingonberry'), 2000, {
             anim: (new TimelineLite())
             .append(
@@ -443,6 +446,8 @@
                     {css:{left: -2800}})
                 )
         });
+
+        controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}), 200);
 
         controller.pin($('.enough-sex-section'), 2000, {
             anim: (new TimelineLite())

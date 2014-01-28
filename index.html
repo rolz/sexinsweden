@@ -1,150 +1,165 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>SCREW SWEDEN</title>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css" type="text/css">
-        <link rel="stylesheet" href="css/main.css" media="screen"/>
-    </head>
-    <body>
-        <!--INTRO SCREEN-->
-        <div>
-            <img id="sweden" src="assets/drafts/sweden.png" width="100px">
-        </div>
-        <div class="section">
-            <div id ="intro-container">
-                <div id="jumbo-image">
-                    <img src="assets/drafts/screw_sweden.svg" width="683px">
-                </div>
+<head>
+    <title>SCREW SWEDEN</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" media="screen"/>
+</head>
+<body>
+    <!--INTRO SCREEN-->
+    <div>
+        <img id="sweden" src="assets/drafts/sweden.png" width="100px">
+    </div>
+    <div class="section">
+        <div id ="intro-container">
+            <div id="jumbo-image">
+                <img src="assets/drafts/screw_sweden.svg" width="683px">
             </div>
         </div>
-        <!--CHOOSE YOUR GENDER Q0-->
-        <div class="section">
-            <div class="headline">
-                <p>CHOOSE YOUR GENDER</p>
-            </div>
-            <div id="gender">
-                <div class="q0">
-                    <img class="sex" id="male" src="assets/img/gender/male.svg" alt="m">
-                    <img class="sex" id="male" src="assets/img/gender/female.svg" alt="f">
-                    <img  class="sex" id="male" src="assets/img/gender/other.svg" alt="o">
-                </div>
+    </div>
+
+    <!--CHOOSE YOUR GENDER Q0-->
+    <div class="section">
+        <div class="headline">
+            <p>CHOOSE YOUR GENDER</p>
+        </div>
+        <div id="gender">
+            <div class="q0">
+                <img class="sex" id="male" src="assets/img/gender/male.svg" alt="m">
+                <img class="sex" id="male" src="assets/img/gender/female.svg" alt="f">
+                <img  class="sex" id="male" src="assets/img/gender/other.svg" alt="o">
             </div>
         </div>
-        <!---HOW OLD ARE YOU-->
-        <div class="section">
-            <div class="headline">
-                <p>HOW OLD ARE YOU?</p><br>
-            </div>
-            <div id="moose_head">
-                <img src="assets/img/moose/moosehead0.svg" height="300px">
-                <div>
-                    <div id="moose_antlers">
-                        <img src="assets/img/moose/moosehead1.svg" height="300px">
-                        <div id="age">
-                        </div>
+    </div>
+
+    <!---HOW OLD ARE YOU-->
+    <div class="section">
+        <div class="headline">
+            <p>HOW OLD ARE YOU?</p><br>
+        </div>
+        <div id="moose_head">
+            <img src="assets/img/moose/moosehead0.svg" height="300px">
+            <div>
+                <div id="moose_antlers">
+                    <img src="assets/img/moose/moosehead1.svg" height="300px">
+                    <div id="age">
                     </div>
-                    <form>
-                        <output for="range" id="ageOutput"></output>
-                        <div>
-                            <input type="range" name="range" min="0" max="100" step="1" value="18" onmouseup="getAge()"/>
-                        </div>
-                    </form>
                 </div>
-            </div>
-        </div>
-        <!--HOW PRUDE ARE YOU Q1-->
-        <div class="section">
-            <div class="bread-text" id="average-amount-of-sexpartners">
-                The average Swede has slept with <p style="font-family:Century; font-size:100px; display:inline">13</p> partners. <br> <br>
-                Is that a lot? <br>
-                <div class="q1">
-                    <div id="average-amount-of-sexpartners-buttons" >
-                        <button type="button" onclick="return false" value="a1" class="blue-button">Bit much</button>
+                <form>
+                    <output for="range" id="ageOutput"></output>
+                    <div>
+                        <input type="range" name="range" min="0" max="100" step="1" value="18" onmouseup="getAge()"/>
                     </div>
-                    <div id="average-amount-of-sexpartners-buttons">
-                        <button type="button" onclick="return false" value="a2" class="blue-button">Just about right</button>
-                    </div>
-                    <div id="average-amount-of-sexpartners-buttons">
-                        <button type="button" onclick="return false" value="a3" class="blue-button">Way too few</button>
-                    </div>
-                    <button class="prudeness" id="no-answer" value="a4">No Answer</button>
-                </div>
+                </form>
             </div>
         </div>
-        <!--WHEN DID YOU LOSE YOUR VIRGINITY Q2-->
-        <div class="section">
-            <div class="headline">
-                <p>WHEN DID YOU POP YOUR LINGONBERRY? <img src="assets/img/virginity/lingonberries.svg" id="lingonberry-img" class="help" height="50px">
-                </p><br>
-            </div>
-            <div class="q2">
+    </div>
+
+    <!--HOW PRUDE ARE YOU Q1-->
+    <div class="section">
+        <div class="bread-text" id="average-amount-of-sexpartners">
+            The average Swede has slept with <p style="font-family:Century; font-size:100px; display:inline">13</p> partners. <br> <br>
+            Is that a lot? <br>
+            <div class="q1">
                 <div id="average-amount-of-sexpartners-buttons" >
-                    <button class="virginity blue-button" id="too-young" value="a1">Too Young</button>
+                    <button type="button" onclick="return false" value="a1" class="blue-button">Bit much</button>
                 </div>
-                <div id="average-amount-of-sexpartners-buttons" >
-                    <button class="virginity blue-button" id="average" value="a2">Average</button>
+                <div id="average-amount-of-sexpartners-buttons">
+                    <button type="button" onclick="return false" value="a2" class="blue-button">Just about right</button>
                 </div>
-                <div id="average-amount-of-sexpartners-buttons" >
-                    <button class="virginity blue-button" id="too-late" value="a3">Too Late</button>
+                <div id="average-amount-of-sexpartners-buttons">
+                    <button type="button" onclick="return false" value="a3" class="blue-button">Way too few</button>
                 </div>
-                <div id="average-amount-of-sexpartners-buttons" >
-                    <button class="virginity blue-button" id="no-answer" value="a4">No Answer</button>
-                </div>
-            </div>
-            <img id="lingonberry-img-help" class="help-hidden" src="assets/img/help/lingonberries.svg" style="z-index:1000; position:absolute" height="200px">
-        </div>
-        <!--WHEN SWEDES LOST THEIR VIRGINITY-->
-        <div class="section lingonberry-section">
-            <div class="headline">
-                <a>WHEN DO SWEDES LOSE THEIR VIRGINITY?</a><br>
-            </div>
-            <div id="lingonberry">
-                <img src="assets/img/jam/jam.svg" height="500px">
+                <button class="prudeness" id="no-answer" value="a4">No Answer</button>
             </div>
         </div>
-        <!--HOW OFTEN DO YOU HAVE SEX EACH MONTH Q3-->
-        <div class="section">
-            <div class="headline"><p>HOW MANY TIMES DO YOU HAVE SEX EACH MONTH?</p>
+    </div>
+
+    <!--WHEN DID YOU LOSE YOUR VIRGINITY Q2-->
+    <div class="section">
+        <div class="headline">
+            <p>WHEN DID YOU POP YOUR LINGONBERRY? <img src="assets/img/virginity/lingonberries.svg" id="lingonberry-img" class="help" height="50px">
+            </p><br>
+        </div>
+        <div class="q2">
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="too-young" value="a1">Too Young</button>
             </div>
-            <div class="q3">
-                <div class="screwHolder">
-                    <canvas id="screwYou" width=250 height=250></canvas>
-                    <div id="screwYouText" class="headline1"><center><h1>0</h1></center></div>
-                </div>
-                <div class="screwHolder grey-button"><button id="reset">reset</button>
-                </div>
-                <div class="screwHolder">
-                    <button class="sex-per-month grey-button" id="no-answer" value="a5">I don't want to answer</button>
-                </div>
-                <div class="screwHolder">
-                    <button class="sex-per-month blue-button" id="submit">Submit</button>
-                </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="average" value="a2">Average</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="too-late" value="a3">Too Late</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="no-answer" value="a4">No Answer</button>
             </div>
         </div>
-        <!--HOW OFTEN SEX EACH MONTH STATS-->
-        <div class="section">
-            <div class="headline"><p>SWEDES YOUR AGE HAVE SEX</p>
-            </div>
+
+        <img id="lingonberry-img-help" class="help-hidden" src="assets/img/help/lingonberries.svg" style="z-index:1000; position:absolute" height="200px">
+    </div>
+
+    <!--WHEN SWEDES LOST THEIR VIRGINITY-->
+    <div class="section lingonberry-section">
+        <div class="headline">
+            <a>WHEN DO SWEDES LOSE THEIR VIRGINITY?</a><br>
+        </div>
+        <div id="lingonberry">
+            <img src="assets/img/jam/jam.svg" height="500px">
+        </div>
+    </div>
+
+    <!--HOW OFTEN DO YOU HAVE SEX EACH MONTH Q3-->
+    <div class="section">
+        <div class="headline"><p>HOW MANY TIMES DO YOU HAVE SEX EACH MONTH?</p>
+        </div>
+        <div class="q3">
             <div class="screwHolder">
-                <canvas id="screwThem" width=250 height=250>
-                </canvas>
-                <div id="screwThemText" class="headline1"><center><h1>0</h1></center>
-                </div>
-                <div class="headline"><p>TIMES EVERY MONTH</p>
-                </div>
+                <canvas id="screwYou" width=250 height=250></canvas>
+                <div id="screwYouText" class="headline1"><center><h1>0</h1></center></div>
+            </div>
+            <div class="screwHolder grey-button"><button id="reset">reset</button>
+            </div>
+        <div class="screwHolder">
+            <button class="sex-per-month grey-button" id="no-answer" value="a5">I don't want to answer</button>
+        </div>
+
+        <div class="screwHolder">
+            <button class="sex-per-month blue-button" id="submit">Submit</button>
+        </div>
+
+        </div>
+    </div>
+
+    <!--HOW OFTEN SEX EACH MONTH STATS-->
+    <div class="section">
+        <div class="headline"><p>SWEDES YOUR AGE HAVE SEX</p>
+        </div>
+        <div class="screwHolder">
+            <canvas id="screwThem" width=250 height=250>
+            </canvas>
+            <div id="screwThemText" class="headline1"><center><h1>0</h1></center>
+            </div>
+            <div class="headline"><p>TIMES EVERY MONTH</p>
             </div>
         </div>
-        <!--TYPES OF SEX Q4-->
-        <!--SWEDES FAVORITE POSITION : MISSIONARY-->
-        <div class="section">
-            <div class="headline"><p>SWEDES LIKE MISSIONARY THE BEST</p>
-            </div>
-            <div class="grid-container">
-                <div class="gridMissionary">
-                    <a href="#" onclick="return false">
+    </div>
+
+    <!--TYPES OF SEX Q4-->
+    <!--SWEDES FAVORITE POSITION : MISSIONARY-->
+    <div class="section">
+        <div class="headline"><p>SWEDES LIKE MISSIONARY THE BEST</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="gridMissionary">
+                <a href="#" onclick="return false">
                     <div class="item">
                         <img src="assets/img/positions/bed.svg" width="400px">
                         <div class="price_tag">
@@ -155,36 +170,40 @@
                             <button type="button" onclick="return false" value="MISSIONARY" class="blue-button" id="missionary">Click to learn more!</button>
                         </div>
                         <p class="position_title">
-                        MISSIONARY
+                            MISSIONARY
                         </p>
                     </div>
                     </a>
                 </div>
             </div>
             <div class="headline"><p>But as they say in sweden</p>
-            </div>
+         </div>
+    </div>
+
+    <!--SMACKEN-->
+    <div class="section">
+        <div class="headline"><p>"SMAKEN ÄR SOM BAKEN"</p>
         </div>
-        <!--SMACKEN-->
-        <div class="section">
-            <div class="headline"><p>"SMAKEN ÄR SOM BAKEN"</p>
-            </div>
-            <div id="dictionary">
-                <p>Phonetics: <strong>[sma:ken ä:r såm: ba:ken]</strong></p>
-                <p>Definition:</p>
-                <p>English translation: <strong>The taste is like the ass</strong></p>
-            </div>
+        <div id="dictionary">
+            <p>Phonetics: <strong>[sma:ken ä:r såm: ba:ken]</strong></p>
+            <p>Definition:</p>
+            <p>English translation: <strong>The taste is like the ass</strong></p>
         </div>
-        <!--FAVORITE POSITIONS-->
-        <div class="section">
-            <div class="headline">
-                <p>HOW DO SWEDES LIKE SCREWING?</p>
-            </div>
-            <div class="favorite-choice" id="favorite-position">
-            </div>
-            <div class="q4">
-                <div class="grid-container">
-                    <div class="gridPositions">
-                        <a href="#" onclick="return false">
+    </div>
+
+    <!--FAVORITE POSITIONS-->
+    <div class="section">
+        <div class="headline">
+            <p>HOW DO SWEDES LIKE SCREWING?</p>
+        </div>
+        <div class="favorite-choice" id="favorite-position">
+        </div>
+
+
+        <div class="q4">
+            <div class="grid-container">
+                <div class="gridPositions">
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/69.svg" width="230px">
                             <div class="price_tag">
@@ -195,11 +214,11 @@
                                 <button type="button" onclick="return false" id="sixtynine" value="a3" name="69" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            69
+                                69
                             </p>
                         </div>
-                        </a>
-                        <a href="#" onclick="return false">
+                    </a>
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/sm.svg" width="230px">
                             <div class="price_tag">
@@ -210,11 +229,11 @@
                                 <button type="button" onclick="return false" id="sm" value="a4" name="S&M" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            S&M
+                                S&M
                             </p>
                         </div>
-                        </a>
-                        <a href="#" onclick="return false">
+                    </a>
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/rodeo.svg" width="230px">
                             <div class="price_tag">
@@ -225,11 +244,11 @@
                                 <button type="button" onclick="return false" id="rodeo" value="a1" name="RODEO" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            RODEO
+                                RODEO
                             </p>
                         </div>
-                        </a>
-                        <a href="#" onclick="return false">
+                    </a>
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/doggystyle.svg" width="230px">
                             <div class="price_tag">
@@ -240,11 +259,11 @@
                                 <button type="button" onclick="return false" id="doggystyle" value="a2" name="DOGGYSTYLE" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            DOGGYSTYLE
+                                DOGGYSTYLE
                             </p>
                         </div>
-                        </a>
-                        <a href="#" onclick="return false">
+                    </a>
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/spatula.svg" width="230px">
                             <div class="price_tag">
@@ -255,11 +274,11 @@
                                 <button type="button" onclick="return false" id="oral" value="a5" name="ORAL" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            ORAL
+                                ORAL
                             </p>
                         </div>
-                        </a>
-                        <a href="#" onclick="return false">
+                    </a>
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/brush.svg" width="230px">
                             <div class="price_tag">
@@ -270,47 +289,54 @@
                                 <button type="button" onclick="return false" id="anal" value="a6" name="ANAL" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            ANAL
+                                ANAL
                             </p>
                         </div>
-                        </a>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <button class="position grey-button" id="no-answer" value="a7">I don't want to answer</button>
+
         </div>
-        <br> <br> <br>
-        <!--SWEDISH SEX SOUNDS-->
-        <div class="section">
-            <div id="sex-sounds">
-                <div class="headline">
-                    <p>HOW DO SWEDES SOUND IN BED?</p>
-                </div>
-                <div id="buttons">
-                    <audio id="audio1" src="assets/audio/1.m4a"></audio>
-                    <audio id="audio2" src="assets/audio/2.m4a"></audio>
-                    <audio id="audio3" src="assets/audio/3.m4a"></audio>
-                    <span id="but1" onmouseover="document.getElementById('audio1').play()"><a>Å</a></span>
-                    <span id="but2" onmouseover="document.getElementById('audio2').play()"><a>Ä</a></span>
-                    <span id="but3" onmouseover="document.getElementById('audio3').play()"><a>Ö</a></span>
-                </div>
-            </div>
-        </div>
-        <!--FAVORITE FANTASIES-->
-        <div class="section">
+                <button class="position grey-button" id="no-answer" value="a7">I don't want to answer</button>
+
+    </div>
+    <br> <br> <br>
+    <!--SWEDISH SEX SOUNDS-->
+    <div class="section">
+        <div id="sex-sounds">
             <div class="headline">
-                <p>WHAT DO SWEDES FANTASIZE ABOUT?</p>
+                <p>HOW DO SWEDES SOUND IN BED?</p>
             </div>
-            <div class="favorite-choice" id="favorite-fantasy">
+            <div id="buttons">
+                <audio id="audio1" src="assets/audio/1.m4a"></audio>
+                <audio id="audio2" src="assets/audio/2.m4a"></audio>
+                <audio id="audio3" src="assets/audio/3.m4a"></audio>
+                <span id="but1" onmouseover="document.getElementById('audio1').play()"><a>Å</a></span>
+                <span id="but2" onmouseover="document.getElementById('audio2').play()"><a>Ä</a></span>
+                <span id="but3" onmouseover="document.getElementById('audio3').play()"><a>Ö</a></span>
             </div>
+        </div>
+    </div>
+
+
+    <!--FAVORITE FANTASIES-->
+    <div class="section">
+        <div class="headline">
+            <p>WHAT DO SWEDES FANTASIZE ABOUT?</p>
+        </div>
+                    <div class="favorite-choice" id="favorite-fantasy">
+                    </div>
+
+
             <div class="cart">
             </div>
-            <div class="q5">
-                <button class="fantasy grey-button" id="no-answer" value="a9">I don't want to answer</button>
-                <div class="grid-container-fantasy">
-                    <div class="gridFantasy">
-                        <!--S&M-->
-                        <a href="#" onclick="return false">
+
+        <div class="q5">
+            <button class="fantasy grey-button" id="no-answer" value="a9">I don't want to answer</button>
+            <div class="grid-container-fantasy">
+                <div class="gridFantasy">
+                    <!--S&M-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_sm.svg" width="200px">
                             <div class="price_tag">
@@ -321,12 +347,12 @@
                                 <button type="button" onclick="return false" id="sm" value="a5" name="S&M" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            S&M
+                                S&M
                             </p>
                         </div>
-                        </a>
-                        <!--Dressing Up-->
-                        <a href="#" onclick="return false">
+                    </a>
+                    <!--Dressing Up-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_dressing_up.svg" width="200px">
                             <div class="price_tag">
@@ -337,12 +363,12 @@
                                 <button type="button" onclick="return false" value="a6" name="DRESSING UP" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title" style="white-space: nowrap;">
-                            Dressing Up
+                                Dressing Up
                             </p>
                         </div>
-                        </a>
-                        <!--Group Sex-->
-                        <a href="#" onclick="return false">
+                    </a>
+                    <!--Group Sex-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_group_sex.svg" width="200px">
                             <div class="price_tag">
@@ -353,12 +379,12 @@
                                 <button type="button" onclick="return false" value="a2" name="GROUP SEX" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title" style="white-space: nowrap;">
-                            Group Sex
+                                Group Sex
                             </p>
                         </div>
-                        </a>
-                        <!--Masturbating-->
-                        <a href="#" onclick="return false">
+                    </a>
+                    <!--Masturbating-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_masturbating.svg" width="200px">
                             <div class="price_tag">
@@ -369,12 +395,12 @@
                                 <button type="button" onclick="return false" value="a1" name="MASTURBATING" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            Masturbating
+                                Masturbating
                             </p>
                         </div>
-                        </a>
-                        <!--Roleplay-->
-                        <a href="#" onclick="return false">
+                    </a>
+                    <!--Roleplay-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_roleplay.svg" width="200px">
                             <div class="price_tag">
@@ -385,12 +411,12 @@
                                 <button type="button" onclick="return false" value="a3" name="ROLEPLAY" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            Roleplay
+                                Roleplay
                             </p>
                         </div>
-                        </a>
-                        <!--Voyeurism-->
-                        <a href="#" onclick="return false">
+                    </a>
+                    <!--Voyeurism-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_watching.svg" width="200px">
                             <div class="price_tag">
@@ -401,12 +427,12 @@
                                 <button type="button" onclick="return false" value="a7" name="VOYEURISM" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            Voyeurism
+                                Voyeurism
                             </p>
                         </div>
-                        </a>
-                        <!--CoWorker-->
-                        <a href="#" onclick="return false">
+                    </a>
+                    <!--CoWorker-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_colleague.svg" width="200px">
                             <div class="price_tag">
@@ -417,12 +443,12 @@
                                 <button type="button" onclick="return false" value="a4" name="COLLEAGUE" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
-                            Colleague
+                                Colleague
                             </p>
                         </div>
-                        </a>
-                        <!--No Fantasy-->
-                        <a href="#" onclick="return false">
+                    </a>
+                    <!--No Fantasy-->
+                    <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/fantasy/thinking_about_nothing.svg" width="200px">
                             <div class="price_tag">
@@ -433,78 +459,98 @@
                                 <button type="button" onclick="return false" value="a8" name="NO FANTASY" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title" style="white-space: nowrap;">
-                            No Fantasy
+                                No Fantasy
                             </p>
                         </div>
-                        </a>
-                    </div>
+                    </a>
                 </div>
-                <br> <br> <br>
-                <!--Submit & No Answer-->
             </div>
+            <br> <br> <br>
+            <!--Submit & No Answer-->
         </div>
-        <br> <br> <br>
-        <!--MASTURBATION FACT-->
-        <div class="section">
-            <div class="headline"><p>SURPRISE SURPRISE</p>
-            </div>
-            <div class="centerImage"><img src="assets/img/masturbation/masturbation.svg" width="400px">
-            </div>
-            <div class="headline"><p>Guys who live with their parents masturbate the most</p>
-            </div>
+    </div>
+    <br> <br> <br>
+
+
+    <!--MASTURBATION FACT-->
+
+    <div class="section">
+        <div class="bread-text">
+            The average Swede masturbates <p style="font-family:Century; font-size:100px; display:inline">6</p> times per month.
+        <br><br><br>
+        The people who masturbate the most...
         </div>
-        <!--Satisfied-->
-        <div class="section" id="satisfied">
-            <div class="headline" id="satisfied-fade-out"><p>HALF OF SWEDES ARE SATISFIED WITH THEIR SEX LIFE</p>
-            </div>
-            <div class="headline" id="satisfied-fade-in" style="top:-40px;"><p>HOW DO WE MAKE ALL OF THEM SATISFIED?</p>
-            </div>
-            <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg" height="400px">
-            </div>
-            <div class="centerImage" id="satisfied-fade-out"><img src="assets/img/satisfied/map-not-satisfied.svg" height="400px">
-            </div>
+    </div>
+
+    <div class="section">
+        <div class="centerImage"><img src="assets/img/masturbation/masturbation.svg" width="400px">
         </div>
-        <!--Enough Sex-->
+        <div class="bread-text">... are guys who live with their parents. <br> They masturbate on average <p style="font-family:Century; font-size:100px; display:inline">16</p> times per month.
+        </div>
+        </div>
+
+    <br> <br> <br><br>
+    <div class="section" id="satisfied">
+        <div class="bread-text" id="satisfied-fade-out"><p>Half of Swedes are satisfied with their sex life.</p>
+        </div>
+        <div class="bread-text" id="satisfied-fade-in" style="top:-40px;"><p>How can we make all of them satisfied?</p>
+        </div>
+        <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg" height="400px">
+        </div>
+        <div class="centerImage" id="satisfied-fade-out"><img src="assets/img/satisfied/map-not-satisfied.svg" height="400px">
+        </div>
+
+
+<!--DO SWEDES HAVE ENOUGH SEX-->
         <div class="section"><div class="headline"><p>DO SWEDES HAVE ENOUGH SEX?</p>
         </div>
         <div class="enough-sex-section">
-            <div class="enough-sex centerImage" id="enough-sex-1" >
+            <div class="centerImage" id="enough-sex-1" >
                 <img src="assets/img/enough_sex/not_enough_sex.svg"height="400px">
                 <p class="bread-text" style="font-size:20px">38% think the don't have enough sex</p>
             </div>
-            <div class="enough-sex" id="enough-sex-2">
+            <div class="centerImage" id="enough-sex-2">
                 <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
                 <p class="bread-text" style="font-size:20px;">1% think they have too much sex</p>
             </div>
-            <div class="enough-sex" id="enough-sex-3">
+            <div class="centerImage" id="enough-sex-4">
+
+                <img src="assets/img/enough_sex/not_sure.svg" height="400px">
+                <p class="bread-text" style="font-size:20px;">10% are not sure</p>
+
+            </div>
+            <div class="centerImage" id="enough-sex-3">
+
                 <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
                 <p class="bread-text" style="font-size:20px;">31% think they have enough sex</p>
             </div>
-            <div class="enough-sex" id="enough-sex-4">
-                <img src="assets/img/enough_sex/not_sure.svg" height="400px">
-                <p class="bread-text" style="font-size:20px;">10% are not sure</p>
-            </div>
+
         </div>
-        <!--How much sex-->
+
         <div class="section"><p>Page 15.5 - How much sex are they having</p>
         </div>
+
         <div class="section"><p>Page 16 - Are they satisfied</p>
         </div>
+
         <div class="section"><p>Page 17 - Satisfaction correlation</p>
         </div>
+
         <div class="section"><p>Page 17.5 - More sex = Happy swedes</p>
         </div>
+
         <div class="section"><p>Page 18 - Closer look</p>
         </div>
+
         <div class="section"><p>Page 18.5 - Equation</p>
         </div>
-        <!--How many fuck need and Visit Sweden-->
+
         <div class="section"><p>Page 19 - Fucks needed</p>
             <button id="finalResponseButton">Visit Sweden</button>
         </div>
 
-
         <!--Get Your City-->
+
         <div class="section"><p>Page 20 - Your city</p>
             <div class="headline"><p>Your City!</p>
             </div>
@@ -528,8 +574,6 @@
                 </div>
             </div>
         </div>
-
-
 
         <!--SLUT-->
         <div class="section"><p>Page 21 - SLUT!</p>
@@ -564,40 +608,50 @@
         <!--SuperScrollorama-->
         <script>
         $(document).ready(function() {
-        var controller = $.superscrollorama();
+            var controller = $.superscrollorama();
+
         // individual element tween examples
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
+
         controller.pin($('#lingonberry'), 2000, {
-        anim: (new TimelineLite())
-        .append(
-        TweenMax.to($('#lingonberry'), .5,
-        {css:{left: -2800}})
-        )
+            anim: (new TimelineLite())
+            .append(
+                TweenMax.to($('#lingonberry'), .5,
+                    {css:{left: -2800}})
+                )
         });
-        //controller.pin($('#satisfied'), 700, {
-        //    onUnpin: function(){
-        //        $('#infografik').css('position', 'relative');
-        //    }
-        //}, -2000);
-        //    controller.addTween('#satisfied', TweenMax.from($('#satisfied'), .5,
-        //        {css:{opacity:0}},
-        //        {css:{left:100}})
-        //        ),
-        //            onUnpin: function(){
-        //            $('#infografik').css('position', 'fixed');
-        //        }
-        //);
-        controller.pin($('.enough-sex-section'), 2000, {
-        anim: (new TimelineLite())
-        .append(
-        TweenMax.to($('.enough-sex-section'), 0.1,
-        {css:{left: -3900}})
-        ),
-        offset:-100
-        });
-        });
-        </script>
-    </body>
+
+
+   //controller.pin($('#satisfied'), 700, {
+   //    onUnpin: function(){
+   //        $('#infografik').css('position', 'relative');
+
+
+   //    }
+   //}, -2000);
+
+//    controller.addTween('#satisfied', TweenMax.from($('#satisfied'), .5,
+//        {css:{opacity:0}},
+//        {css:{left:100}})
+//        ),
+//            onUnpin: function(){
+//            $('#infografik').css('position', 'fixed');
+//        }
+//);
+
+//controller.pin($('.enough-sex-section'), 2000, {
+//    anim: (new TimelineLite())
+//    .append(
+//        TweenMax.to($('.enough-sex-section'), 0.1,
+//            {css:{left: -3900}})
+//        ),
+//    offset:-100
+//
+//});
+
+});
+</script>
+</body>
 </html>

@@ -2,7 +2,19 @@ window.onload = function(){
 
 $(document).ready(function ($) {
 
-  var $container = $('.grid').masonry({
+  var $container = $('.gridMissionary').masonry({
+    columnWidth: 280,
+    itemSelector: '.item',
+    isFitWidth: true
+  });
+
+  var $container = $('.gridPositions').masonry({
+    columnWidth: 280,
+    itemSelector: '.item',
+    isFitWidth: true
+  });
+
+  var $container = $('.gridFantasy').masonry({
     columnWidth: 280,
     itemSelector: '.item',
     isFitWidth: true

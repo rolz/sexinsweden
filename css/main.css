@@ -314,6 +314,11 @@ output {
 
 }
 
+/*Missionary*/
+.gridMissionary {
+  margin: 0 auto;
+}
+
 /*POSITIONS*/
 .grid-container {
   margin: 0 auto;
@@ -324,7 +329,7 @@ output {
 }
 
 
-.gridPosition {
+.gridPositions {
   margin: 0 auto;
 }
 

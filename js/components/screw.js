@@ -23,9 +23,9 @@ c.onclick = clickScrew;
 r.onclick = resetScrew;
 var times = 0;
 var status = 1;
-var increment = 4;
-var speed = 1;
-var rotSpeed = setInterval(function(){drawRevolution()},speed)
+// var increment = 0.4;
+var speed = 0.4;
+var rotSpeed = setInterval(function(){drawRevolution()},1)
 // var render = window.requestAnimationFrame(drawRevolution);
 // var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
@@ -71,10 +71,9 @@ function clickScrew() {
   window.clearInterval(rotSpeed);
   // window.cancelAnimationFrame(render);
   times += 1;
-  speed = speed * 0.1;
-  console.log(speed);
+  speed = speed + 0.1;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
-  rotSpeed = setInterval(function(){drawRevolution()},speed);
+  rotSpeed = setInterval(function(){drawRevolution()},1);
   // drawRevolution();
   // window.clearInterval(rotSpeed);
   rotSpeed;
@@ -87,7 +86,7 @@ function drawRevolution() {
   // var newspeed = (increment*speed)/10;
   // // console.log(newspeed);
   // newspeed = precise_round(newspeed, 1);
-  degrees += 0.4;
+  degrees += speed;
   degrees = precise_round(degrees, 1);
   // degrees = (degrees).toFixed(1);r
   // console.log(degrees);
@@ -132,9 +131,9 @@ function resetScrew() {
   window.clearInterval(rotSpeed);
   // window.cancelAnimationFrame(render);
   times = 0;
-  speed = 10;
+  speed = 0.4;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
-  rotSpeed = setInterval(function(){drawRevolution()},speed);
+  rotSpeed = setInterval(function(){drawRevolution()},1);
   // drawRevolution();
   // window.clearInterval(rotSpeed);
   // rotSpeed;

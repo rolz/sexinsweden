@@ -623,46 +623,51 @@
 		L3045.226,778.507z"/>
 	<path fill="none" d="M3810.718,976.883c0,0,3.331,1.002,6.184,1.257"/>
 </g>
-<text transform="matrix(1 0 0 1 -5.0588 319.2979)"><tspan x="0" y="0" font-family="'TwCenMT-Regular'" font-size="7">12 years </tspan><tspan x="-4.218" y="8.4" font-family="'TwCenMT-Regular'" font-size="7">and younger</tspan></text>
-<text transform="matrix(1 0 0 1 50.8547 319.3491)" font-family="'Verdana'" font-size="7">13</text>
-<text transform="matrix(1 0 0 1 109.8298 319.1759)" font-family="'Verdana'" font-size="7">14</text>
-<text transform="matrix(1 0 0 1 193.984 319.2822)" font-family="'Verdana'" font-size="7">15</text>
-<text transform="matrix(1 0 0 1 293.0271 319.7096)" font-family="'Verdana'" font-size="7">16</text>
-<text transform="matrix(1 0 0 1 383.6447 319.6782)" font-family="'Verdana'" font-size="7">17</text>
-<text transform="matrix(1 0 0 1 465.1329 319.2919)" font-family="'Verdana'" font-size="7">18</text>
-<text transform="matrix(1 0 0 1 531.478 319.3253)" font-family="'Verdana'" font-size="7">19</text>
-<text transform="matrix(1 0 0 1 585.3076 319.5174)" font-family="'Verdana'" font-size="7">20</text>
-<text transform="matrix(1 0 0 1 627.5095 319.3977)" font-family="'Verdana'" font-size="7">21</text>
-<text transform="matrix(1 0 0 1 653.9271 319.1389)" font-family="'Verdana'" font-size="7">22</text>
-<text transform="matrix(1 0 0 1 687.7009 318.9448)" font-family="'Verdana'" font-size="7">23</text>
-<text transform="matrix(1 0 0 1 719.2762 319.2997)" font-family="'Verdana'" font-size="7">24</text>
-<text transform="matrix(1 0 0 1 749.9507 319.0742)" font-family="'Verdana'" font-size="7">25</text>
-<text transform="matrix(1 0 0 1 781.3095 319.0742)" font-family="'Verdana'" font-size="7">26</text>
-<text transform="matrix(1 0 0 1 813.4095 319.0742)" font-family="'Verdana'" font-size="7">27</text>
-<text transform="matrix(1 0 0 1 844.3076 319.1703)" font-family="'Verdana'" font-size="7">28</text>
-<text transform="matrix(1 0 0 1 877.9011 319.0348)" font-family="'Verdana'" font-size="7">29</text>
+<text transform="matrix(1 0 0 1 -5.052 319.2979)"><tspan x="0" y="0" font-family="'TwCenMT-Bold'" font-size="7">12 years </tspan><tspan x="-4.999" y="8.4" font-family="'TwCenMT-Bold'" font-size="7">and younger</tspan></text>
+<text transform="matrix(1 0 0 1 51.5896 319.3491)" font-family="'TwCenMT-Bold'" font-size="7">13</text>
+<text transform="matrix(1 0 0 1 110.5647 319.1759)" font-family="'TwCenMT-Bold'" font-size="7">14</text>
+<text transform="matrix(1 0 0 1 192.7189 319.2822)" font-family="'TwCenMT-Bold'" font-size="7">15</text>
+<text transform="matrix(1 0 0 1 290.7619 319.7096)" font-family="'TwCenMT-Bold'" font-size="7">16</text>
+<text transform="matrix(1 0 0 1 382.3795 319.6782)" font-family="'TwCenMT-Bold'" font-size="7">17</text>
+<text transform="matrix(1 0 0 1 464.8677 319.2919)" font-family="'TwCenMT-Bold'" font-size="7">18</text>
+<text transform="matrix(1 0 0 1 532.2129 319.3253)" font-family="'TwCenMT-Bold'" font-size="7">19</text>
+<text transform="matrix(1 0 0 1 586.0424 319.5174)" font-family="'TwCenMT-Bold'" font-size="7">20</text>
+<text transform="matrix(1 0 0 1 628.2443 319.3977)" font-family="'TwCenMT-Bold'" font-size="7">21</text>
+<text transform="matrix(1 0 0 1 654.662 319.1389)" font-family="'TwCenMT-Bold'" font-size="7">22</text>
+<text transform="matrix(1 0 0 1 688.4357 318.9448)" font-family="'TwCenMT-Bold'" font-size="7">23</text>
+<text transform="matrix(1 0 0 1 720.011 319.2997)" font-family="'TwCenMT-Bold'" font-size="7">24</text>
+<text transform="matrix(1 0 0 1 750.6855 319.0742)" font-family="'TwCenMT-Bold'" font-size="7">25</text>
+<text transform="matrix(1 0 0 1 782.0444 319.0742)" font-family="'TwCenMT-Bold'" font-size="7">26</text>
+<text transform="matrix(1 0 0 1 814.1443 319.0742)" font-family="'TwCenMT-Bold'" font-size="7">27</text>
+<text transform="matrix(1 0 0 1 845.0424 319.1703)" font-family="'TwCenMT-Bold'" font-size="7">28</text>
+<text transform="matrix(1 0 0 1 878.636 319.0348)" font-family="'TwCenMT-Bold'" font-size="7">29</text>
 <text transform="matrix(0.9994 0.0349 -0.0349 0.9994 922.1664 304.8285)" fill="#FFFFFF" font-family="'TwCenMT-Bold'" font-size="0.6641">LINGONSYLT</text>
 <text transform="matrix(0.9994 0.0349 -0.0349 0.9994 922.2258 305.1487)" fill="#FFFFFF" font-family="'Verdana'" font-size="0.2125">Swedish lingonberry preserves</text>
-<text transform="matrix(1 0 0 1 909.8611 319.0973)"><tspan x="0" y="0" font-family="'Verdana'" font-size="7">30 years</tspan><tspan x="-1.316" y="8.4" font-family="'Verdana'" font-size="7">and older</tspan></text>
-<text transform="matrix(1 0 0 1 957.0864 319.4086)"><tspan x="0" y="0" font-family="'Verdana'" font-size="7">haven’t had</tspan><tspan x="7.99" y="8.4" font-family="'Verdana'" font-size="7">sex yet</tspan></text>
-<text transform="matrix(1 0 0 1 0.9553 290.7345)" font-family="'Verdana'" font-size="7">2.1%</text>
-<text transform="matrix(1 0 0 1 47.2496 279.4117)" font-family="'Verdana'" font-size="7">3.7%</text>
-<text transform="matrix(1 0 0 1 106.8487 252.2289)" font-family="'Verdana'" font-size="7">7.8%</text>
-<text transform="matrix(1 0 0 1 187.2894 202.6297)" font-family="'Verdana'" font-size="7">15.3%</text>
-<text transform="matrix(1 0 0 1 281.4585 209.513)" font-family="'Verdana'" font-size="7">14.2%</text>
-<text transform="matrix(1 0 0 1 373.686 208.5421)" font-family="'Verdana'" font-size="7">14.4%</text>
-<text transform="matrix(1 0 0 1 457.1762 225.046)" font-family="'Verdana'" font-size="7">11.8%</text>
-<text transform="matrix(1 0 0 1 529.8856 257.0829)" font-family="'Verdana'" font-size="7">7%</text>
-<text transform="matrix(1 0 0 1 580.7527 267.7619)" font-family="'Verdana'" font-size="7">5.9%</text>
-<text transform="matrix(1 0 0 1 627.0527 285.5352)" font-family="'Verdana'" font-size="7">3%</text>
-<text transform="matrix(1 0 0 1 650.2777 295.0129)" font-family="'Verdana'" font-size="7">1.6%</text>
-<text transform="matrix(1 0 0 1 682.9007 295.6514)" font-family="'Verdana'" font-size="7">1.6%</text>
-<text transform="matrix(1 0 0 1 715.8005 295.6514)" font-family="'Verdana'" font-size="7">1.4%</text>
-<text transform="matrix(1 0 0 1 746.5927 298.6514)" font-family="'Verdana'" font-size="7">0.9%</text>
-<text transform="matrix(1 0 0 1 776.9387 301.7591)" font-family="'Verdana'" font-size="7">0.6%</text>
-<text transform="matrix(1 0 0 1 808.6463 302.6744)" font-family="'Verdana'" font-size="7">0.5%</text>
-<text transform="matrix(1 0 0 1 842.1616 302.6744)" font-family="'Verdana'" font-size="7">0.4%</text>
-<text transform="matrix(1 0 0 1 874.5842 303.4521)" font-family="'Verdana'" font-size="7">0.2%</text>
-<text transform="matrix(1 0 0 1 917.3994 296.4291)" font-family="'Verdana'" font-size="7">1.3%</text>
-<text transform="matrix(1 0 0 1 968.3994 277.7906)" font-family="'Verdana'" font-size="7">4.1%</text>
+<text transform="matrix(1 0 0 1 912.4998 319.0973)"><tspan x="0" y="0" font-family="'TwCenMT-Bold'" font-size="7">30 years</tspan><tspan x="-1.273" y="8.4" font-family="'TwCenMT-Bold'" font-size="7">and older</tspan></text>
+<text transform="matrix(1 0 0 1 960.4126 319.4086)"><tspan x="0" y="0" font-family="'TwCenMT-Bold'" font-size="7">haven’t had</tspan><tspan x="7.007" y="8.4" font-family="'TwCenMT-Bold'" font-size="7">sex yet</tspan></text>
+<text transform="matrix(1 0 0 1 6.9189 294.875)" font-family="'Verdana'" font-size="2">2.1%</text>
+<text transform="matrix(1 0 0 1 53.6879 284.1624)" font-family="'Verdana'" font-size="2">3.7%</text>
+<text transform="matrix(1 0 0 1 113.4049 257.4237)" font-family="'Verdana'" font-size="2">7.8%</text>
+<text transform="matrix(1 0 0 1 193.2559 208.0134)" font-family="'Verdana'" font-size="2">15.3%</text>
+<text transform="matrix(1 0 0 1 287.3687 213.9415)" font-family="'Verdana'" font-size="2">14.2%</text>
+<text transform="matrix(1 0 0 1 379.7375 213.768)" font-family="'Verdana'" font-size="2">14.4%</text>
+<text transform="matrix(1 0 0 1 303.6753 251.6377)" font-family="'Verdana'" font-size="4.6075">11.8%</text>
+<text transform="matrix(1 0 0 1 534.673 261.3555)" font-family="'Verdana'" font-size="2">7%</text>
+<text transform="matrix(1 0 0 1 587.0046 269.6287)" font-family="'Verdana'" font-size="2">5.9%</text>
+<text transform="matrix(1 0 0 1 629.3891 284.8582)" font-family="'Verdana'" font-size="2">3%</text>
+<text transform="matrix(1 0 0 1 655.8927 293.2028)" font-family="'Verdana'" font-size="2">1.6%</text>
+<text transform="matrix(1 0 0 1 452.251 298.1113)" font-family="'Verdana'" font-size="4.6075">1.6%</text>
+<text transform="matrix(1 0 0 1 473.9062 298.1113)" font-family="'Verdana'" font-size="4.6075">1.4%</text>
+<text transform="matrix(1 0 0 1 752.4028 301.4016)" font-family="'Verdana'" font-size="2">0.9%</text>
+<text transform="matrix(1 0 0 1 783.0871 303.5278)" font-family="'Verdana'" font-size="2">0.6%</text>
+<text transform="matrix(1 0 0 1 535.0186 302.7334)" font-family="'Verdana'" font-size="4.6075">0.5%</text>
+<text transform="matrix(1 0 0 1 846.5328 304.1178)" font-family="'Verdana'" font-size="2">0.4%</text>
+<text transform="matrix(1 0 0 1 578.4199 303.2461)" font-family="'Verdana'" font-size="4.6075">0.2%</text>
+<text transform="matrix(1 0 0 1 923.5099 298.623)" font-family="'Verdana'" font-size="2">1.3%</text>
+<text transform="matrix(1 0 0 1 974.7725 278.9043)" font-family="'Verdana'" font-size="2">4.1%</text>
+<text transform="matrix(1 0 0 1 464.9254 228.8915)" font-family="'Verdana'" font-size="2">11.8%</text>
+<text transform="matrix(1 0 0 1 689.8353 296.1527)" font-family="'Verdana'" font-size="2">1.6%</text>
+<text transform="matrix(1 0 0 1 720.9105 298.1902)" font-family="'Verdana'" font-size="2">1.4%</text>
+<text transform="matrix(1 0 0 1 815.2694 303.5653)" font-family="'Verdana'" font-size="2">0.5%</text>
+<text transform="matrix(1 0 0 1 879.8356 304.9949)" font-family="'Verdana'" font-size="2">0.2%</text>
 </svg>

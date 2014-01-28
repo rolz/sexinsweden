@@ -455,6 +455,8 @@ h3{
 
 }
 
+/*POSITIONS END*/
+
 /*SATISFIED*/
 #satisfied-fade-in{
   position: absolute;
@@ -483,4 +485,16 @@ h3{
 
 #enough-sex-1{
   margin-bottom:1000px;
+}
+
+/*HELP DUDES*/
+.help-visible{
+  position: absolute;
+  bottom: 50px;
+  right:10px;
+  visibility: visible;
+}
+
+.help-hidden{
+  visibility: hidden;
 }

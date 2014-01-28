@@ -79,14 +79,30 @@
     </div>
 
     <!--WHEN DID YOU LOSE YOUR VIRGINITY Q2-->
-    <div class="section">Page 5 - When did you pop your lingonberry<br>
-        <div class="q2">
-            <p>Q2: When did you lose your virginity?</p>
-            <button class="virginity" id="too-young" value="a1">Too Young</button>
-            <button class="virginity" id="average" value="a2">Average</button>
-            <button class="virginity" id="too-late" value="a3">Too Late</button>
-            <button class="virginity" id="no-answer" value="a4">No Answer</button>
+    <div class="section">        
+        <div class="headline">
+            <p>WHEN DID YOU POP YOUR LINGONBERRY? <img src="assets/img/virginity/lingonberries.svg" id="lingonberry-img" class="help" height="50px">
+</p><br>
         </div>
+        <div class="q2">
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity add-to-cart" id="too-young" value="a1">Too Young</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity add-to-cart" id="average" value="a2">Average</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity add-to-cart" id="too-late" value="a3">Too Late</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity add-to-cart" id="no-answer" value="a4">No Answer</button>
+            </div>
+        </div>
+
+    <img id="lingonberry-img-help" class="help-hidden" src="assets/img/help/lingonberries.svg" style="z-index:1000; position:absolute" height="200px">
     </div>
 
     <!--WHEN SWEDES LOST THEIR VIRGINITY-->
@@ -431,6 +447,7 @@
     <script type="text/javascript" src="js/components/moose.js"></script>
     <script type="text/javascript" src="js/components/fantasy.js"></script>
     <script type="text/javascript" src="js/components/positions.js"></script>
+    <script type="text/javascript" src="js/components/help.js"></script>
     <script type="text/javascript" src="js/components/sexquiz.js"></script>
     <script>
         $(document).ready(function() {
@@ -448,7 +465,23 @@
                 )
         });
 
-        controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}), 200);
+
+   //controller.pin($('#satisfied'), 700, {
+   //    onUnpin: function(){
+   //        $('#infografik').css('position', 'relative');
+
+
+   //    }
+   //}, -2000);
+
+//    controller.addTween('#satisfied', TweenMax.from($('#satisfied'), .5, 
+//        {css:{opacity:0}},
+//        {css:{left:100}})
+//        ),
+//            onUnpin: function(){
+//            $('#infografik').css('position', 'fixed');
+//        }
+//);
 
         controller.pin($('.enough-sex-section'), 2000, {
             anim: (new TimelineLite())

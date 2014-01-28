@@ -4,6 +4,7 @@ $( document ).ready(function() {
     /* User's Sex : Q0*/
 
     var userResponse = {};
+    var cityResponse;
 
     $( ".q0 img" ).click(function() {
         var valueQ0 = $( this ).attr("alt")
@@ -137,7 +138,7 @@ $( document ).ready(function() {
     $(".q5 button").click(function() {
         var valueQ5 = $( this ).val();
 
-        userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5[valueQ5]};
+        userResponse["q5"] = {"m": male[4].q5[valueQ5], "f": female[4].q5[valueQ5]};
 
         console.log(userResponse);
     });
@@ -211,19 +212,19 @@ $( document ).ready(function() {
             console.log(values[0].id);
 
             var citiesArray = [
-                {id:"a", cityName:"Åre", cityPop:"1417", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
-                {id:"b", cityName:"Leksand", cityPop:"5934", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
-                {id:"c", cityName:"Gävle", cityPop:"71 033", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
-                {id:"d", cityName:"Kiruna", cityPop:"18 148", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
-                {id:"e", cityName:"Visby", cityPop:"22 593", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
-                {id:"f", cityName:"Stockholm", cityPop:"871 592", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
-                {id:"g", cityName:"Malmö", cityPop:"303 873", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"},
-                {id:"h", cityName:"Göteborg", cityPop:"532 247", cityCopy:"Lorem ipsum larum, fill copy funny ha ha!"}
+                {id:"a", cityName:"Åre"},
+                {id:"b", cityName:"Leksand"},
+                {id:"c", cityName:"Gävle"},
+                {id:"d", cityName:"Kiruna"},
+                {id:"e", cityName:"Visby"},
+                {id:"f", cityName:"Stockholm"},
+                {id:"g", cityName:"Malmö"},
+                {id:"h", cityName:"Göteborg"}
             ];
 
             // If only one object then select city
             // Switch case and choose city.
-            var cityResponse;
+            // var cityResponse;
 
             if (values.length === 1) {
                 var cityId = values[0].id;
@@ -254,6 +255,7 @@ $( document ).ready(function() {
                         break;
                 }
                 console.log(cityResponse);
+                sendPostCard(cityResponse);
             }
             else {
                 console.log("More than 1 value");
@@ -297,76 +299,53 @@ $( document ).ready(function() {
                         break;
                 }
                 console.log(cityResponse);
+                sendPostCard(cityResponse);
             };
+
+            //Send PostCard
+            function sendPostCard(city) {
+                console.log(city);
+
+                switch(city) {
+                    case "Åre":
+                        $(".mapForCity img").attr('src','assets/img/cities/are_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/are_front.svg');
+                        break;
+                    case "Leksand":
+                        $(".mapForCity img").attr('src','assets/img/cities/leksand_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/leksand_front.svg');
+                        break;
+                    case "Gävle":
+                        $(".mapForCity img").attr('src','assets/img/cities/gavle_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/gavle_front.svg');
+                        break;
+                    case "Kiruna":
+                        $(".mapForCity img").attr('src','assets/img/cities/kiruna_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/kiruna_front.svg');
+                        break;
+                    case "Visby":
+                        $(".mapForCity img").attr('src','assets/img/cities/visby_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/visby_front.svg');
+                        break;
+                    case "Stockholm":
+                        $(".mapForCity img").attr('src','assets/img/cities/stockholm_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/stockholm_front.svg');
+                        break;
+                    case "Malmö":
+                        $(".mapForCity img").attr('src','assets/img/cities/malmo_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/malmo_front.svg');
+                        break;
+                    case "Göteborg":
+                        $(".mapForCity img").attr('src','assets/img/cities/gothenburg_map.svg');
+                        $(".postCard img").attr('src','assets/img/cities/gothenburg_front.svg');
+                        break;
+                }
+
+            };
+
+
         };
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Simone's Code
-
-    var fantasyImagesArray=[
-
-    {fileName:"thinking_about_sm.svg",percent:"10%", fantasyType:"S&M", fantasyValue:"5",fontSize:"150px"},
-    {fileName:"thinking_about_dressing_up.svg",percent:"11%", fantasyType:"dressing up", fantasyValue:"6",fontSize:"70px"},
-    {fileName:"thinking_about_group_sex.svg",percent:"13%", fantasyType:"group sex", fantasyValue:"2" ,fontSize:"140px"},
-    {fileName:"thinking_about_masturbating.svg",percent:"14%", fantasyType:"masturbation", fantasyValue:"1", fontSize:"80px"},
-    {fileName:"thinking_about_roleplay.svg",percent:"16%", fantasyType:"roleplay", fantasyValue:"3", fontSize:"130px"},
-    {fileName:"thinking_about_watching.svg",percent:"17%", fantasyType:"watching others have sex", fantasyValue:"7", fontSize:"80px"},
-    {fileName:"thinking_about_colleague.svg",percent:"12%", fantasyType:"colleagues", fantasyValue:"4", fontSize:"130px"},
-    {fileName:"thinking_about_nothing.svg",percent:"12%", fantasyType:"nothing", fantasyValue:"8",fontSize:"130px"}
-
-    ]
-
-    var counter=0;
-
-    $( "#right_arrow").click(function() {
-      counter+=1;
-    if(counter<fantasyImagesArray.length){
-        HTMLWrite(counter)
-
-      }
-      else{
-        counter=0;
-        HTMLWrite(counter)
-      }
-    });
-    $( "#left_arrow").click(function() {
-        counter-=1
-    if(counter!=-1){
-        HTMLWrite(counter)
-     }
-      else{
-        counter=fantasyImagesArray.length-1
-        HTMLWrite(counter)
-      }
-
-    });
-
-    function HTMLWrite(number){
-        $( "#fantasy_examples" ).html( "<img src='../assets/img/fantasy/"+fantasyImagesArray[number].fileName+"' height='300px'>" );
-        $( "#fantasy_percentage" ).html( fantasyImagesArray[number].percent );
-        $( "#fantasy_type" ).html( fantasyImagesArray[number].fantasyType );
-    //  $( "#fantasy_type" ).css( "font-size", function( index ) {
-    //  index=fantasyImagesArray[number].fontSize;
-    //  return index;
-    //
-    //});
-    };
-
 });
 
 

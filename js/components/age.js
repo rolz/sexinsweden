@@ -39,7 +39,6 @@ function getAge() {
     	speed1 = 0.1
     	f.innerHTML = "<center><h1>"+ageArray[8]+"</h1></center>";
     }
-    console.log(speed1);
     rotSpeed2 = setInterval(function(){drawSweden()},1);
 	// drawRevolution();
 	// window.clearInterval(rotSpeed);

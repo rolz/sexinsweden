@@ -49,7 +49,6 @@ function screwThem() {
 
 function drawScrew(canvas, rot) {
   var angle = rot * radian;
-  console.log(angle);
   // draw circle
   canvas.beginPath();
   canvas.strokeStyle = "black";
@@ -103,7 +102,7 @@ function drawRevolution() {
 
 function drawSweden() {
   
-  if (degrees > 360) {
+  if (degrees1 > 360) {
     degrees1 = 0
   } else {
   // var newspeed = (increment*speed)/10;

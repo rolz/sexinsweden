@@ -224,6 +224,11 @@
   width: 700px;
   margin-left: auto;
   margin-right: auto;
+  cursor:pointer;
+}
+
+#gender:active{
+  color:#000000;
 }
 
 #gender img {

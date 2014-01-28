@@ -11,11 +11,18 @@ $( document ).ready(function() {
 
         if (valueQ0 == "m" || valueQ0 == "f") {
             userResponse["sex"] = valueQ0;
+            for(var i=0;i<2;i++){
+                $("#male").css('opacity','0.5')
+            }
+            $(this).css('opacity','1')
+
+
         }
         else {
             var randomSex = ["m","f"];
             var random = Math.floor(Math.random()*randomSex.length);
             userResponse["sex"] = randomSex[random];
+
         }
 
         console.log(userResponse);

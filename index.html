@@ -28,9 +28,9 @@
         </div>
         <div id="gender">
             <div class="q0">
-                <button class="sex" id="male" value="m"><img src="assets/img/gender/male.svg"></button>
-                <button class="sex" id="female" value="f"><img src="assets/img/gender/female.svg"></button>
-                <button class="sex" id="other" value="o"><img src="assets/img/gender/other.svg"></button>
+                <img class="sex" id="male" src="assets/img/gender/male.svg" alt="m">
+                <img class="sex" id="male" src="assets/img/gender/female.svg" alt="f">
+                <img  class="sex" id="male" src="assets/img/gender/other.svg" alt="o">
             </div>
         </div>
     </div>
@@ -65,13 +65,13 @@
             Is that a lot? <br>
             <div class="q1">
                 <div id="average-amount-of-sexpartners-buttons" >
-                    <button type="button" onclick="return false" value="a1" class="add-to-cart">Bit much</button>
+                    <button type="button" onclick="return false" value="a1" class="blue-button">Bit much</button>
                 </div>
                 <div id="average-amount-of-sexpartners-buttons">
-                    <button type="button" onclick="return false" value="a2" class="add-to-cart">Just about right</button>
+                    <button type="button" onclick="return false" value="a2" class="blue-button">Just about right</button>
                 </div>
                 <div id="average-amount-of-sexpartners-buttons">
-                    <button type="button" onclick="return false" value="a3" class="add-to-cart">Way too few</button>
+                    <button type="button" onclick="return false" value="a3" class="blue-button">Way too few</button>
                 </div>
                 <button class="prudeness" id="no-answer" value="a4">No Answer</button>
             </div>
@@ -79,14 +79,30 @@
     </div>
 
     <!--WHEN DID YOU LOSE YOUR VIRGINITY Q2-->
-    <div class="section">Page 5 - When did you pop your lingonberry<br>
-        <div class="q2">
-            <p>Q2: When did you lose your virginity?</p>
-            <button class="virginity" id="too-young" value="a1">Too Young</button>
-            <button class="virginity" id="average" value="a2">Average</button>
-            <button class="virginity" id="too-late" value="a3">Too Late</button>
-            <button class="virginity" id="no-answer" value="a4">No Answer</button>
+    <div class="section">
+        <div class="headline">
+            <p>WHEN DID YOU POP YOUR LINGONBERRY? <img src="assets/img/virginity/lingonberries.svg" id="lingonberry-img" class="help" height="50px">
+</p><br>
         </div>
+        <div class="q2">
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="too-young" value="a1">Too Young</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="average" value="a2">Average</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="too-late" value="a3">Too Late</button>
+            </div>
+
+            <div id="average-amount-of-sexpartners-buttons" >
+                <button class="virginity blue-button" id="no-answer" value="a4">No Answer</button>
+            </div>
+        </div>
+
+    <img id="lingonberry-img-help" class="help-hidden" src="assets/img/help/lingonberries.svg" style="z-index:1000; position:absolute" height="200px">
     </div>
 
     <!--WHEN SWEDES LOST THEIR VIRGINITY-->
@@ -136,7 +152,7 @@
         </div>
 
             <div class="grid-container">
-                <div class="grid">
+                <div class="gridMissionary">
                     <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/bed.svg" width="400px">
@@ -145,7 +161,7 @@
                                 <h3>39% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" value="MISSIONARY" class="add-to-cart" id="missionary">Click to learn more!</button>
+                                <button type="button" onclick="return false" value="MISSIONARY" class="blue-button" id="missionary">Click to learn more!</button>
                             </div>
                             <p class="position_title">
                                 MISSIONARY
@@ -179,7 +195,7 @@
         </div>
         <div class="q4">
             <div class="grid-container">
-                <div class="grid">
+                <div class="gridPositions">
                     <a href="#" onclick="return false">
                         <div class="item">
                             <img src="assets/img/positions/69.svg" width="230px">
@@ -188,7 +204,7 @@
                                 <h3>8% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" id="sixtynine" value="a3" name="69" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" id="sixtynine" value="a3" name="69" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
                                 69
@@ -203,7 +219,7 @@
                                 <h3>3% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" id="sm" value="a4" name="S&M" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" id="sm" value="a4" name="S&M" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
                                 S&M
@@ -218,7 +234,7 @@
                                 <h3>38% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" id="rodeo" value="a1" name="RODEO" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" id="rodeo" value="a1" name="RODEO" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
                                 RODEO
@@ -233,7 +249,7 @@
                                 <h3>38% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" id="doggystyle" value="a2" name="DOGGYSTYLE" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" id="doggystyle" value="a2" name="DOGGYSTYLE" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
                                 DOGGYSTYLE
@@ -248,7 +264,7 @@
                                 <h3>34% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" id="oral" value="a5" name="ORAL" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" id="oral" value="a5" name="ORAL" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
                                 ORAL
@@ -263,7 +279,7 @@
                                 <h3>5% </h3>
                             </div>
                             <div class="add-to-cart-div">
-                                <button type="button" onclick="return false" id="anal" value="a6" name="ANAL" class="add-to-cart">Favorite</button>
+                                <button type="button" onclick="return false" id="anal" value="a6" name="ANAL" class="blue-button">Favorite</button>
                             </div>
                             <p class="position_title">
                                 ANAL
@@ -297,55 +313,160 @@
             </div>
         </div>
     </div>
-    <!--FANTASIES-->
+
+
+    <!--FAVORITE FANTASIES-->
     <div class="section">
         <div class="headline">
             <p>WHAT DO SWEDES FANTASIZE ABOUT?</p>
         </div>
         <div class="q5">
-            <p>Q5: What's your favorite fantasy?</p></br>
             <button class="fantasy" id="no-answer" value="a9">No Answer</button>
-            <div class="centerImage">
-                <div class="fantasy" id="fantasyImageCarousel">
-                    <ul>
-                        <li id="smFantasy" value="5"><img src="assets/img/fantasy/thinking_about_sm.svg"/></li>
-                        <li id="dressing-up" value="6"><img src="assets/img/fantasy/thinking_about_dressing_up.svg"/></li>
-                        <li id="group-sex" value="2"><img src="assets/img/fantasy/thinking_about_group_sex.svg"/></li>
-                        <li id="masturbating" value="1"><img src="assets/img/fantasy/thinking_about_masturbating.svg"/></li>
-                        <li id="roleplay" value="3"><img src="assets/img/fantasy/thinking_about_roleplay.svg"/></li>
-                        <li id="voyeur" value="7"><img src="assets/img/fantasy/thinking_about_watching.svg"/></li>
-                        <li id="colleague" value="4"><img src="assets/img/fantasy/thinking_about_colleague.svg"/></li>
-                        <li id="nothingFantasy" value="8"><img src="assets/img/fantasy/thinking_about_nothing.svg"/></li>
-                    </ul>
-                </div>
-                <div class="fantasy" id="fantasyPercentageCarousel">
-                    <ul>
-                        <li id="smFantasy">10%</li>
-                        <li id="dressing-up">11%</li>
-                        <li id="group-sex">13%</li>
-                        <li id="masturbating">14%</li>
-                        <li id="roleplay">16%</li>
-                        <li id="voyeur">17%</li>
-                        <li id="colleague">12%</li>
-                        <li id="nothingFantasy">12%</li>
-                    </ul>
-                </div>
-                <div class="fantasy" id="fantasyNameCarousel">
-                    <ul>
-                        <li id="smFantasy">S&M</li>
-                        <li id="dressing-up">Dressing Up</li>
-                        <li id="group-sex">Group Sex</li>
-                        <li id="masturbating">Masturbation</li>
-                        <li id="roleplay">Roleplay</li>
-                        <li id="voyeur">Voyeurism</li>
-                        <li id="colleague">Colleague</li>
-                        <li id="nothingFantasy">No Fantasies</li>
-                    </ul>
+            <div class="grid-container">
+                <div class="gridFantasy">
+                    <!--S&M-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_sm.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>8% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" id="sm" value="a5" name="S&M" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                S&M
+                            </p>
+                        </div>
+                    </a>
+                    <!--Dressing Up-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_dressing_up.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>3% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="a6" name="DRESSING UP" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                Dressing Up
+                            </p>
+                        </div>
+                    </a>
+                    <!--Group Sex-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_group_sex.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>38% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="a2" name="GROUP SEX" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                Group Sex
+                            </p>
+                        </div>
+                    </a>
+                    <!--Masturbating-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_masturbating.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>38% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="a1" name="MASTURBATING" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                Masturbating
+                            </p>
+                        </div>
+                    </a>
+                    <!--Roleplay-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_roleplay.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>34% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="a3" name="ROLEPLAY" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                Roleplay
+                            </p>
+                        </div>
+                    </a>
+                    <!--Voyeurism-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_watching.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>5% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="a7" name="VOYEURISM" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                Voyeurism
+                            </p>
+                        </div>
+                    </a>
+                    <!--CoWorker-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_colleague.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>5% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="a4" name="COLLEAGUE" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                Colleague
+                            </p>
+                        </div>
+                    </a>
+                    <!--No Fantasy-->
+                    <a href="#" onclick="return false">
+                        <div class="item">
+                            <img src="assets/img/fantasy/thinking_about_nothing.svg" width="230px">
+                            <div class="price_tag">
+                                <img src="assets/img/positions/pricetag.svg">
+                                <h3>5% </h3>
+                            </div>
+                            <div class="add-to-cart-div">
+                                <button type="button" onclick="return false" value="a8" name="NO FANTASY" class="blue-button">Favorite</button>
+                            </div>
+                            <p class="position_title">
+                                No Fantasy
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <button class="fantasy" id="submit">Submit</button>
+            <div class="favorite-position">
+            </div>
+            <div class="cart">
+                <img src="assets/img/positions/cart.svg" width="70px">
+            </div>
+            <br> <br> <br>
+            <!--Submit & No Answer-->
         </div>
     </div>
+    <br> <br> <br>
+
+
+    <!--MASTURBATION FACT-->
 
     <div class="section">
         <div class="headline"><p>SURPRISE SURPRISE</p>
@@ -357,13 +478,15 @@
 
     </div>
 
-    <div class="section">
-        <div class="headline"><p>HALF OF SWEDES ARE SATISFIED WITH THEIR SEX LIFE</p>
-        </div> 
-    </div>
-
-    <div class="section"><p>Page 17 - Satisfaction correlation</p>
-    </div>
+    <div class="section" id="satisfied">
+        <div class="headline" id="satisfied-fade-out"><p>HALF OF SWEDES ARE SATISFIED WITH THEIR SEX LIFE</p>
+        </div>
+        <div class="headline" id="satisfied-fade-in" style="top:-40px;"><p>HOW DO WE MAKE ALL OF THEM SATISFIED?</p>
+        </div>
+        <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg" height="400px">
+        </div>
+        <div class="centerImage" id="satisfied-fade-out"><img src="assets/img/satisfied/map-not-satisfied.svg" height="400px">
+        </div>
 
 
     <div class="section"><div class="headline"><p>DO SWEDES HAVE ENOUGH SEX?</p> </div>
@@ -429,6 +552,7 @@
     <script type="text/javascript" src="js/components/moose.js"></script>
     <script type="text/javascript" src="js/components/fantasy.js"></script>
     <script type="text/javascript" src="js/components/positions.js"></script>
+    <script type="text/javascript" src="js/components/help.js"></script>
     <script type="text/javascript" src="js/components/sexquiz.js"></script>
     <script>
         $(document).ready(function() {
@@ -437,6 +561,7 @@
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
+
         controller.pin($('#lingonberry'), 2000, {
             anim: (new TimelineLite())
             .append(
@@ -444,6 +569,24 @@
                     {css:{left: -2800}})
                 )
         });
+
+
+   //controller.pin($('#satisfied'), 700, {
+   //    onUnpin: function(){
+   //        $('#infografik').css('position', 'relative');
+
+
+   //    }
+   //}, -2000);
+
+//    controller.addTween('#satisfied', TweenMax.from($('#satisfied'), .5,
+//        {css:{opacity:0}},
+//        {css:{left:100}})
+//        ),
+//            onUnpin: function(){
+//            $('#infografik').css('position', 'fixed');
+//        }
+//);
 
         controller.pin($('.enough-sex-section'), 2000, {
             anim: (new TimelineLite())

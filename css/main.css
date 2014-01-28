@@ -499,6 +499,10 @@ h3{
 
 /*CITY POSTCARD*/
 
+.mapForCity {
+  float:left;
+}
+
 .gridCity {
   margin: 0 auto;
 }

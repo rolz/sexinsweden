@@ -308,27 +308,35 @@ $( document ).ready(function() {
 
                 switch(city) {
                     case "Åre":
+                        $(".mapForCity img").attr('src','assets/img/cities/are_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/are_front.svg');
                         break;
                     case "Leksand":
+                        $(".mapForCity img").attr('src','assets/img/cities/leksand_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/leksand_front.svg');
                         break;
                     case "Gävle":
+                        $(".mapForCity img").attr('src','assets/img/cities/gavle_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/gavle_front.svg');
                         break;
                     case "Kiruna":
+                        $(".mapForCity img").attr('src','assets/img/cities/kiruna_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/kiruna_front.svg');
                         break;
                     case "Visby":
+                        $(".mapForCity img").attr('src','assets/img/cities/visby_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/visby_front.svg');
                         break;
                     case "Stockholm":
+                        $(".mapForCity img").attr('src','assets/img/cities/stockholm_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/stockholm_front.svg');
                         break;
                     case "Malmö":
+                        $(".mapForCity img").attr('src','assets/img/cities/malmo_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/malmo_front.svg');
                         break;
                     case "Göteborg":
+                        $(".mapForCity img").attr('src','assets/img/cities/gothenburg_map.svg');
                         $(".postCard img").attr('src','assets/img/cities/gothenburg_front.svg');
                         break;
                 }

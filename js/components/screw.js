@@ -19,18 +19,13 @@ var start = 0;
 var degrees = 0;
 var degrees1 = 0;
 window.onload = screwYou();
-window.onload = screwThem();
 c.onclick = clickScrew;
 r.onclick = resetScrew;
 var times = 0;
-var status = 1;
-// var increment = 0.4;
 var speed = 0.4;
 var speed1 = 0.4;
 var rotSpeed = setInterval(function(){drawRevolution()},1)
 var rotSpeed2 = setInterval(function(){drawSweden()},1);
-// var render = window.requestAnimationFrame(drawRevolution);
-// var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 
 function precise_round(num,decimals) {
@@ -72,56 +67,33 @@ function drawScrew(canvas, rot) {
 
 function clickScrew() {
   window.clearInterval(rotSpeed);
-  // window.cancelAnimationFrame(render);
   times += 1;
   speed = speed + 0.1;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
   rotSpeed = setInterval(function(){drawRevolution()},1);
-  // drawRevolution();
-  // window.clearInterval(rotSpeed);
   rotSpeed;
 }
 
 function drawRevolution() {
   if (degrees > 360) {
-    degrees = 0
+    degrees = 0;
   } else {
-  // var newspeed = (increment*speed)/10;
-  // // console.log(newspeed);
-  // newspeed = precise_round(newspeed, 1);
   degrees += speed;
   degrees = precise_round(degrees, 1);
-  // console.log(degrees);
-  // degrees = (degrees).toFixed(1);r
-  // console.log(degrees);
-};
+  };
   resetYou();
   drawScrew(ctx, degrees);
-  // requestAnimationFrame(drawRevolution);
 };
 
 function drawSweden() {
-  
   if (degrees1 > 360) {
-    degrees1 = 0
+    degrees1 = 0;
   } else {
-  // var newspeed = (increment*speed)/10;
-  // // console.log(newspeed);
-  // newspeed = precise_round(newspeed, 1);
   degrees1 += speed1;
   degrees1 = precise_round(degrees1, 1);
-  // console.log(degrees1);
-  // degrees = (degrees).toFixed(1);r
-  // console.log(degrees);
 };
   resetThem();
   drawScrew(etx, degrees1);
-  // requestAnimationFrame(drawRevolution);
-
-  // degrees += 0.4;
-  // resetThem();
-  // drawScrew(etx);
-  // requestAnimationFrame(drawSweden);
 };
 
 function drawLine(canvas, startX, startY, endX, endY) {

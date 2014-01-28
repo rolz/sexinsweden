@@ -7,41 +7,39 @@ var ageArray = ["Stop screwing around, you're too young", 5.6, 5.28, 5.55, 4.13,
 // Who met their partner through a dating site	4.85
 
 function getAge() {
-    // console.log("age");
     window.clearInterval(rotSpeed2);
-	// window.cancelAnimationFrame(render);
     var age = document.getElementById('ageOutput').value
+    speed1 = 0.4;
     if (age < 17) {
-    	speed1 = 0;
+    	speed1 = 0; 
     	f.innerHTML = "<center><h1>"+ageArray[0]+"</h1></center>";
     } else if (age >=18 && age <=20) {
-    	speed1 = 0.5;
+    	speed1 = speed1 + 0.6;
     	f.innerHTML = "<center><h1>"+ageArray[1]+"</h1></center>";
     } else if (age >= 21 && age <=25) {
-    	speed1 = 0.4
+    	speed1 = speed1 + 0.5;
     	f.innerHTML = "<center><h1>"+ageArray[2]+"</h1></center>";
     } else if (age >= 26 && age <=30) {
-    	speed1 = 0.5
+    	speed1 = speed1 + 0.6;
     	f.innerHTML = "<center><h1>"+ageArray[3]+"</h1></center>";
     } else if (age >= 31 && age <=40) {
-    	speed1 = 0.3
+    	speed1 = speed1 + 0.4;
     	f.innerHTML = "<center><h1>"+ageArray[4]+"</h1></center>";
     } else if (age >= 41 && age <=50) {
-    	speed1 = 0.3
+    	speed1 = speed1 + 0.4;
     	f.innerHTML = "<center><h1>"+ageArray[5]+"</h1></center>";
     } else if (age >= 51 && age <=60) {
-    	speed1 = 0.3
+    	speed1 = speed1 + 0.4;
     	f.innerHTML = "<center><h1>"+ageArray[6]+"</h1></center>";
     } else if (age >= 61 && age <=69) {
-    	speed1 = 0.2
+    	speed1 = speed1 + 0.3;
     	f.innerHTML = "<center><h1>"+ageArray[7]+"</h1></center>";
     } else if (age >= 70 && age <=100) {
-    	speed1 = 0.1
+    	speed1 = speed1 + 0.2;
     	f.innerHTML = "<center><h1>"+ageArray[8]+"</h1></center>";
     }
     rotSpeed2 = setInterval(function(){drawSweden()},1);
-	// drawRevolution();
-	// window.clearInterval(rotSpeed);
+	console.log(speed1);
 	rotSpeed2;
 };
 

@@ -80,12 +80,21 @@ $(document).ready(function ($) {
       var favoriteSex = $(this).attr('name')
       $( "div#favorite-position" ).html('You chose <p style="font-family:Century; display: inline; font-size:20px;">'+favoriteSex+ '</p> as your favorite type of sex')
   });
+
+    $('.q4 .grey-button').click(function () {
+      $( "div#favorite-position" ).html('')
+  });
+
+
   $('.q5 .blue-button').click(function () {
     event.stopPropagation()
       var favoriteFantasy = $(this).attr('name')
       $( "div#favorite-fantasy" ).html('You chose <p style="font-family:Century; display: inline ;font-size:20px;">'+favoriteFantasy+ '</p> as your favorite type of sex')
   });
 
+  $('.q5 .grey-button').click(function () {
+      $( "div#favorite-fantasy" ).html('')
+  });
 
 
 

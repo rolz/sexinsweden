@@ -218,6 +218,16 @@
   font-size: 60px;
 }
 
+.fantasy-title {
+  font-family: "Century";
+  font-size: 15px;
+  position: relative;
+  color: #000000;
+  padding-left:10px;
+  width:10px;
+}
+
+
 /*GENDER*/
 
 #gender {

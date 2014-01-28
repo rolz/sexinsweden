@@ -153,6 +153,7 @@
 	position:relative;
 	font-family: "Century";
 	font-size: 40px;
+  display: block;
 }
 
 .headline1 {
@@ -257,6 +258,7 @@
 #moose_antlers{
     margin:0 0 0 -206px; /* let's guess second image was 200px wide */
 }
+
 form output{
 position: relative;
 left:41%;
@@ -291,6 +293,7 @@ input[type="range"] {
   /*overflow: hidden;*/
   /*-webkit-appearance: none;*/
 }
+
 /*
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;

@@ -129,32 +129,7 @@ $( document ).ready(function() {
 
     /* Question 5 Fantasy*/
 
-    // Set the interval to be 4 seconds for Fantasy Images
-    var t = setInterval(function(){
-        $("#fantasyImageCarousel ul").animate({marginLeft:-480},1000,function(){
-            $(this).find("li:last").after($(this).find("li:first"));
-            $(this).css({marginLeft:0});
-        })
-    },4000);
-
-    // Set the interval to 4 seconds for text
-    var u = setInterval(function(){
-        $("#fantasyPercentageCarousel ul").animate({marginLeft:-480},1000,function(){
-            $(this).find("li:last").after($(this).find("li:first"));
-            $(this).css({marginLeft:0});
-        })
-    },4000);
-
-    var v = setInterval(function(){
-        $("#fantasyNameCarousel ul").animate({marginLeft:-480},1000,function(){
-            $(this).find("li:last").after($(this).find("li:first"));
-            $(this).css({marginLeft:0});
-        })
-    },4000);
-
-    //Submit Fantasy answer
-
-    $(".q5 button #fantasy").click(function() {
+    $(".q5 button").click(function() {
         var valueQ5 = $( this ).val();
 
         userResponse["q5"] = {"m": male[4].q5["a"+valueQ5], "f": female[4].q5[valueQ5]};

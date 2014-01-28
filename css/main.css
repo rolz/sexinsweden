@@ -79,10 +79,10 @@
 #screwYou, #screwYouText, #screwThem, #screwThemText {
   width: 250px;
   float: left;
-  -moz-user-select: none; 
-  -khtml-user-select: none; 
-  -webkit-user-select: none; 
-  -o-user-select: none; 
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 #reset {
@@ -167,74 +167,7 @@
   font-size: 60px;
 }
 
-/*Fantasy*/
-
-/*Images*/
-
-#fantasyImageCarousel {
-        width: 400px;
-        overflow:hidden;
-    }
-
-#fantasyImageCarousel ul {
-    width: 4200px;
-    padding: 0;
-    margin: 0;
-}
-
-#fantasyImageCarousel ul li {
-    width:480px;
-    text-align: center;
-    height: 280px;
-    list-style: none;
-    float:  left;
-}
-
-#fantasyImageCarousel img {
-    height:300px;
-}
-
-/*Percentages*/
-
-#fantasyPercentageCarousel {
-        width: 400px;
-        overflow:hidden;
-    }
-
-#fantasyPercentageCarousel ul {
-    width: 4200px;
-    padding: 0;
-    margin: 0;
-}
-
-#fantasyPercentageCarousel ul li {
-    width:480px;
-    text-align: center;
-    height: 20px;
-    list-style: none;
-    float:  left;
-}
-
-/*Names*/
-
-#fantasyNameCarousel {
-        width: 400px;
-        overflow:hidden;
-    }
-
-#fantasyNameCarousel ul {
-    width: 4200px;
-    padding: 0;
-    margin: 0;
-}
-
-#fantasyNameCarousel ul li {
-    width:480px;
-    text-align: center;
-    height: 20px;
-    list-style: none;
-    float:  left;
-}
+/*GENDER*/
 
 #gender {
   width: 700px;
@@ -359,7 +292,7 @@ output {
 }
 
 
-.grid {
+.gridPosition {
   margin: 0 auto;
 }
 
@@ -456,6 +389,14 @@ h3{
 }
 
 /*POSITIONS END*/
+
+/*Fantasy*/
+
+.gridFantasy {
+  margin: 0 auto;
+}
+
+
 
 /*SATISFIED*/
 #satisfied-fade-in{

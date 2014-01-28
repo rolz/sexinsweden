@@ -66,6 +66,23 @@
     top:1px;
 }
 
+.grey-button {
+    background-color:white;
+    border:none;
+    cursor:pointer;
+    color:#000000;
+    position: absolute;
+    bottom: 0px;
+    right:5px;
+    font-family:Verdana;
+    font-size:12px;
+    text-decoration:none;
+}
+.grey-button:active {
+  color:#919191;
+}
+
+
 
 #sex-sounds {
 
@@ -178,7 +195,7 @@
 
 /*Fantasy*/
 .headline {
-	width:700px;
+	width:800px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -368,13 +385,14 @@ output {
 
 .cart{
 	position:absolute;
-	right:100px;
+	right:130px;
 }
 
 .favorite-position{
-	position:absolute;
-	right:200px;
-	bottom:-120px;
+  position: absolute;
+  right:70px;
+  top:180px;
+  width: 120px;
 	font-family:"Verdana";
 
 }
@@ -409,6 +427,26 @@ h3{
   margin: 0 auto;
 }
 
+.favorite-choice{
+  font-family:"Verdana";
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position:relative;
+  display: block;
+  margin-top: -30px;
+  z-index: 100;
+}
+
+
+.grid-container-fantasy {
+  margin: 0 auto;
+  max-width: 70em;
+  overflow: hidden;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
 
 
 /*SATISFIED*/

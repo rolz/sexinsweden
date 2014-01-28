@@ -126,8 +126,14 @@
             </div>
             <div class="screwHolder"><button id="reset">reset</button>
             </div>
-            <button class="sex-per-month" id="no-answer" value="a5">No Answer</button>
-            <button class="sex-per-month" id="submit">Submit</button>
+        <div class="screwHolder">
+            <button class="sex-per-month grey-button" id="no-answer" value="a5">I don't want to answer</button>
+        </div>
+            
+        <div class="screwHolder">
+            <button class="sex-per-month blue-button" id="submit">Submit</button>
+        </div>
+        
         </div>
     </div>
 
@@ -193,6 +199,10 @@
         <div class="headline">
             <p>HOW DO SWEDES LIKE SCREWING?</p>
         </div>
+        <div class="favorite-choice" id="favorite-position">
+        </div>
+
+
         <div class="q4">
             <div class="grid-container">
                 <div class="gridPositions">
@@ -288,13 +298,10 @@
                     </a>
                 </div>
             </div>
-            <div class="favorite-position">
-            </div>
-            <button class="positioin" id="no-answer" value="a7">No Answer</button>
-            <div class="cart">
-                <img src="assets/img/positions/cart.svg" width="70px">
-            </div>
+ 
         </div>
+                <button class="position grey-button" id="no-answer" value="a7">I don't want to answer</button>
+
     </div>
     <br> <br> <br>
     <!--SWEDISH SEX SOUNDS-->
@@ -320,14 +327,21 @@
         <div class="headline">
             <p>WHAT DO SWEDES FANTASIZE ABOUT?</p>
         </div>
+                    <div class="favorite-choice" id="favorite-fantasy">
+                    </div>
+
+
+            <div class="cart">
+            </div>
+
         <div class="q5">
-            <button class="fantasy" id="no-answer" value="a9">No Answer</button>
-            <div class="grid-container">
+            <button class="fantasy grey-button" id="no-answer" value="a9">I don't want to answer</button>
+            <div class="grid-container-fantasy">
                 <div class="gridFantasy">
                     <!--S&M-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_sm.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_sm.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>8% </h3>
@@ -343,7 +357,7 @@
                     <!--Dressing Up-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_dressing_up.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_dressing_up.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>3% </h3>
@@ -351,7 +365,7 @@
                             <div class="add-to-cart-div">
                                 <button type="button" onclick="return false" value="a6" name="DRESSING UP" class="blue-button">Favorite</button>
                             </div>
-                            <p class="position_title">
+                            <p class="position_title" style="white-space: nowrap;">
                                 Dressing Up
                             </p>
                         </div>
@@ -359,7 +373,7 @@
                     <!--Group Sex-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_group_sex.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_group_sex.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>38% </h3>
@@ -367,7 +381,7 @@
                             <div class="add-to-cart-div">
                                 <button type="button" onclick="return false" value="a2" name="GROUP SEX" class="blue-button">Favorite</button>
                             </div>
-                            <p class="position_title">
+                            <p class="position_title" style="white-space: nowrap;">
                                 Group Sex
                             </p>
                         </div>
@@ -375,7 +389,7 @@
                     <!--Masturbating-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_masturbating.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_masturbating.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>38% </h3>
@@ -391,7 +405,7 @@
                     <!--Roleplay-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_roleplay.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_roleplay.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>34% </h3>
@@ -407,7 +421,7 @@
                     <!--Voyeurism-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_watching.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_watching.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>5% </h3>
@@ -423,7 +437,7 @@
                     <!--CoWorker-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_colleague.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_colleague.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>5% </h3>
@@ -439,7 +453,7 @@
                     <!--No Fantasy-->
                     <a href="#" onclick="return false">
                         <div class="item">
-                            <img src="assets/img/fantasy/thinking_about_nothing.svg" width="230px">
+                            <img src="assets/img/fantasy/thinking_about_nothing.svg" width="200px">
                             <div class="price_tag">
                                 <img src="assets/img/positions/pricetag.svg">
                                 <h3>5% </h3>
@@ -447,17 +461,12 @@
                             <div class="add-to-cart-div">
                                 <button type="button" onclick="return false" value="a8" name="NO FANTASY" class="blue-button">Favorite</button>
                             </div>
-                            <p class="position_title">
+                            <p class="position_title" style="white-space: nowrap;">
                                 No Fantasy
                             </p>
                         </div>
                     </a>
                 </div>
-            </div>
-            <div class="favorite-position">
-            </div>
-            <div class="cart">
-                <img src="assets/img/positions/cart.svg" width="70px">
             </div>
             <br> <br> <br>
             <!--Submit & No Answer-->

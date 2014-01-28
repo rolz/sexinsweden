@@ -8,13 +8,11 @@ $( document ).ready(function() {
     $( ".q0 img" ).click(function() {
         var valueQ0 = $( this ).attr("alt")
         console.log(valueQ0);
+        $(".sex").css('opacity','0.2')
+        $(this).css('opacity','1')
 
         if (valueQ0 == "m" || valueQ0 == "f") {
             userResponse["sex"] = valueQ0;
-            for(var i=0;i<2;i++){
-                $("#male").css('opacity','0.5')
-            }
-            $(this).css('opacity','1')
 
 
         }

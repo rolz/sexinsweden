@@ -18,14 +18,15 @@ var radCirc = center - lW;
 var start = 0;
 var degrees = 0;
 window.onload = screwYou();
-window.onload = screwThem();
+// window.onload = screwThem();
 c.onclick = clickScrew;
 r.onclick = resetScrew;
 var times = 0;
 var status = 1;
-var increment = 4;
-var speed = 2;
-var render = window.requestAnimationFrame(drawRevolution);
+// var increment = 0.4;
+var speed = 0.4;
+var rotSpeed = setInterval(function(){drawRevolution()},1)
+// var render = window.requestAnimationFrame(drawRevolution);
 // var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 
 
@@ -35,7 +36,7 @@ function precise_round(num,decimals) {
 
 function screwYou() {
   resetYou();
-  drawRevolution();
+  rotSpeed;
 }
 
 function screwThem() {
@@ -67,12 +68,15 @@ function drawScrew(canvas) {
 }
 
 function clickScrew() {
+  window.clearInterval(rotSpeed);
   // window.cancelAnimationFrame(render);
   times += 1;
-  speed += 1;
+  speed = speed + 0.1;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
-  drawRevolution();
-
+  rotSpeed = setInterval(function(){drawRevolution()},1);
+  // drawRevolution();
+  // window.clearInterval(rotSpeed);
+  rotSpeed;
 }
 
 function drawRevolution() {
@@ -82,21 +86,21 @@ function drawRevolution() {
   // var newspeed = (increment*speed)/10;
   // // console.log(newspeed);
   // newspeed = precise_round(newspeed, 1);
-  degrees += 0.4;
+  degrees += speed;
   degrees = precise_round(degrees, 1);
   // degrees = (degrees).toFixed(1);r
   // console.log(degrees);
 };
   resetYou();
   drawScrew(ctx);
-  requestAnimationFrame(drawRevolution);
+  // requestAnimationFrame(drawRevolution);
 };
 
 function drawSweden() {
   degrees += 0.4;
   resetThem();
   drawScrew(etx);
-  requestAnimationFrame(drawSweden);
+  // requestAnimationFrame(drawSweden);
 };
 
 function drawLine(canvas, startX, startY, endX, endY) {
@@ -124,8 +128,13 @@ function resetThem() {
 }
 
 function resetScrew() {
-  // degrees = 0;
+  window.clearInterval(rotSpeed);
+  // window.cancelAnimationFrame(render);
   times = 0;
+  speed = 0.4;
   d.innerHTML = "<center><h1>"+times+"</h1></center>";
-  window.cancelAnimationFrame(drawRevolution);
+  rotSpeed = setInterval(function(){drawRevolution()},1);
+  // drawRevolution();
+  // window.clearInterval(rotSpeed);
+  // rotSpeed;
 }

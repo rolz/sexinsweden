@@ -478,19 +478,25 @@
     <!--MASTURBATION FACT-->
 
     <div class="section">
-        <div class="headline"><p>SURPRISE SURPRISE</p>
+        <div class="bread-text">
+            The average Swede masturbates <p style="font-family:Century; font-size:100px; display:inline">6</p> times per month.
+        <br><br><br>
+        The people who masturbate the most...
         </div>
-        <div class="centerImage"><img src="assets/img/masturbation/masturbation.svg" width="400px">
-        </div>
-        <div class="headline"><p>Guys who live with their parents masturbate the most</p>
-        </div>
-
     </div>
 
-    <div class="section" id="satisfied">
-        <div class="headline" id="satisfied-fade-out"><p>HALF OF SWEDES ARE SATISFIED WITH THEIR SEX LIFE</p>
+    <div class="section">
+        <div class="centerImage"><img src="assets/img/masturbation/masturbation.svg" width="400px">
         </div>
-        <div class="headline" id="satisfied-fade-in" style="top:-40px;"><p>HOW DO WE MAKE ALL OF THEM SATISFIED?</p>
+        <div class="bread-text">... are guys who live with their parents. <br> They masturbate on average <p style="font-family:Century; font-size:100px; display:inline">16</p> times per month.
+        </div>
+        </div>
+
+    <br> <br> <br><br> 
+    <div class="section" id="satisfied">
+        <div class="bread-text" id="satisfied-fade-out"><p>Half of Swedes are satisfied with their sex life.</p>
+        </div>
+        <div class="bread-text" id="satisfied-fade-in" style="top:-40px;"><p>How can we make all of them satisfied?</p>
         </div>
         <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg" height="400px">
         </div>
@@ -498,28 +504,30 @@
         </div>
 
 
+<!--DO SWEDES HAVE ENOUGH SEX-->
         <div class="section"><div class="headline"><p>DO SWEDES HAVE ENOUGH SEX?</p>
         </div>
         <div class="enough-sex-section">
-            <div class="enough-sex centerImage" id="enough-sex-1" >
+            <div class="centerImage" id="enough-sex-1" >
                 <img src="assets/img/enough_sex/not_enough_sex.svg"height="400px">
                 <p class="bread-text" style="font-size:20px">38% think the don't have enough sex</p>
             </div>
-            <div class="enough-sex" id="enough-sex-2">
+            <div class="centerImage" id="enough-sex-2">
                 <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
                 <p class="bread-text" style="font-size:20px;">1% think they have too much sex</p>
             </div>
-            <div class="enough-sex" id="enough-sex-3">
-
-                <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
-                <p class="bread-text" style="font-size:20px;">31% think they have enough sex</p>
-            </div>
-            <div class="enough-sex" id="enough-sex-4">
+            <div class="centerImage" id="enough-sex-4">
 
                 <img src="assets/img/enough_sex/not_sure.svg" height="400px">
                 <p class="bread-text" style="font-size:20px;">10% are not sure</p>
 
             </div>
+            <div class="centerImage" id="enough-sex-3">
+
+                <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
+                <p class="bread-text" style="font-size:20px;">31% think they have enough sex</p>
+            </div>
+
         </div>
 
         <div class="section"><p>Page 15.5 - How much sex are they having</p>
@@ -599,15 +607,15 @@
 //        }
 //);
 
-controller.pin($('.enough-sex-section'), 2000, {
-    anim: (new TimelineLite())
-    .append(
-        TweenMax.to($('.enough-sex-section'), 0.1,
-            {css:{left: -3900}})
-        ),
-    offset:-100
-
-});
+//controller.pin($('.enough-sex-section'), 2000, {
+//    anim: (new TimelineLite())
+//    .append(
+//        TweenMax.to($('.enough-sex-section'), 0.1,
+//            {css:{left: -3900}})
+//        ),
+//    offset:-100
+//
+//});
 
 });
 </script>

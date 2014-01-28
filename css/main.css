@@ -39,6 +39,8 @@
 .bread-text{
   font-family: "Verdana";
   font-size: 40px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .blue-button {
@@ -461,23 +463,24 @@ h3{
 
 
 /*ENOUGH SEX*/
-.enough-sex {
+
+/*.enough-sex {
   position:static;
   margin-top: 30px;
   left:0; right:0; bottom:0;top:0;
   float:left;
   padding-right: 900px;
 
-}
+}*/
 
-.enough-sex-section {
+/*.enough-sex-section {
   height:700px;
   width:6000px;
-}
+}*/
 
-#enough-sex-1{
+/*#enough-sex-1{
   margin-bottom:1000px;
-}
+}*/
 
 /*HELP DUDES*/
 .help-visible{

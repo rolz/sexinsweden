@@ -72,6 +72,8 @@ $(document).ready(function ($) {
   });
 
 
+
+
   $('.q4 .blue-button').click(function () {
     event.stopPropagation()
       var favoriteSex = $(this).attr('name')

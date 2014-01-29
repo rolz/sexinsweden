@@ -498,11 +498,17 @@ $(document).ready(function() {
     $("#finalResponseButton").click(function() {
         try {
             getFinalResponse();
+            $('.section #postCardSection').show();
+            $('.sendCity .headline').show();
+            $('.mapCardContainer').show();
         }
         catch(e) {
             console.log("error");
-            $('.mapCardContainer').hide();
-            $('.sendCity .headline').html("You are a Moron. You will never screw in Sweden.")
+            $('.section #postCardSection').show();
+            $('.sendCity .headlineError').show();
+            $('.sendCity .headline').hide();
+            $('.sendCity .mapCardContainer').hide();
+
         }
     });
 

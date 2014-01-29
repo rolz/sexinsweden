@@ -575,12 +575,30 @@ h3{
   margin-bottom:1000px;
 }*/
 
+
+/*******************************************/
 /*CITY POSTCARD*/
+
+/*.section #postCardSection {
+  display:none;
+}*/
 
 .sendCity {
 min-width: 1400px;
 
 }
+
+/*.sendCity .headline {
+  display:none;
+}*/
+
+.sendCity .headlineError {
+  display:none;
+}
+
+/*.mapCardContainer {
+  display:none;
+}*/
 
 .mapForCity {
   float:left;

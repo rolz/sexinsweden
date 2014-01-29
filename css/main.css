@@ -237,7 +237,7 @@
 }
 
 .hugeText {
-  font-family:Century; 
+  font-family:Century;
   font-size:100px;
 }
 .fantasy-title {
@@ -540,11 +540,6 @@ h3{
   margin: 0 auto;
 }
 
-
-
-
-
-
 /*HELP DUDES*/
 .help-visible{
   position: absolute;
@@ -562,4 +557,11 @@ h3{
   width:200px;
   height:70px;
   margin: 0 auto;
+}
+
+/*Stop Scrolling*/
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }

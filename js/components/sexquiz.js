@@ -9,8 +9,9 @@ $( document ).ready(function() {
     $( ".q0 img" ).click(function() {
         var valueQ0 = $( this ).attr("alt")
         console.log(valueQ0);
-        $(".sex").css('opacity','0.2')
-        $(this).css('opacity','1')
+        $(".sex").css('opacity','0.2');
+        $(this).css('opacity','1');
+        $('body').removeClass('stop-scrolling');
 
         if (valueQ0 == "m" || valueQ0 == "f") {
             userResponse["sex"] = valueQ0;

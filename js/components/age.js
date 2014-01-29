@@ -7,9 +7,9 @@ var arrayPosition;
 // Have usually over 8 years older partners	7.58
 // Who met their partner through a dating site	4.85
 
-function getAge() {
+function getAge(age) {
     window.clearInterval(rotSpeed2);
-    var age = document.getElementById('ageOutput').value
+    //var age = document.getElementById('ageOutput').value
     speed1 = 0.4;
     if (age < 17) {
     	speed1 = 0;
@@ -50,6 +50,9 @@ function getAge() {
 //drop down menu 
 $(document).ready(function() {
     $('select#group-choice').change(function() {
+        if(!age){
+            age=18;
+        }
     var value= $(this).context.value
     if(value=="Students"){
        f.innerHTML="5.05";

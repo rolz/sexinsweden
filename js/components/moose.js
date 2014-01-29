@@ -1,5 +1,5 @@
-var age=18;
 	$(document).ready(function() {
+	var age=18;
 	  $("[name=range]").on("change", function() {
 	    $("[for=range]").val(this.value);
 	  	age=this.value
@@ -18,4 +18,5 @@ var age=18;
 		}
 	}
 	  }).trigger("change");
+getAge(age);
 	});

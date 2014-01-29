@@ -1,23 +1,23 @@
 $(document).ready(function() {
     //Gender
-    $('#genderSection').waypoint(function(direction) {
+    // $('#genderSection').waypoint(function(direction) {
 
-        if (direction === 'down') {
-          $("body").css("overflow", "hidden");        }
-        else {
-          $("body").css("overflow", "scroll");         }
+    //     if (direction === 'down') {
+    //       $("body").css("overflow", "hidden");        }
+    //     else {
+    //       $("body").css("overflow", "scroll");         }
 
-    });
+    // });
 
     //Age
-    $('#ageSection').waypoint(function(direction) {
+    // $('#ageSection').waypoint(function(direction) {
 
-        if (direction === 'down') {
-          $("body").css("overflow", "hidden");        }
-        else {
-          $("body").css("overflow", "scroll");         }
+    //     if (direction === 'down') {
+    //       $("body").css("overflow", "hidden");        }
+    //     else {
+    //       $("body").css("overflow", "scroll");         }
 
-    });
+    // });
 
     // //Prudeness
     // $('#average-amount-of-sexpartners').waypoint(function(direction) {

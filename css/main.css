@@ -540,6 +540,19 @@ h3{
   margin: 0 auto;
 }
 
+.postCard{
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.postCard img {
+  width:800px;
+  height:520px;
+}
+
 /*HELP DUDES*/
 .help-visible{
   position: absolute;
@@ -559,9 +572,4 @@ h3{
   margin: 0 auto;
 }
 
-/*Stop Scrolling*/
 
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
-}

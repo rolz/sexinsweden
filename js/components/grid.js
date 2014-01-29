@@ -26,7 +26,8 @@ $(document).ready(function ($) {
     isFitWidth: true
   });
 
-  var $container = $('.gridCity').masonry({
+  //PostCard
+  var $container = $('.gridPostCard').masonry({
     columnWidth: 280,
     itemSelector: '.postCard',
     isFitWidth: true
@@ -38,42 +39,46 @@ $(document).ready(function ($) {
     $(this).toggleClass('expand');
     positionName= positionName.replace(/ /g,'');
 
-    var imageFolder=$(this).children()[3].className
+    var imageFolder=$(this).children()[3].className;
 
-    var className=$(this)[0].className
+    var className=$(this)[0].className;
 
     if(className=="item masonry-brick expand"){
-        var imageURL="assets/img/"+imageFolder+"/"+positionName+"-info.svg"
-        $('.expand').css('background-image','url('+imageURL+')')
+        var imageURL="assets/img/"+imageFolder+"/"+positionName+"-info.svg";
+        $('.expand').css('background-image','url('+imageURL+')');
 
     }
 
     else{
-      $('.item').css('background-image','none')
+      $('.item').css('background-image','none');
 
     }
 
   });
 
   //Switch to post card back
-  $('#postCard').click(function () {
+  $('.postCard').click(function () {
 
-    var positionName=$(this).children()[3].innerText;
+    var postCardCity=$('.postCard img').attr('alt');
+    console.log(postCardCity);
+
+    var className=$(this)[0].className;
+    console.log(className);
 
     $(this).toggleClass('expand');
-    if(className=="postCard masonry-brick expand"){
-        var imageURL="assets/img/positions/"+positionName+"-info.svg"
-        $('.expand').css('background-image','url('+imageURL+')')
+    if(className=="postCard masonry-brick"){
+        var imageURL="assets/img/cities/"+postCardCity+"_back.svg";
+        $('.expand').css('background-image','url('+imageURL+')');
+        console.log(imageURL);
 
     }
 
     else{
-      $('.postCard').css('background-image','none')
+      $('.postCard').css('background-image','none');
 
     }
 
   });
-
 
 
 

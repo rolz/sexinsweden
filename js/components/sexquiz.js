@@ -4,7 +4,7 @@ $(document).ready(function() {
     /* User's Sex : Q0*/
 
     var userResponse = {};
-    var cityResponse;
+    var firstNotAnswered = {};
 
     //Gender Question
 
@@ -23,10 +23,16 @@ $(document).ready(function() {
             var randomSex = ["m", "f"];
             var random = Math.floor(Math.random() * randomSex.length);
             userResponse["sex"] = randomSex[random];
-
         }
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#ageSection").offset().top
+        }, 1000);
     });
 
     // Possibe result 1=Man, 2=Female, 3=Other(random man or woman)
@@ -133,8 +139,6 @@ $(document).ready(function() {
 
     /* Prudeness */
 
-    // **** add male and female key pairs
-
     $(".q1 button").click(function() {
         var valueQ1 = $(this).val();
 
@@ -144,6 +148,13 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#lingonberry-q").offset().top
+        }, 1000);
     });
 
     /* Lose Virginity */
@@ -157,6 +168,13 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#lingonberry-f").offset().top
+        }, 1000);
     });
 
     /* Sex Per Month */
@@ -202,6 +220,13 @@ $(document).ready(function() {
         }
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#swScrew").offset().top
+        }, 1000);
     });
 
     // No Answer
@@ -215,6 +240,10 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+        $("body").css("overflow", "scroll");
+        $('html, body').animate(
+        {scrollTop: $("#swScrew").offset().top
+        }, 1000);
     });
 
 
@@ -230,7 +259,35 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#sexSounds").offset().top
+        }, 1000);
     });
+
+    // No Answer
+
+    $(".q4 #no-answer").click(function() {
+        var valueQ4 = $(this).val();
+
+        userResponse["q4"] = {
+            "m": male[3].q5[valueQ4],
+            "f": female[3].q5[valueQ4]
+        };
+
+        console.log(userResponse);
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#sexSounds").offset().top
+        }, 1000);
+    });
+
+
+
 
     /* Question 5 Fantasy*/
 
@@ -242,7 +299,12 @@ $(document).ready(function() {
             "f": female[4].q5[valueQ5]
         };
 
-        console.log(userResponse);
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#mast").offset().top
+        }, 1000);
     });
 
     // No Answer
@@ -256,6 +318,11 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#mast").offset().top
+        }, 1000);
     });
 
 
@@ -265,54 +332,47 @@ $(document).ready(function() {
 
     function getFinalResponse() {
 
-        if (userResponse["sex"] == "m" || userResponse["sex"] == "f") {
+        answerQ1 = userResponse.q1[userResponse.sex];
+        answerQ2 = userResponse.q2[userResponse.sex];
+        answerQ3 = userResponse.q3[userResponse.sex];
+        answerQ4 = userResponse.q4[userResponse.sex];
+        answerQ5 = userResponse.q5[userResponse.sex];
 
-            answerQ1 = userResponse.q1[userResponse.sex];
-            answerQ2 = userResponse.q2[userResponse.sex];
-            answerQ3 = userResponse.q3[userResponse.sex];
-            answerQ4 = userResponse.q4[userResponse.sex];
-            answerQ5 = userResponse.q5[userResponse.sex];
+        //View all answers
 
-            //View all answers
+        var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
+        console.log(userAnswersArray);
 
-            var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
-            console.log(userAnswersArray);
+        //Count answers
 
-            //Count answers
+        var finalUserAnswersArray = _.chain(userAnswersArray).countBy().pairs().object().value();
+        console.log(finalUserAnswersArray);
 
-            var finalUserAnswersArray = _.chain(userAnswersArray).countBy().pairs().object().value();
-            console.log(finalUserAnswersArray);
+        // Sort into objects with Key Pairs
 
-            // Sort into objects with Key Pairs
+        var finalUserAnswersObject = _.map(finalUserAnswersArray, function(value, key) {
+            return {
+                id: key,
+                count: value
+            };
+        });
 
-            var finalUserAnswersObject = _.map(finalUserAnswersArray, function(value, key) {
-                return {
-                    id: key,
-                    count: value
-                };
-            });
+        console.log(finalUserAnswersObject);
 
-            console.log(finalUserAnswersObject);
-
-            function multiplemax(arr, compare) {
-                var groups = _.groupBy(arr, compare);
-                var keys = _.keys(groups);
-                var max = _.max(keys);
-                return groups[max];
-            }
-
-            var valueResponses = multiplemax(finalUserAnswersObject, "count");
-            console.log(valueResponses);
-            console.log(valueResponses.length);
-
-
-            // Call getCity Function
-            getCity(valueResponses);
-
+        function multiplemax(arr, compare) {
+            var groups = _.groupBy(arr, compare);
+            var keys = _.keys(groups);
+            var max = _.max(keys);
+            return groups[max];
         }
-        else {
-            console.log("Looks like you have not chosen your sex.");
-        };
+
+        var valueResponses = multiplemax(finalUserAnswersObject, "count");
+        console.log(valueResponses);
+        console.log(valueResponses.length);
+
+
+        // Call getCity Function
+        getCity(valueResponses);
     };
 
     // Get City
@@ -498,15 +558,77 @@ $(document).ready(function() {
     $("#finalResponseButton").click(function() {
         try {
             getFinalResponse();
+            $('#postCardSection').show();
+            $('.sendCity .headline').show();
+            $('.sendCity .mapCardContainer').show();
+            $('.sendCity .headlineError').hide();
+            $('#goToUnansweredQuestions').hide();
         }
         catch(e) {
             console.log("error");
-            $('.mapCardContainer').hide();
-            $('.sendCity .headline').html("You are a Moron. You will never screw in Sweden.")
+
+            //Get User Answers
+            var userData = userResponse;
+            //Turn them into an array
+            var userDataArray = Object.keys(userData); // ['alpha', 'beta']
+            console.log(userDataArray);
+
+            var fullAnswerArray = ["sex","q1","q2","q3","q4","q5"];
+
+            //Find questions user did not answer
+            var notAnswered = _.difference(fullAnswerArray, userDataArray);
+            console.log(notAnswered);
+
+            //Find position in quiz where the first question they did not answer is located
+            var firstNotAnswered = notAnswered[0];
+            console.log(firstNotAnswered);
+            //Pass firstNotAnswered to goToNotAnswered Function
+            goToNotAnswered(firstNotAnswered);
+
+            $('#postCardSection').show();
+            $('.sendCity .headlineError').show();
+            $('#goToUnansweredQuestions').show();
+            $('.sendCity .headline').hide();
+            $('.sendCity .mapCardContainer').hide();
         }
     });
 
 
-
-
+    function goToNotAnswered(x) {
+        var goTo = x;
+        $('#goToUnansweredQuestions').click(function(){
+            switch (goTo) {
+                case "sex":
+                    $('html, body').animate(
+                    {scrollTop: $("#genderSection").offset().top
+                    }, 2000);
+                    break;
+                case "q1":
+                    $('html, body').animate(
+                    {scrollTop: $("#average-amount-of-sexpartners").offset().top
+                    }, 2000);
+                    break;
+                case "q2":
+                    $('html, body').animate(
+                    {scrollTop: $("#lingonberry-q").offset().top
+                    }, 2000);
+                    break;
+                case "q3":
+                    $('html, body').animate(
+                    {scrollTop: $("#sex-per-month-q").offset().top
+                    }, 2000);
+                    break;
+                case "q4":
+                    $('html, body').animate(
+                    {scrollTop: $("#positions-q").offset().top
+                    }, 2000);
+                    break;
+                case "q5":
+                    $('html, body').animate(
+                    {scrollTop: $("#fantasies-q").offset().top
+                    }, 2000);
+                    break;
+            }
+        });
+    };
 });

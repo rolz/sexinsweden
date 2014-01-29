@@ -9,6 +9,9 @@
 }
 
 /*Common Elements*/
+body {
+  overflow-x: hidden;
+}
 
 .section {
 	margin: 50px 20px 20px 20px;
@@ -24,6 +27,9 @@
   font-family: 'Century';
 }
 
+#lingonberry-f{
+  margin-bottom:50px;
+}
 
 /*Landing Page*/
 
@@ -82,8 +88,8 @@
     cursor:pointer;
     color:#000000;
     position: absolute;
-    bottom: 5px;
-    right:5px;
+    bottom: 250px;
+    right:20px;
     font-family:Verdana;
     font-size:12px;
     text-decoration:none;
@@ -120,8 +126,8 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 
 }
 
@@ -571,14 +577,66 @@ h3{
   width:6000px;
 }*/
 
-/*#enough-sex-1{
-  margin-bottom:1000px;
-}*/
+#enough-sex-1{
+  width:400px;
+  height: 400px;
+}
 
+#enough-sex-5{
+  float:left;
+  width:400px;
+  height: 400px;
+}
+
+#enough-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/*******************************************/
 /*CITY POSTCARD*/
+
+#postCardSection {
+ /* display:none;*/
+}
 
 .sendCity {
 min-width: 1400px;
+
+}
+
+.sendCity .headline {
+
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /*position:relative;*/
+  font-family: "Century";
+  font-size: 40px;
+  display: block;
+
+}
+
+.sendCity .headlineError {
+
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /*position:relative;*/
+  font-family: "Century";
+  font-size: 40px;
+  display: block;
+  display:none;
+}
+
+#goToUnansweredQuestions {
+  display:none;
+}
+
+.mapCardContainer {
 
 }
 
@@ -626,24 +684,5 @@ min-width: 1400px;
   margin: 0 auto;
 }
 
-/*DROP DOWN MENU*/
-.dropdown p {
-  display: inline-block;
-  font-weight: bold;
-}
 
-.dropdown select {
-      border: 0 !important;  /*Removes border*/
-      -webkit-appearance: none;  /*Removes default chrome and safari style*/
-      -moz-appearance: none; /* Removes Default Firefox style*/
-      width: auto; /*Width of select dropdown to give space for arrow image*/
-      text-indent: 0.01px; /* Removes default arrow from firefox*/
-      text-overflow: "";  /*Removes default arrow from firefox*/
-      padding-left: 30px;
-      cursor: pointer;
-}
 
-select option {
-  text-align: right;
-  padding-left: 20px;
-}

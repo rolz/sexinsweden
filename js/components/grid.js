@@ -35,11 +35,15 @@ $(document).ready(function ($) {
   $('.item').click(function () {
 
     var positionName=$(this).children()[3].innerText;
-
     $(this).toggleClass('expand');
+    positionName= positionName.replace(/ /g,'');
+
+    var imageFolder=$(this).children()[3].className
+
     var className=$(this)[0].className
+
     if(className=="item masonry-brick expand"){
-        var imageURL="assets/img/positions/"+positionName+"-info.svg"
+        var imageURL="assets/img/"+imageFolder+"/"+positionName+"-info.svg"
         $('.expand').css('background-image','url('+imageURL+')')
 
     }
@@ -57,7 +61,6 @@ $(document).ready(function ($) {
     var positionName=$(this).children()[3].innerText;
 
     $(this).toggleClass('expand');
-    var className=$(this)[0].className
     if(className=="postCard masonry-brick expand"){
         var imageURL="assets/img/positions/"+positionName+"-info.svg"
         $('.expand').css('background-image','url('+imageURL+')')

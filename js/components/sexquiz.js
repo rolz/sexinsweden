@@ -263,237 +263,238 @@ $(document).ready(function() {
 
     // get results according to sex at this point in app
 
-    // Try for Error Handling
-    try{
-        $("#finalResponseButton").click(function() {
+    function getFinalResponse() {
 
-            if (userResponse["sex"] == "m" || userResponse["sex"] == "f") {
+        if (userResponse["sex"] == "m" || userResponse["sex"] == "f") {
 
-                answerQ1 = userResponse.q1[userResponse.sex];
-                answerQ2 = userResponse.q2[userResponse.sex];
-                answerQ3 = userResponse.q3[userResponse.sex];
-                answerQ4 = userResponse.q4[userResponse.sex];
-                answerQ5 = userResponse.q5[userResponse.sex];
+            answerQ1 = userResponse.q1[userResponse.sex];
+            answerQ2 = userResponse.q2[userResponse.sex];
+            answerQ3 = userResponse.q3[userResponse.sex];
+            answerQ4 = userResponse.q4[userResponse.sex];
+            answerQ5 = userResponse.q5[userResponse.sex];
 
-                //View all answers
+            //View all answers
 
-                var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
-                console.log(userAnswersArray);
+            var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
+            console.log(userAnswersArray);
 
-                //Count answers
+            //Count answers
 
-                var finalUserAnswersArray = _.chain(userAnswersArray).countBy().pairs().object().value();
-                console.log(finalUserAnswersArray);
+            var finalUserAnswersArray = _.chain(userAnswersArray).countBy().pairs().object().value();
+            console.log(finalUserAnswersArray);
 
-                // Sort into objects with Key Pairs
+            // Sort into objects with Key Pairs
 
-                var finalUserAnswersObject = _.map(finalUserAnswersArray, function(value, key) {
-                    return {
-                        id: key,
-                        count: value
-                    };
+            var finalUserAnswersObject = _.map(finalUserAnswersArray, function(value, key) {
+                return {
+                    id: key,
+                    count: value
+                };
+            });
+
+            console.log(finalUserAnswersObject);
+
+            function multiplemax(arr, compare) {
+                var groups = _.groupBy(arr, compare);
+                var keys = _.keys(groups);
+                var max = _.max(keys);
+                return groups[max];
+            }
+
+            var valueResponses = multiplemax(finalUserAnswersObject, "count");
+            console.log(valueResponses);
+            console.log(valueResponses.length);
+
+
+            // Call getCity Function
+            getCity(valueResponses);
+
+        }
+        else {
+            console.log("Looks like you have not chosen your sex.");
+        };
+    };
+
+    // Get City
+
+    function getCity(values) {
+
+        // log city id
+        console.log(values[0].id);
+
+        var citiesArray = [{
+            id: "a",
+            cityName: "Åre"
+        }, {
+            id: "b",
+            cityName: "Leksand"
+        }, {
+            id: "c",
+            cityName: "Gävle"
+        }, {
+            id: "d",
+            cityName: "Kiruna"
+        }, {
+            id: "e",
+            cityName: "Visby"
+        }, {
+            id: "f",
+            cityName: "Stockholm"
+        }, {
+            id: "g",
+            cityName: "Malmö"
+        }, {
+            id: "h",
+            cityName: "Göteborg"
+        }];
+
+        // If only one object then select city
+
+        if (values.length === 1) {
+            var cityId = values[0].id;
+            switch (cityId) {
+                case "a":
+                    cityResponse = citiesArray[0].cityName;
+                    break;
+                case "b":
+                    cityResponse = citiesArray[1].cityName;
+                    break;
+                case "c":
+                    cityResponse = citiesArray[2].cityName;
+                    break;
+                case "d":
+                    cityResponse = citiesArray[3].cityName;
+                    break;
+                case "e":
+                    cityResponse = citiesArray[4].cityName;
+                    break;
+                case "f":
+                    cityResponse = citiesArray[5].cityName;
+                    break;
+                case "g":
+                    cityResponse = citiesArray[6].cityName;
+                    break;
+                case "h":
+                    cityResponse = citiesArray[7].cityName;
+                    break;
+            }
+            console.log(cityResponse);
+            sendPostCard(cityResponse);
+        }
+        else {
+
+            // Randomize City Id's for when user has multiple id's with same count
+            function random(array) {
+                return array[_.random(0, array.length - 1)];
+            };
+
+            //This is the the random city
+            var randomId = random(values);
+            console.log(randomId);
+            var cityId = randomId.id;
+
+            switch (cityId) {
+                case "a":
+                    cityResponse = citiesArray[0].cityName;
+                    break;
+                case "b":
+                    cityResponse = citiesArray[1].cityName;
+                    break;
+                case "c":
+                    cityResponse = citiesArray[2].cityName;
+                    break;
+                case "d":
+                    cityResponse = citiesArray[3].cityName;
+                    break;
+                case "e":
+                    cityResponse = citiesArray[4].cityName;
+                    break;
+                case "f":
+                    cityResponse = citiesArray[5].cityName;
+                    break;
+                case "g":
+                    cityResponse = citiesArray[6].cityName;
+                    break;
+                case "h":
+                    cityResponse = citiesArray[7].cityName;
+                    break;
+            }
+            console.log(cityResponse);
+
+            // Call sendPostCard Function
+            sendPostCard(cityResponse);
+        }
+    };
+
+
+    //PostCard Function
+    function sendPostCard(city) {
+        console.log(city);
+
+        switch (city) {
+            case "Åre":
+                $(".mapForCity img").attr('src', 'assets/img/cities/are_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/are_front.svg',
+                    alt: 'are'
                 });
+                break;
+            case "Leksand":
+                $(".mapForCity img").attr('src', 'assets/img/cities/leksand_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/leksand_front.svg',
+                    alt: 'leksand'
+                });
+                break;
+            case "Gävle":
+                $(".mapForCity img").attr('src', 'assets/img/cities/gavle_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/gavle_front.svg',
+                    alt: 'gavle'
+                });
+                break;
+            case "Kiruna":
+                $(".mapForCity img").attr('src', 'assets/img/cities/kiruna_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/kiruna_front.svg',
+                    alt: 'kiruna'
+                });
+                break;
+            case "Visby":
+                $(".mapForCity img").attr('src', 'assets/img/cities/visby_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/visby_front.svg',
+                    alt: 'visby'
+                });
+                break;
+            case "Stockholm":
+                $(".mapForCity img").attr('src', 'assets/img/cities/stockholm_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/stockholm_front.svg',
+                    alt: 'stockholm'
+                });
+                break;
+            case "Malmö":
+                $(".mapForCity img").attr('src', 'assets/img/cities/malmo_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/malmo_front.svg',
+                    alt: 'malmo'
+                });
+                break;
+            case "Göteborg":
+                $(".mapForCity img").attr('src', 'assets/img/cities/gothenburg_map.svg');
+                $(".postCard img").attr({
+                    src: 'assets/img/cities/gothenburg_front.svg',
+                    alt: 'gothenburg'
+                });
+                break;
+        }
+    };
 
-                console.log(finalUserAnswersObject);
+    // Submit end of quiz and call functions
 
-                function multiplemax(arr, compare) {
-                    var groups = _.groupBy(arr, compare);
-                    var keys = _.keys(groups);
-                    var max = _.max(keys);
-                    return groups[max];
-                }
-
-                var valueResponses = multiplemax(finalUserAnswersObject, "count");
-                console.log(valueResponses);
-                console.log(valueResponses.length);
-
-                getCity(valueResponses);
-
-            } else {
-                console.log("Looks like you have not chosen your sex.");
-            }
-
-            // Get City
-
-            function getCity(values) {
-
-                // log city id
-                console.log(values[0].id);
-
-                var citiesArray = [{
-                    id: "a",
-                    cityName: "Åre"
-                }, {
-                    id: "b",
-                    cityName: "Leksand"
-                }, {
-                    id: "c",
-                    cityName: "Gävle"
-                }, {
-                    id: "d",
-                    cityName: "Kiruna"
-                }, {
-                    id: "e",
-                    cityName: "Visby"
-                }, {
-                    id: "f",
-                    cityName: "Stockholm"
-                }, {
-                    id: "g",
-                    cityName: "Malmö"
-                }, {
-                    id: "h",
-                    cityName: "Göteborg"
-                }];
-
-                // If only one object then select city
-                // Switch case and choose city.
-                // var cityResponse;
-
-                if (values.length === 1) {
-                    var cityId = values[0].id;
-                    switch (cityId) {
-                        case "a":
-                            cityResponse = citiesArray[0].cityName;
-                            break;
-                        case "b":
-                            cityResponse = citiesArray[1].cityName;
-                            break;
-                        case "c":
-                            cityResponse = citiesArray[2].cityName;
-                            break;
-                        case "d":
-                            cityResponse = citiesArray[3].cityName;
-                            break;
-                        case "e":
-                            cityResponse = citiesArray[4].cityName;
-                            break;
-                        case "f":
-                            cityResponse = citiesArray[5].cityName;
-                            break;
-                        case "g":
-                            cityResponse = citiesArray[6].cityName;
-                            break;
-                        case "h":
-                            cityResponse = citiesArray[7].cityName;
-                            break;
-                    }
-                    console.log(cityResponse);
-                    sendPostCard(cityResponse);
-                } else {
-                    console.log("More than 1 value");
-
-                    // Randomize City Id's for when user has multiple id's with same count
-
-                    function random(array) {
-                        return array[_.random(0, array.length - 1)];
-                    }
-
-                    var randomId = random(values);
-                    console.log(randomId);
-                    var cityId = randomId.id;
-
-                    //Switch Case and choose city
-
-                    switch (cityId) {
-                        case "a":
-                            cityResponse = citiesArray[0].cityName;
-                            break;
-                        case "b":
-                            cityResponse = citiesArray[1].cityName;
-                            break;
-                        case "c":
-                            cityResponse = citiesArray[2].cityName;
-                            break;
-                        case "d":
-                            cityResponse = citiesArray[3].cityName;
-                            break;
-                        case "e":
-                            cityResponse = citiesArray[4].cityName;
-                            break;
-                        case "f":
-                            cityResponse = citiesArray[5].cityName;
-                            break;
-                        case "g":
-                            cityResponse = citiesArray[6].cityName;
-                            break;
-                        case "h":
-                            cityResponse = citiesArray[7].cityName;
-                            break;
-                    }
-                    console.log(cityResponse);
-                    sendPostCard(cityResponse);
-                }
-
-                //Send PostCard
-                function sendPostCard(city) {
-                    console.log(city);
-
-                    switch (city) {
-                        case "Åre":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/are_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/are_front.svg',
-                                alt: 'are'
-                            });
-                            break;
-                        case "Leksand":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/leksand_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/leksand_front.svg',
-                                alt: 'leksand'
-                            });
-                            break;
-                        case "Gävle":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/gavle_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/gavle_front.svg',
-                                alt: 'gavle'
-                            });
-                            break;
-                        case "Kiruna":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/kiruna_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/kiruna_front.svg',
-                                alt: 'kiruna'
-                            });
-                            break;
-                        case "Visby":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/visby_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/visby_front.svg',
-                                alt: 'visby'
-                            });
-                            break;
-                        case "Stockholm":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/stockholm_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/stockholm_front.svg',
-                                alt: 'stockholm'
-                            });
-                            break;
-                        case "Malmö":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/malmo_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/malmo_front.svg',
-                                alt: 'malmo'
-                            });
-                            break;
-                        case "Göteborg":
-                            $(".mapForCity img").attr('src', 'assets/img/cities/gothenburg_map.svg');
-                            $(".postCard img").attr({
-                                src: 'assets/img/cities/gothenburg_front.svg',
-                                alt: 'gothenburg'
-                            });
-                            break;
-                    }
-                }
-            }
-        });
-    }
-    // catch error
-    catch (err) {
-        console.log("Error OH MY!!!");
-    }
+    $("#finalResponseButton").click(function() {
+        getFinalResponse();
+    });
 
 });

@@ -96,6 +96,12 @@
   margin-right: auto;
 }
 
+.centerImage1 {
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #dictionary {
   border-width: 2px;
   border-color: black;
@@ -171,9 +177,21 @@
   text-align: center;
 }
 
+.buttonHolder {
+  width:500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.buttonHolder1 {
+  width:387px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 #average-amount-of-sexpartners-buttons{
   margin-top: 70px;
-  padding-left: 50px;
+  padding: 5px;
   font-size: 20px;
   float: left;
 }
@@ -201,7 +219,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	position:relative;
+	/*position:relative;*/
 	font-family: "Century";
 	font-size: 40px;
   display: block;
@@ -218,6 +236,10 @@
   font-size: 60px;
 }
 
+.hugeText {
+  font-family:Century; 
+  font-size:100px;
+}
 .fantasy-title {
   font-family: "Century";
   font-size: 15px;
@@ -243,7 +265,7 @@
 
 #gender img {
   float: left;
-  width: 200px;
+  width: 233px;
 }
 
 	/* MOOSE */
@@ -506,7 +528,6 @@ h3{
 .gridCity {
   margin: 0 auto;
 }
-
 
 
 

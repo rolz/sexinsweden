@@ -61,20 +61,24 @@
     <!--HOW PRUDE ARE YOU Q1-->
     <div class="section">
         <div class="bread-text" id="average-amount-of-sexpartners">
-            The average Swede has slept with <p style="font-family:Century; font-size:100px; display:inline">13</p> partners. <br> <br>
+            The average Swede has slept with <span class="hugeText">13</span> partners. <br> <br>
             Is that a lot? <br>
-            <div class="q1">
-                <div id="average-amount-of-sexpartners-buttons" >
-                    <button type="button" onclick="return false" value="a1" class="blue-button">Bit much</button>
-                </div>
-                <div id="average-amount-of-sexpartners-buttons">
-                    <button type="button" onclick="return false" value="a2" class="blue-button">Just about right</button>
-                </div>
-                <div id="average-amount-of-sexpartners-buttons">
-                    <button type="button" onclick="return false" value="a3" class="blue-button">Way too few</button>
+            <div class="buttonHolder">
+                <div class="q1">
+
+                    <div id="average-amount-of-sexpartners-buttons" >
+                        <button type="button" onclick="return false" value="a1" class="blue-button">Bit much</button>
+                    </div>
+                    <div id="average-amount-of-sexpartners-buttons">
+                        <button type="button" onclick="return false" value="a2" class="blue-button">Just about right</button>
+                    </div>
+                    <div id="average-amount-of-sexpartners-buttons">
+                        <button type="button" onclick="return false" value="a3" class="blue-button">Way too few</button>
+                    </div>
                 </div>
                 <button class="prudeness grey-button" id="no-answer" value="a4">I don't want to answer</button>
             </div>
+
         </div>
     </div>
 
@@ -84,31 +88,32 @@
             <p>WHEN DID YOU POP YOUR LINGONBERRY? <img src="assets/img/virginity/lingonberries.svg" id="lingonberry-img" class="help" height="50px">
             </p><br>
         </div>
-        <div class="q2">
-            <div id="average-amount-of-sexpartners-buttons" >
-                <button class="virginity blue-button" id="too-young" value="a1">Too Young</button>
-            </div>
+        <div class="buttonHolder1">
+            <div class="q2">
+                <div id="average-amount-of-sexpartners-buttons" >
+                    <button class="virginity blue-button" id="too-young" value="a1">Too Young</button>
+                </div>
 
-            <div id="average-amount-of-sexpartners-buttons" >
-                <button class="virginity blue-button" id="average" value="a2">Average</button>
-            </div>
+                <div id="average-amount-of-sexpartners-buttons" >
+                    <button class="virginity blue-button" id="average" value="a2">Average</button>
+                </div>
 
-            <div id="average-amount-of-sexpartners-buttons" >
-                <button class="virginity blue-button" id="too-late" value="a3">Too Late</button>
-            </div>
+                <div id="average-amount-of-sexpartners-buttons" >
+                    <button class="virginity blue-button" id="too-late" value="a3">Too Late</button>
+                </div>
 
-            <div id="average-amount-of-sexpartners-buttons" >
-                <button class="virginity grey-button" id="no-answer" value="a4">I don't want to answer</button>
+                <div id="average-amount-of-sexpartners-buttons" >
+                    <button class="virginity grey-button" id="no-answer" value="a4">I don't want to answer</button>
+                </div>
             </div>
         </div>
-
         <img id="lingonberry-img-help" class="help-hidden" src="assets/img/help/lingonberries.svg" style="z-index:1000; position:absolute" height="200px">
     </div>
 
     <!--WHEN SWEDES LOST THEIR VIRGINITY-->
     <div class="section">
         <div class="bread-text">
-            Swedes are on average <p style="font-family:Century; font-size:100px; display:inline">17</p> years old when they lose their virginity.
+            Swedes are on average <span class="hugeText">17</span> years old when they lose their virginity.
         </div>
     </div>
 
@@ -155,8 +160,8 @@
             </canvas>
             <div id="screwThemText" class="headline1"><center><h1>0</h1></center>
             </div>
-            <div class="headline"><p>TIMES EVERY MONTH</p>
-            </div>
+        </div>
+        <div class="headline"><p>TIMES EVERY MONTH</p>
         </div>
     </div>
 
@@ -487,7 +492,7 @@
 
     <div class="section">
         <div class="bread-text">
-            The average Swede masturbates <p style="font-family:Century; font-size:100px; display:inline">6</p> times per month.
+            The average Swede masturbates <span class="hugeText">6</span> times per month.
             <br><br><br>
             The people who masturbate the most...
         </div>
@@ -496,7 +501,7 @@
     <div class="section">
         <div class="centerImage"><img src="assets/img/masturbation/masturbation.svg" width="400px">
         </div>
-        <div class="bread-text">... are guys who live with their parents. <br> They masturbate on average <p style="font-family:Century; font-size:100px; display:inline">16</p> times per month.
+        <div class="bread-text">... are guys who live with their parents. <br> They masturbate on average <span class="hugeText">16</span> times per month.
         </div>
     </div>
     <!--ARE SWEDES SATISFIED?-->
@@ -506,7 +511,7 @@
         </div>
         <div class="bread-text" id="satisfied-fade-in" style="top:-40px;"><p>How can we make all of them satisfied?</p>
         </div>
-        <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg" height="400px">
+        <div class="centerImage" id="satisfied-fade-in" style="top:127px;"><img src="assets/img/satisfied/map-satisfied.svg">
         </div>
         <div class="centerImage" id="satisfied-fade-out"><img src="assets/img/satisfied/map-not-satisfied.svg" height="400px">
         </div>
@@ -515,100 +520,96 @@
     <!--SATISFACTION GRAPH-->
     <br> <br> <br><br>
     <div class="section">
-    <div class="headline"><p>SATISFACTION GRAPH</p></div>
-    <div class="centerImage"><img src="assets/img/graph/graph.svg" width="800px">
+        <div class="headline"><p>SATISFACTION GRAPH</p>
         </div>
-
+        <div class="centerImage1"><img src="assets/img/graph/graph.svg" width="800px">
+        </div>
     </div>
     <!--DO SWEDES HAVE ENOUGH SEX-->
-    <div class="section"><div class="headline"><p>DO SWEDES HAVE ENOUGH SEX?</p>
-    </div>
-    <div class="enough-sex-section">
-        <div class="centerImage" id="enough-sex-1" >
-            <img src="assets/img/enough_sex/not_enough_sex.svg"height="400px">
-            <p class="bread-text" style="font-size:20px">38% think the don't have enough sex</p>
+    <div class="longsection">
+        <div class="headline"><p>DO SWEDES HAVE ENOUGH SEX?</p>
         </div>
-        <div class="centerImage" id="enough-sex-2">
-            <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
-            <p class="bread-text" style="font-size:20px;">1% think they have too much sex</p>
+        <div class="enough-sex-section">
+            <div class="centerImage" id="enough-sex-1">
+                <img src="assets/img/enough_sex/not_enough_sex.svg"height="400px">
+                <p class="bread-text" style="font-size:20px">38% think the don't have enough sex</p>
+            </div>
+            <div class="centerImage" id="enough-sex-2">
+                <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
+                <p class="bread-text" style="font-size:20px;">1% think they have too much sex</p>
+            </div>
+            <div class="centerImage" id="enough-sex-4">
+                <img src="assets/img/enough_sex/not_sure.svg" height="400px">
+                <p class="bread-text" style="font-size:20px;">10% are not sure</p>
+            </div>
+            <div class="centerImage" id="enough-sex-3">
+                <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
+                <p class="bread-text" style="font-size:20px;">31% think they have enough sex</p>
+            </div>
         </div>
-        <div class="centerImage" id="enough-sex-4">
+    </div>
 
-            <img src="assets/img/enough_sex/not_sure.svg" height="400px">
-            <p class="bread-text" style="font-size:20px;">10% are not sure</p>
-
+    <div class="section"><p class="bread-text">So we made some calculations...</p>
+        <div class="centerImage"><img src="assets/img/enough_sex/math.svg">
         </div>
-        <div class="centerImage" id="enough-sex-3">
+    </div>
 
-            <img src="assets/img/enough_sex/enough_sex.svg" height="400px">
-            <p class="bread-text" style="font-size:20px;">31% think they have enough sex</p>
+
+
+
+    <div class="section">
+        <div class="bread-text">
+            So to make all Swedes satisfied they need to screw an additional <br> <br> <span class="hugeText">21 760 344</span>  times.
+            <br>
+            Per month.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="bread-text">
+            Do you want to screw Sweden?
+        </div>
+        <br> <br> <br>
+        <div class="bread-text">
+            Submit your answers to see which Swedish city fits your screwing preferences the most!
+        </div>
+        <br> <br> <br> <br>
+        <div id="new-home-town-button">
+            <button class="blue-button" id="finalResponseButton">Submit answers!</button>
         </div>
 
     </div>
-</div>
 
-<div class="section"><p class="bread-text">So we made some calculations...</p>
- <img class="centerImage" src="assets/img/enough_sex/math.svg">
+    <!--Get Your City-->
 
-</div>
-
-
-
-
-<div class="section">
-    <div class="bread-text">
-        So to make all Swedes satisfied they need to screw an additional <br> <br> <p style="font-family:Century; font-size:100px; display:inline">21 760 344</p>  times.
-        <br> <br>
-        Per month.
-    </div>
-</div>
-
-<div class="section">
-    <div class="bread-text">
-        Do you want to screw Sweden?
-    </div>
-    <br> <br> <br>
-    <div class="bread-text">
-        Submit your answers to see which Swedish city fits your screwing preferences the most!
-    </div>
-    <br> <br> <br> <br>
-    <div id="new-home-town-button">
-        <button class="blue-button" id="finalResponseButton">Submit answers!</button>
-    </div>
-
-</div>
-
-<!--Get Your City-->
-
-        <div class="section"><p>Page 20 - Your city</p>
-            <div class="sendCity">
+    <div class="section"><p>Page 20 - Your city</p>
+        <div class="sendCity">
             <div class="headline"><p>Your City!</p>
             </div>
-                <!--Map-->
-                <div class="mapForCity">
-                    <img src="#" width="400px">
-                </div>
+            <!--Map-->
+            <div class="mapForCity">
+                <img src="#" width="400px">
+            </div>
 
-                <!--PostCard-->
-                <div class="grid-container">
-                    <div class="gridCity">
-                        <a href="#" onclick="return false">
+            <!--PostCard-->
+            <div class="grid-container">
+                <div class="gridCity">
+                    <a href="#" onclick="return false">
                         <div class="postCard">
                             <img src="assets/img/positions/bed.svg" width="800px">
                         </div>
-                        </a>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-        <!--SLUT-->
-        <div class="section">
-
+    <!--SLUT-->
+    <div class="section">
         <div class="bread-text">
             So come and screw Sweden
         </div>
-<br><br> <br> <br> <br>
+        <br><br> <br> <br> <br>
         <div class="headline" style="font-size:150px;">
             <img src="assets/img/virginity/lingonberries-left.svg" height="100px">
             SLUT!
@@ -617,9 +618,8 @@
         <div class="bread-text" style="font-size:11px;">
             It means "the end" in Swedish. <br> No, seriously, it does.
         </div>
-</div>
-
-
+    </div>
+</body>
 
 
 
@@ -644,54 +644,6 @@
 <script type="text/javascript" src="js/components/positions.js"></script>
 <script type="text/javascript" src="js/components/help.js"></script>
 <script type="text/javascript" src="js/components/sexquiz.js"></script>
+<script type="text/javascript" src="js/components/transitions.js"></script>
 
-<!--SuperScrollorama-->
-<script>
-    $(document).ready(function() {
-        var controller = $.superscrollorama();
-
-        // individual element tween examples
-        controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
-        controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
-        controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
-
-        controller.pin($('#lingonberry'), 2000, {
-            anim: (new TimelineLite())
-            .append(
-                TweenMax.to($('#lingonberry'), .5,
-                    {css:{left: -2800}})
-                )
-        });
-
-
-   //controller.pin($('#satisfied'), 700, {
-   //    onUnpin: function(){
-   //        $('#infografik').css('position', 'relative');
-
-
-   //    }
-   //}, -2000);
-
-//    controller.addTween('#satisfied', TweenMax.from($('#satisfied'), .5,
-//        {css:{opacity:0}},
-//        {css:{left:100}})
-//        ),
-//            onUnpin: function(){
-//            $('#infografik').css('position', 'fixed');
-//        }
-//);
-
-//controller.pin($('.enough-sex-section'), 2000, {
-//    anim: (new TimelineLite())
-//    .append(
-//        TweenMax.to($('.enough-sex-section'), 0.1,
-//            {css:{left: -3900}})
-//        ),
-//    offset:-100
-//
-//});
-
-});
-</script>
-</body>
 </html>

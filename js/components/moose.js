@@ -6,7 +6,6 @@ var age=18;
 	    if(age<=70){
 		  if(age%7==0){
 		    var number=age/7
-			console.log(number)
 
 			$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='300px'>" );
 		  }
@@ -17,11 +16,6 @@ var age=18;
 
 			$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='300px'>" );
 		}
-
 	}
-
-
-
-
 	  }).trigger("change");
 	});

@@ -580,7 +580,21 @@ h3{
 }
 
 #enough-sex-5{
+  margin-left: 100px;
   float:left;
+  width:400px;
+  height: 400px;
+}
+
+#enough-sex-6{
+  margin-right: 100px;
+  float:right;
+  width:400px;
+  height: 400px;
+}
+
+#enough-sex-7{
+  float:right;
   width:400px;
   height: 400px;
 }

@@ -1,6 +1,6 @@
 //Elements
 var c = document.getElementById("screwYou");
-var d = document.getElementById("resetScrew");
+var d = document.getElementById("screwNumber");
 var e = document.getElementById("screwThem");
 var f = document.getElementById("screwThemText");
 var ctx = c.getContext("2d");
@@ -68,7 +68,7 @@ function clickScrew() {
   window.clearInterval(rotSpeed);
   times += 1;
   speed = speed + 0.1;
-  d.innerHTML = "You have sex "+times+" times per month";
+  d.innerHTML = times;
   rotSpeed = setInterval(function(){drawRevolution()},1);
   rotSpeed;
 }

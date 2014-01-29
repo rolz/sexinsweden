@@ -493,7 +493,9 @@ $(document).ready(function() {
             getFinalResponse();
             $('#postCardSection').show();
             $('.sendCity .headline').show();
+            $('.sendCity .mapCardContainer').show();
             $('.sendCity .headlineError').hide();
+            $('#goToUnansweredQuestions').hide();
         }
         catch(e) {
             console.log("error");
@@ -551,7 +553,7 @@ $(document).ready(function() {
                     break;
                 case "q4":
                     $('html, body').animate(
-                    {scrollTop: $("##positions-q").offset().top
+                    {scrollTop: $("#positions-q").offset().top
                     }, 2000);
                     break;
                 case "q5":

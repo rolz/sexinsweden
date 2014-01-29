@@ -379,7 +379,9 @@ $(document).ready(function() {
                     break;
             }
             console.log(cityResponse);
+            // Call sendPostCard Function;
             sendPostCard(cityResponse);
+
         }
         else {
 
@@ -421,7 +423,7 @@ $(document).ready(function() {
             }
             console.log(cityResponse);
 
-            // Call sendPostCard Function
+            // Call sendPostCard Function for random city
             sendPostCard(cityResponse);
         }
     };
@@ -494,7 +496,17 @@ $(document).ready(function() {
     // Submit end of quiz and call functions
 
     $("#finalResponseButton").click(function() {
-        getFinalResponse();
+        try {
+            getFinalResponse();
+        }
+        catch(e) {
+            console.log("error");
+            $('.mapCardContainer').hide();
+            $('.sendCity .headline').html("You are a Moron. You will never screw in Sweden.")
+        }
     });
+
+
+
 
 });

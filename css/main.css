@@ -551,7 +551,16 @@ h3{
 
 
 /*SATISFIED*/
-#satisfied-fade-in{
+.satisfied-fade-in{
+  position: absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  opacity: 0;
+}
+
+.satisfied-fade-in{
   position: absolute;
   left:0;
   right:0;
@@ -698,5 +707,71 @@ min-width: 1400px;
   margin: 0 auto;
 }
 
+/* DROPDOWNS USING SELECT - BASE */
+select {
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: #3C434A;
+  border-color: #A6AFB7;
+  width: auto;
+  padding: 8px 16px;
+  border-radius: 3px;
+  background: #FFFFFF url('http://i.imgur.com/hRbauFc.png') no-repeat scroll right center;
+}
+select:hover, select:active {
+  border-color: #85929D;
+}
 
-
+/* DROPDOWNS USING JQUERY & UL - BASE */
+.dropdown dd, .dropdown dt, .dropdown ul {
+  margin: 0px;
+  padding: 0px;
+}
+.dropdown dd {
+  position: relative;
+}
+.dropdown dt a {
+  background: #FFFFFF url('http://i.imgur.com/hRbauFc.png') no-repeat scroll right center;
+  display: block;
+  padding: 0;
+  border: 1px solid #A6AFB7;
+  border-radius: 3px;
+  width: 254px;
+  text-decoration: none;
+  color: #3C434A;
+}
+.dropdown dt a span {
+  cursor: pointer;
+  display: block;
+  padding: 7px 14px;
+}
+.dropdown dd ul {
+  background: #EEF0F3 none repeat scroll 0 0;
+  border: 1px solid #A6AFB7;
+  border-radius: 0 0 3px 3px;
+  display: none;
+  list-style: none;
+  padding: 5px 0px;
+  position: absolute;
+  left: 0px;
+  top: -1px;
+  width: 254px;
+  min-width: 170px;
+}
+.dropdown span.value {
+  display: none;
+}
+.dropdown dd ul li a {
+  padding: 5px 14px;
+  display: block;
+  text-decoration: none;
+  color: #3C434A;
+}
+.dropdown dd ul li a:hover {
+  background-color: #008BE1;
+  color: #FFFFFF;
+}
+.dropdown dt a:hover, .dropdown dt a:active {
+  border-color: #85929D;
+}

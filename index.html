@@ -188,18 +188,22 @@
 
             </div>
         </div>
-        <div class="headline"><p>But as they say in Sweden</p>
+        <div class="headline"><p>But as they say in Sweden<br><br>
+            SMAKEN ÄR SOM BAKEN
+        </p>
         </div>
     </div>
 
     <!--SMACKEN-->
     <div class="section" id="smaken">
         <div id="dictionary">
-            <strong><center><p style="font-size:25px;">&nbsp &nbspSmaken är som baken &nbsp <audio  id="audio3" src="assets/audio/3.m4a"></audio>
-                <span ><img class="audio" id="speaker" onclick="document.getElementById('audio1').play()" src="assets/img/help/speaker.svg"></span>
+            <strong><center><p style="font-size:25px;">&nbsp &nbspSmaken är som baken &nbsp
+                <span ><img class="audio" id="speaker" onclick="document.getElementById('smakenaudio').play()" src="assets/img/help/speaker.svg"></span>
 </p></center></strong>
-            <p><strong>Definition:</strong> An idiomatic expression meaning that everybody has different taste</p>
             <p><strong>English translation: </strong>The taste is like the ass</p>
+
+            <p><strong>Definition:</strong> An idiomatic expression meaning that everybody has different taste</p>
+
         </div>
     </div>
 
@@ -324,12 +328,9 @@
             </div>
         <div id="sex-sounds">
             <div id="buttons">
-                <audio id="audio1" src="assets/audio/1.m4a"></audio>
-                <audio id="audio2" src="assets/audio/2.m4a"></audio>
-                <audio id="audio3" src="assets/audio/3.m4a"></audio>
-                <span id="but1" onclick="document.getElementById('audio1').play()"><a>Å</a></span>
-                <span id="but2" onclick="document.getElementById('audio2').play()"><a>Ä</a></span>
-                <span id="but3" onclick="document.getElementById('audio3').play()"><a>Ö</a></span>
+                <span id="but1" onclick="document.getElementById('oh').play()" style="cursor:pointer;"><a>Å</a></span>
+                <span id="but2" onclick="document.getElementById('e').play()" style="cursor:pointer;"><a>Ä</a></span>
+                <span id="but3" onclick="document.getElementById('o').play()" style="cursor:pointer;"><a>Ö</a></span>
             </div>
         </div>
         <img id="swedish-language-img-help" class="help-visible" src="assets/img/help/swedish-letters.svg" style="z-index:1000; position:absolute" height="200px">
@@ -516,15 +517,16 @@
         </div>
     </div>
 
-      <div class="section" id="finding">
-        <div class="bread-text">
-            We made a finding...<br>
-            the more sex people have, <br>
-            the more satisfied they are with their sex life.
-        </div>
-    </div>
+
     <!--SATISFACTION GRAPH-->
     <div class="section" id="graph">
+        <div class="headline"><p>MORE IS MORE</p>
+        </div>
+        <div class="bread-text">
+            More sex Swedes have, <br>
+            more satisfying their sex life is.
+            <br><br><br>
+        </div>
         <div class="centerImage1"><img src="assets/img/graph/graph.svg" width="800px">
         </div>
     </div>
@@ -535,7 +537,7 @@
         <div class="enough-sex-section">
             <div class="centerImage" id="enough-sex-1">
                 <img src="assets/img/enough_sex/not_enough_sex.svg"height="400px">
-                <p class="bread-text" style="font-size:20px">38% think the don't have enough sex</p>
+                <p class="bread-text" style="font-size:20px">38% think they don't have enough sex</p>
             </div>
             <div class="centerImage" id="enough-sex-2">
                 <img src="assets/img/enough_sex/too_much_sex.svg" height="400px">
@@ -562,8 +564,8 @@
 
     <div class="section">
         <div class="bread-text">
-            So to make all Swedes satisfied they need to screw an additional <br> <br> <span class="hugeText">21 760 344</span>  times.
-            <br>
+            To make all Swedes satisfied they need to screw additional <br> <br> <span class="hugeText">21 760 344</span>  times.
+            <br><br>
             Per month.
         </div>
     </div>
@@ -574,7 +576,7 @@
         </div>
         <br> <br> <br>
         <div class="bread-text">
-            Submit your answers to see which Swedish city fits your screwing preferences the most!
+            Submit your answers and see where in Sweden<br> your screwing preferences fit best!
         </div>
         <br> <br> <br> <br>
         <div id="new-home-town-button">
@@ -613,7 +615,7 @@
     <!--SLUT-->
     <div class="section">
         <div class="bread-text">
-            So come and screw Sweden
+            So come screw Sweden!
         </div>
         <br><br> <br> <br> <br>
         <div class="headline" style="font-size:150px;">
@@ -632,7 +634,11 @@
 
 <!--***************************************************-->
 <!--***************************************************-->
-
+<!--AUDIO-->
+<audio  id="smakenaudio" src="assets/audio/smakenaudio.m4a"></audio>
+<audio  id="e" src="assets/audio/e.m4a"></audio>
+<audio  id="oh" src="assets/audio/oh.m4a"></audio>
+<audio  id="o" src="assets/audio/o.m4a"></audio>
 
 <!--Vendor Scripts-->
 <script type="text/javascript" src="js/vendor/TweenMax.min.js"></script>

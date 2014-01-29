@@ -498,13 +498,13 @@ $(document).ready(function() {
     $("#finalResponseButton").click(function() {
         try {
             getFinalResponse();
-            $('.section #postCardSection').show();
+            $('#postCardSection').show();
             $('.sendCity .headline').show();
-            $('.mapCardContainer').show();
+            $('.sendCity .headlineError').hide();
         }
         catch(e) {
             console.log("error");
-            $('.section #postCardSection').show();
+            $('#postCardSection').show();
             $('.sendCity .headlineError').show();
             $('.sendCity .headline').hide();
             $('.sendCity .mapCardContainer').hide();

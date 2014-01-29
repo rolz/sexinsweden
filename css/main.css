@@ -579,26 +579,26 @@ h3{
 /*******************************************/
 /*CITY POSTCARD*/
 
-/*.section #postCardSection {
-  display:none;
-}*/
+#postCardSection {
+ /* display:none;*/
+}
 
 .sendCity {
 min-width: 1400px;
 
 }
 
-/*.sendCity .headline {
-  display:none;
-}*/
+.sendCity .headline {
+
+}
 
 .sendCity .headlineError {
   display:none;
 }
 
-/*.mapCardContainer {
-  display:none;
-}*/
+.mapCardContainer {
+
+}
 
 .mapForCity {
   float:left;

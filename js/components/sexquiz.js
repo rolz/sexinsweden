@@ -370,7 +370,6 @@ $( document ).ready(function() {
 
             };
 
-
         };
     });
 });

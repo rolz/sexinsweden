@@ -546,7 +546,11 @@ h3{
   margin: 5px;
   cursor: pointer;
   background: #ffffff;
-  border: 1px solid #CCCCCC;
+}
+
+.postCard img {
+  width:800px;
+  height:520px;
 }
 
 /*HELP DUDES*/

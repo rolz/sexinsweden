@@ -62,15 +62,12 @@ $(document).ready(function ($) {
     var postCardCity=$('.postCard img').attr('alt');
     console.log(postCardCity);
 
-console.log($(this))
     var className=$(this)[0].className;
-    console.log(className);
 
     $(this).toggleClass('expand');
     if(className=="postCard masonry-brick"){
         var imageURL="assets/img/cities/"+postCardCity+"_back.svg";
         $('.expand').css('background-image','url('+imageURL+')');
-        console.log(imageURL);
 
     }
 

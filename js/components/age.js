@@ -1,6 +1,6 @@
 var ageArray = ["Stop screwing around, you're too young", 5.6, 5.28, 5.55, 4.13, 3.84, 4.08, 2.65, 1.91]
 var arrayPosition;
-
+var yourAge = 18;
 // Single and lack a stable relationship	1.49
 // Student	5.05
 // In a relationship for about half a year	13.66
@@ -9,7 +9,7 @@ var arrayPosition;
 
 function getAge(age) {
     window.clearInterval(rotSpeed2);
-    //var age = document.getElementById('ageOutput').value
+    age = document.getElementById('ageOutput').value
     speed1 = 0.4;
     if (age < 17) {
     	speed1 = 0;
@@ -50,22 +50,31 @@ function getAge(age) {
 //drop down menu 
 $(document).ready(function() {
     $('select#group-choice').change(function() {
+    window.clearInterval(rotSpeed2);
+    speed1 = 0.4;
         if(!age){
             age=18;
         }
     var value= $(this).context.value
     if(value=="Students"){
-       f.innerHTML="5.05";
+        f.innerHTML="5.05";
+        speed1 = speed1 + 0.6;
     }
     else if(value=="Singles"){
+        speed1 = speed1 + 0.1;
         f.innerHTML="1.49";
     }
     else if(value=="Swedes who are 70+"){
+        speed1 = speed1 + 0.2;
         f.innerHTML="1.91";
     }
     else if(value=="Swedes your age"){
-        f.innerHTML=ageArray[arrayPosition];
+        getAge(yourAge);
+        return false;
     }
+    // f.innerHTML = ageArray[arrayPosition];
+    rotSpeed2 = setInterval(function(){drawSweden()},1);
+    rotSpeed2;
 
 })
 });

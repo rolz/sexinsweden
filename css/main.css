@@ -85,8 +85,8 @@ body {
     cursor:pointer;
     color:#000000;
     position: absolute;
-    bottom: 5px;
-    right:5px;
+    bottom: 250px;
+    right:20px;
     font-family:Verdana;
     font-size:12px;
     text-decoration:none;
@@ -593,9 +593,27 @@ min-width: 1400px;
 
 .sendCity .headline {
 
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /*position:relative;*/
+  font-family: "Century";
+  font-size: 40px;
+  display: block;
+
 }
 
 .sendCity .headlineError {
+
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /*position:relative;*/
+  font-family: "Century";
+  font-size: 40px;
+  display: block;
   display:none;
 }
 

@@ -12,31 +12,31 @@ function getAge() {
     speed1 = 0.4;
     if (age < 17) {
     	speed1 = 0; 
-    	f.innerHTML = "<center><h1>"+ageArray[0]+"</h1></center>";
+    	f.innerHTML = ageArray[0];
     } else if (age >=18 && age <=20) {
     	speed1 = speed1 + 0.6;
-    	f.innerHTML = "<center><h1>"+ageArray[1]+"</h1></center>";
+    	f.innerHTML = ageArray[1];
     } else if (age >= 21 && age <=25) {
     	speed1 = speed1 + 0.5;
-    	f.innerHTML = "<center><h1>"+ageArray[2]+"</h1></center>";
+    	f.innerHTML = ageArray[2];
     } else if (age >= 26 && age <=30) {
     	speed1 = speed1 + 0.6;
-    	f.innerHTML = "<center><h1>"+ageArray[3]+"</h1></center>";
+    	f.innerHTML = ageArray[3];
     } else if (age >= 31 && age <=40) {
     	speed1 = speed1 + 0.4;
-    	f.innerHTML = "<center><h1>"+ageArray[4]+"</h1></center>";
+    	f.innerHTML = ageArray[4];
     } else if (age >= 41 && age <=50) {
     	speed1 = speed1 + 0.4;
-    	f.innerHTML = "<center><h1>"+ageArray[5]+"</h1></center>";
+    	f.innerHTML = ageArray[5];
     } else if (age >= 51 && age <=60) {
     	speed1 = speed1 + 0.4;
-    	f.innerHTML = "<center><h1>"+ageArray[6]+"</h1></center>";
+    	f.innerHTML = ageArray[6];
     } else if (age >= 61 && age <=69) {
     	speed1 = speed1 + 0.3;
-    	f.innerHTML = "<center><h1>"+ageArray[7]+"</h1></center>";
+    	f.innerHTML = ageArray[7];
     } else if (age >= 70 && age <=100) {
     	speed1 = speed1 + 0.2;
-    	f.innerHTML = "<center><h1>"+ageArray[8]+"</h1></center>";
+    	f.innerHTML = ageArray[8];
     }
     rotSpeed2 = setInterval(function(){drawSweden()},1);
 	rotSpeed2;

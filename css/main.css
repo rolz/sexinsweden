@@ -540,6 +540,15 @@ h3{
   margin: 0 auto;
 }
 
+.postCard{
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #CCCCCC;
+}
+
 /*HELP DUDES*/
 .help-visible{
   position: absolute;

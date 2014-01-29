@@ -312,35 +312,59 @@ $( document ).ready(function() {
                 switch(city) {
                     case "Åre":
                         $(".mapForCity img").attr('src','assets/img/cities/are_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/are_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/are_front.svg',
+                            alt:'are'
+                            });
                         break;
                     case "Leksand":
                         $(".mapForCity img").attr('src','assets/img/cities/leksand_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/leksand_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/leksand_front.svg',
+                            alt:'leksand'
+                            });
                         break;
                     case "Gävle":
                         $(".mapForCity img").attr('src','assets/img/cities/gavle_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/gavle_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/gavle_front.svg',
+                            alt:'gavle'
+                            });
                         break;
                     case "Kiruna":
                         $(".mapForCity img").attr('src','assets/img/cities/kiruna_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/kiruna_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/kiruna_front.svg',
+                            alt:'kiruna'
+                            });
                         break;
                     case "Visby":
                         $(".mapForCity img").attr('src','assets/img/cities/visby_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/visby_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/visby_front.svg',
+                            alt:'visby'
+                            });
                         break;
                     case "Stockholm":
                         $(".mapForCity img").attr('src','assets/img/cities/stockholm_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/stockholm_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/stockholm_front.svg',
+                            alt:'stockholm'
+                            });
                         break;
                     case "Malmö":
                         $(".mapForCity img").attr('src','assets/img/cities/malmo_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/malmo_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/malmo_front.svg',
+                            alt:'malmo'
+                            });
                         break;
                     case "Göteborg":
                         $(".mapForCity img").attr('src','assets/img/cities/gothenburg_map.svg');
-                        $(".postCard img").attr('src','assets/img/cities/gothenburg_front.svg');
+                        $(".postCard img").attr({
+                            src:'assets/img/cities/gothenburg_front.svg',
+                            alt:'gothenburg'
+                            });
                         break;
                 }
 

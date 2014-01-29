@@ -1,9 +1,8 @@
 //Elements
 var c = document.getElementById("screwYou");
-var d = document.getElementById("screwYouText");
+var d = document.getElementById("screwNumber");
 var e = document.getElementById("screwThem");
 var f = document.getElementById("screwThemText");
-var r = document.getElementById("reset");
 var ctx = c.getContext("2d");
 var etx = e.getContext("2d");
 
@@ -20,7 +19,7 @@ var degrees = 0;
 var degrees1 = 0;
 window.onload = screwYou();
 c.onclick = clickScrew;
-r.onclick = resetScrew;
+d.onclick = resetScrew;
 var times = 0;
 var speed = 0.4;
 var speed1 = 0.4;
@@ -69,7 +68,7 @@ function clickScrew() {
   window.clearInterval(rotSpeed);
   times += 1;
   speed = speed + 0.1;
-  d.innerHTML = "<center><h1>"+times+"</h1></center>";
+  d.innerHTML = times;
   rotSpeed = setInterval(function(){drawRevolution()},1);
   rotSpeed;
 }
@@ -121,11 +120,12 @@ function resetThem() {
 }
 
 function resetScrew() {
+  console.log("reset")
   window.clearInterval(rotSpeed);
   // window.cancelAnimationFrame(render);
   times = 0;
   speed = 0.4;
-  d.innerHTML = "<center><h1>"+times+"</h1></center>";
+  d.innerHTML = times;
   rotSpeed = setInterval(function(){drawRevolution()},1);
   // drawRevolution();
   // window.clearInterval(rotSpeed);

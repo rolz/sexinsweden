@@ -30,6 +30,23 @@ $(document).ready(function() {
         // individual element tween examples
         // controller.addTween('#intro-screen', TweenMax.from( $('#intro-screen'), .5, {css:{opacity: 0}}));
         controller.addTween('#gender', TweenMax.from( $('#gender'), .5, {css:{opacity: 0}}));
+        controller.addTween('#moose_head', TweenMax.from( $('#moose_head'), .5, {css:{opacity: 0}}));
+        controller.addTween('#average-amount-of-sexpartners', TweenMax.from( $('#average-amount-of-sexpartners'), .5, {css:{opacity: 0}}));
+        controller.addTween('#lingonberry-q', TweenMax.from( $('#lingonberry-q'), .5, {css:{opacity: 0}}));
+        controller.addTween('#lingonberry-f', TweenMax.from( $('#lingonberry-f'), .5, {css:{opacity: 0}}));
+        controller.addTween('#screwYou', TweenMax.from( $('#screwYou'), .5, {css:{opacity: 0}}));
+        controller.addTween('#swScrew', TweenMax.from( $('#swScrew'), .5, {css:{opacity: 0}}));
+        controller.addTween('#missionary', TweenMax.from( $('#missionary'), .5, {css:{opacity: 0}}));
+        controller.addTween('#smaken', TweenMax.from( $('#smaken'), .5, {css:{opacity: 0}}));
+        controller.addTween('#how', TweenMax.from( $('#how'), .5, {css:{opacity: 0}}));
+        controller.addTween('#fantasy-transition', TweenMax.from( $('#fantasy-transition'), .5, {css:{opacity: 0}}));
+        controller.addTween('#mast', TweenMax.from( $('#mast'), .5, {css:{opacity: 0}}));
+        controller.addTween('#parents', TweenMax.from( $('#parents'), .5, {css:{opacity: 0}}));
+        controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}));
+        controller.addTween('#graph', TweenMax.from( $('#graph'), .5, {css:{opacity: 0}}));
+
+
+
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));

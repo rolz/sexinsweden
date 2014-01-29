@@ -624,8 +624,11 @@
 <script type="text/javascript">
         // $(document).ready(function () {
         var windowSize = window.innerHeight;
+        if (windowSize < 600) {
+            $('.section').css("height", 600);
+        } else {
         $('.section').css("height", windowSize);
-    
+        }
 </script>
 <script src="js/vendor/underscore-min.js"></script>
 <script src="js/vendor/jquery.superscrollorama.js"></script>

@@ -9,7 +9,7 @@ $( document ).ready(function() {
     //Gender Question
 
     $( ".q0 img" ).click(function() {
-        var valueQ0 = $( this ).attr("alt")
+        var valueQ0 = $( this ).attr("alt");
         console.log(valueQ0);
         $(".sex").css('opacity','0.2');
         $(this).css('opacity','1');
@@ -83,7 +83,7 @@ $( document ).ready(function() {
     $(function(){
         var $select = $(".1-20");
         for (i=0;i<=20;i++){
-            $select.append($('<option></option>').val(i).html(i))
+            $select.append($('<option></option>').val(i).html(i));
         }
     });
 
@@ -109,7 +109,7 @@ $( document ).ready(function() {
         else {
             var valueQ3 = "a4";
             userResponse["q3"] = {"m": male[2].q3[valueQ3], "f": female[2].q3[valueQ3]};
-        };
+        }
 
         console.log(userResponse);
     });
@@ -161,6 +161,8 @@ $( document ).ready(function() {
 
     // get results according to sex at this point in app
 
+    // try{};
+
     $("#finalResponseButton").click(function() {
 
         if (userResponse["sex"] == "m" || userResponse["sex"] == "f" ) {
@@ -194,7 +196,7 @@ $( document ).ready(function() {
               var keys = _.keys(groups);
               var max = _.max(keys);
               return groups[max];
-            };
+            }
 
             var valueResponses = multiplemax(finalUserAnswersObject, "count");
             console.log(valueResponses);
@@ -204,8 +206,8 @@ $( document ).ready(function() {
 
         }
         else {
-            console.log("Looks like you have not chosen your sex.")
-        };
+            console.log("Looks like you have not chosen your sex.");
+        }
 
         // Get City
 
@@ -233,28 +235,28 @@ $( document ).ready(function() {
                 var cityId = values[0].id;
                 switch(cityId) {
                     case "a":
-                        var cityResponse = citiesArray[0].cityName;
+                        cityResponse = citiesArray[0].cityName;
                         break;
                     case "b":
-                        var cityResponse = citiesArray[1].cityName;
+                        cityResponse = citiesArray[1].cityName;
                         break;
                     case "c":
-                        var cityResponse = citiesArray[2].cityName;
+                        cityResponse = citiesArray[2].cityName;
                         break;
                     case "d":
-                        var cityResponse = citiesArray[3].cityName;
+                        cityResponse = citiesArray[3].cityName;
                         break;
                     case "e":
-                        var cityResponse = citiesArray[4].cityName;
+                        cityResponse = citiesArray[4].cityName;
                         break;
                     case "f":
-                        var cityResponse = citiesArray[5].cityName;
+                        cityResponse = citiesArray[5].cityName;
                         break;
                     case "g":
-                        var cityResponse = citiesArray[6].cityName;
+                        cityResponse = citiesArray[6].cityName;
                         break;
                     case "h":
-                        var cityResponse = citiesArray[7].cityName;
+                        cityResponse = citiesArray[7].cityName;
                         break;
                 }
                 console.log(cityResponse);
@@ -266,8 +268,8 @@ $( document ).ready(function() {
                 // Randomize City Id's for when user has multiple id's with same count
 
                 function random(array){
-                  return array[ _.random(0, array.length-1) ]
-                };
+                  return array[ _.random(0, array.length-1) ];
+                }
 
                 var randomId = random(values);
                 console.log(randomId);
@@ -277,33 +279,33 @@ $( document ).ready(function() {
 
                 switch(cityId) {
                     case "a":
-                        var cityResponse = citiesArray[0].cityName;
+                        cityResponse = citiesArray[0].cityName;
                         break;
                     case "b":
-                        var cityResponse = citiesArray[1].cityName;
+                        cityResponse = citiesArray[1].cityName;
                         break;
                     case "c":
-                        var cityResponse = citiesArray[2].cityName;
+                        cityResponse = citiesArray[2].cityName;
                         break;
                     case "d":
-                        var cityResponse = citiesArray[3].cityName;
+                        cityResponse = citiesArray[3].cityName;
                         break;
                     case "e":
-                        var cityResponse = citiesArray[4].cityName;
+                        cityResponse = citiesArray[4].cityName;
                         break;
                     case "f":
-                        var cityResponse = citiesArray[5].cityName;
+                        cityResponse = citiesArray[5].cityName;
                         break;
                     case "g":
-                        var cityResponse = citiesArray[6].cityName;
+                        cityResponse = citiesArray[6].cityName;
                         break;
                     case "h":
-                        var cityResponse = citiesArray[7].cityName;
+                        cityResponse = citiesArray[7].cityName;
                         break;
                 }
                 console.log(cityResponse);
                 sendPostCard(cityResponse);
-            };
+            }
 
             //Send PostCard
             function sendPostCard(city) {
@@ -368,10 +370,9 @@ $( document ).ready(function() {
                         break;
                 }
 
-            };
+            }
 
-        };
+        }
     });
 });
-
 

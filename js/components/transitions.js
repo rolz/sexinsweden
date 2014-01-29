@@ -1,11 +1,11 @@
 $(document).ready(function() {
         var controller = $.superscrollorama();
-        var cityAnim = new TimelineLite();
-        cityAnim
-        .append(TweenMax.from($('#submit-answers'), .5, {css:{marginTop:0}, ease: Quad.easeInOut}))
-          .append([
-            TweenMax.to($('#your-city'), 1, {css:{marginLeft:'100%'}})
-          ], .5)
+        // var cityAnim = new TimelineLite();
+        // cityAnim
+        // .append(TweenMax.from($('#submit-answers'), .5, {css:{marginTop:0}, ease: Quad.easeInOut}))
+        //   .append([
+        //     TweenMax.to($('#your-city'), 1, {css:{marginLeft:'100%'}})
+        //   ], .5)
 
         // function showCity() {
         //   controller.addTween('#submit-answers', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));

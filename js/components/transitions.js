@@ -39,9 +39,10 @@ $(document).ready(function() {
         controller.addTween('#missionary', TweenMax.from( $('#missionary'), .5, {css:{opacity: 0}}));
         controller.addTween('#smaken', TweenMax.from( $('#smaken'), .5, {css:{opacity: 0}}));
         controller.addTween('#how', TweenMax.from( $('#positions-q'), .5, {css:{opacity: 0}}));
-        controller.addTween('#fantasy-transition', TweenMax.from( $('#fantasy-transition'), .5, {css:{opacity: 0}}));
+        controller.addTween('#fantasy-transition', TweenMax.from( $('#fantasies-q'), .5, {css:{opacity: 0}}));
         controller.addTween('#mast', TweenMax.from( $('#mast'), .5, {css:{opacity: 0}}));
-        controller.addTween('#parents', TweenMax.from( $('#parents'), .5, {css:{opacity: 0}}));
+        controller.addTween('#masturbate-most', TweenMax.from( $('#masturbate-most'), 0.5, {css:{opacity: 0}}));
+        controller.addTween('#parents', TweenMax.from( $('#parents'), 3, {css:{opacity: 0}},0,200));
         // controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}));
         controller.addTween('.graph', TweenMax.from( $('.graph'), .5, {css:{opacity: 0}}));
         controller.addTween('.satisfied-fade-out', TweenMax.from( $('.satisfied-fade-out'), 1, {css:{opacity: 0}}),0,170);
@@ -110,7 +111,7 @@ $(document).ready(function() {
         // });
 
 
-        controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
+        controller.addTween('#sex-sounds', TweenMax.from( $('#sexSounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
 

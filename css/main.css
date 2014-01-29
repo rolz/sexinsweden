@@ -559,9 +559,4 @@ h3{
   margin: 0 auto;
 }
 
-/*Stop Scrolling*/
 
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
-}

@@ -20,16 +20,6 @@ body {
   font-family: 'Century';
 }
 
-.lingonberry-section {
-  margin: 50px 20px 20px 20px;
-  position: relative;
-  height:2000px;
-  font-family: 'Century';
-}
-
-#lingonberry-f{
-  margin-bottom:50px;
-}
 
 /*Landing Page*/
 
@@ -251,12 +241,23 @@ margin-top: 250px;}
 #lingonberry-img{
   cursor:pointer;
 }
+.lingonberry-section {
+  margin: 50px 20px 20px 20px;
+  position: relative;
+  height:2000px;
+  font-family: 'Century';
+}
+
+#lingonberry-f{
+  margin-bottom:50px;
+}
+
 
 
 /*jam jars*/
 #lingonberry{
 	position:absolute;
-  margin-top:30px;
+  margin-top:130px;
 	margin-bottom: 2800px;
 	left:0; right:0; bottom:0;top:0;
 }

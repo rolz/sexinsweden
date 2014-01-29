@@ -23,10 +23,16 @@ $(document).ready(function() {
             var randomSex = ["m", "f"];
             var random = Math.floor(Math.random() * randomSex.length);
             userResponse["sex"] = randomSex[random];
-
         }
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#ageSection").offset().top
+        }, 1000);
     });
 
     // Possibe result 1=Man, 2=Female, 3=Other(random man or woman)
@@ -133,8 +139,6 @@ $(document).ready(function() {
 
     /* Prudeness */
 
-    // **** add male and female key pairs
-
     $(".q1 button").click(function() {
         var valueQ1 = $(this).val();
 
@@ -144,6 +148,13 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#lingonberry-q").offset().top
+        }, 1000);
     });
 
     /* Lose Virginity */
@@ -157,6 +168,13 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#lingonberry-f").offset().top
+        }, 1000);
     });
 
     /* Sex Per Month */
@@ -202,6 +220,13 @@ $(document).ready(function() {
         }
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#swScrew").offset().top
+        }, 1000);
     });
 
     // No Answer
@@ -215,6 +240,10 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+        $("body").css("overflow", "scroll");
+        $('html, body').animate(
+        {scrollTop: $("#swScrew").offset().top
+        }, 1000);
     });
 
 
@@ -230,7 +259,35 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#sexSounds").offset().top
+        }, 1000);
     });
+
+    // No Answer
+
+    $(".q4 #no-answer").click(function() {
+        var valueQ4 = $(this).val();
+
+        userResponse["q4"] = {
+            "m": male[3].q5[valueQ4],
+            "f": female[3].q5[valueQ4]
+        };
+
+        console.log(userResponse);
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#sexSounds").offset().top
+        }, 1000);
+    });
+
+
+
 
     /* Question 5 Fantasy*/
 
@@ -242,7 +299,12 @@ $(document).ready(function() {
             "f": female[4].q5[valueQ5]
         };
 
-        console.log(userResponse);
+        //Enable Scrolling and Move down
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#mast").offset().top
+        }, 1000);
     });
 
     // No Answer
@@ -256,6 +318,11 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
+        $("body").css("overflow", "scroll");
+
+        $('html, body').animate(
+        {scrollTop: $("#mast").offset().top
+        }, 1000);
     });
 
 

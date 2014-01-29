@@ -11,7 +11,7 @@ function getAge() {
     var age = document.getElementById('ageOutput').value
     speed1 = 0.4;
     if (age < 17) {
-    	speed1 = 0; 
+    	speed1 = 0;
     	f.innerHTML = ageArray[0];
     } else if (age >=18 && age <=20) {
     	speed1 = speed1 + 0.6;
@@ -40,5 +40,7 @@ function getAge() {
     }
     rotSpeed2 = setInterval(function(){drawSweden()},1);
 	rotSpeed2;
+
+    $("body").css("overflow", "scroll");
 };
 

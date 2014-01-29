@@ -596,6 +596,10 @@ min-width: 1400px;
   display:none;
 }
 
+#goToUnansweredQuestions {
+  display:none;
+}
+
 .mapCardContainer {
 
 }

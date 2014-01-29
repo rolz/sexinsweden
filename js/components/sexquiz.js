@@ -4,7 +4,7 @@ $(document).ready(function() {
     /* User's Sex : Q0*/
 
     var userResponse = {};
-    var cityResponse;
+    var firstNotAnswered = {};
 
     //Gender Question
 
@@ -265,54 +265,47 @@ $(document).ready(function() {
 
     function getFinalResponse() {
 
-        if (userResponse["sex"] == "m" || userResponse["sex"] == "f") {
+        answerQ1 = userResponse.q1[userResponse.sex];
+        answerQ2 = userResponse.q2[userResponse.sex];
+        answerQ3 = userResponse.q3[userResponse.sex];
+        answerQ4 = userResponse.q4[userResponse.sex];
+        answerQ5 = userResponse.q5[userResponse.sex];
 
-            answerQ1 = userResponse.q1[userResponse.sex];
-            answerQ2 = userResponse.q2[userResponse.sex];
-            answerQ3 = userResponse.q3[userResponse.sex];
-            answerQ4 = userResponse.q4[userResponse.sex];
-            answerQ5 = userResponse.q5[userResponse.sex];
+        //View all answers
 
-            //View all answers
+        var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
+        console.log(userAnswersArray);
 
-            var userAnswersArray = answerQ1.concat(answerQ2, answerQ3, answerQ4, answerQ5);
-            console.log(userAnswersArray);
+        //Count answers
 
-            //Count answers
+        var finalUserAnswersArray = _.chain(userAnswersArray).countBy().pairs().object().value();
+        console.log(finalUserAnswersArray);
 
-            var finalUserAnswersArray = _.chain(userAnswersArray).countBy().pairs().object().value();
-            console.log(finalUserAnswersArray);
+        // Sort into objects with Key Pairs
 
-            // Sort into objects with Key Pairs
+        var finalUserAnswersObject = _.map(finalUserAnswersArray, function(value, key) {
+            return {
+                id: key,
+                count: value
+            };
+        });
 
-            var finalUserAnswersObject = _.map(finalUserAnswersArray, function(value, key) {
-                return {
-                    id: key,
-                    count: value
-                };
-            });
+        console.log(finalUserAnswersObject);
 
-            console.log(finalUserAnswersObject);
-
-            function multiplemax(arr, compare) {
-                var groups = _.groupBy(arr, compare);
-                var keys = _.keys(groups);
-                var max = _.max(keys);
-                return groups[max];
-            }
-
-            var valueResponses = multiplemax(finalUserAnswersObject, "count");
-            console.log(valueResponses);
-            console.log(valueResponses.length);
-
-
-            // Call getCity Function
-            getCity(valueResponses);
-
+        function multiplemax(arr, compare) {
+            var groups = _.groupBy(arr, compare);
+            var keys = _.keys(groups);
+            var max = _.max(keys);
+            return groups[max];
         }
-        else {
-            console.log("Looks like you have not chosen your sex.");
-        };
+
+        var valueResponses = multiplemax(finalUserAnswersObject, "count");
+        console.log(valueResponses);
+        console.log(valueResponses.length);
+
+
+        // Call getCity Function
+        getCity(valueResponses);
     };
 
     // Get City
@@ -504,15 +497,57 @@ $(document).ready(function() {
         }
         catch(e) {
             console.log("error");
+
+            //Get User Answers
+            var userData = userResponse;
+            //Turn them into an array
+            var userDataArray = Object.keys(userData); // ['alpha', 'beta']
+            console.log(userDataArray);
+
+            var fullAnswerArray = ["sex","q1","q2","q3","q4","q5"];
+
+            //Find questions user did not answer
+            var notAnswered = _.difference(fullAnswerArray, userDataArray);
+            console.log(notAnswered);
+
+            //Find position in quiz where the first question they did not answer is located
+            var firstNotAnswered = notAnswered[0];
+            console.log(firstNotAnswered);
+            //Pass firstNotAnswered to goToNotAnswered Function
+            goToNotAnswered(firstNotAnswered);
+
             $('#postCardSection').show();
             $('.sendCity .headlineError').show();
+            $('#goToUnansweredQuestions').show();
             $('.sendCity .headline').hide();
             $('.sendCity .mapCardContainer').hide();
-
         }
     });
 
 
-
-
+    function goToNotAnswered(x) {
+        var goTo = x;
+        $('#goToUnansweredQuestions').click(function(){
+            switch (goTo) {
+                case "sex":
+                    $('body').scrollTo('#genderSection');
+                    break;
+                case "q1":
+                    $('body').scrollTo('#average-amount-of-sexpartners');
+                    break;
+                case "q2":
+                    $('body').scrollTo('#lingonberry-q');
+                    break;
+                case "q3":
+                    $('body').scrollTo('#sex-per-month-q');
+                    break;
+                case "q4":
+                    $('body').scrollTo('#positions-q');
+                    break;
+                case "q5":
+                    $('body').scrollTo('#fantasies-q');
+                    break;
+            }
+        });
+    };
 });

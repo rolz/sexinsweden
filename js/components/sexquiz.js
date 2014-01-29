@@ -530,22 +530,34 @@ $(document).ready(function() {
         $('#goToUnansweredQuestions').click(function(){
             switch (goTo) {
                 case "sex":
-                    $('body').scrollTo('#genderSection');
+                    $('html, body').animate(
+                    {scrollTop: $("#genderSection").offset().top
+                    }, 2000);
                     break;
                 case "q1":
-                    $('body').scrollTo('#average-amount-of-sexpartners');
+                    $('html, body').animate(
+                    {scrollTop: $("#average-amount-of-sexpartners").offset().top
+                    }, 2000);
                     break;
                 case "q2":
-                    $('body').scrollTo('#lingonberry-q');
+                    $('html, body').animate(
+                    {scrollTop: $("#lingonberry-q").offset().top
+                    }, 2000);
                     break;
                 case "q3":
-                    $('body').scrollTo('#sex-per-month-q');
+                    $('html, body').animate(
+                    {scrollTop: $("#sex-per-month-q").offset().top
+                    }, 2000);
                     break;
                 case "q4":
-                    $('body').scrollTo('#positions-q');
+                    $('html, body').animate(
+                    {scrollTop: $("##positions-q").offset().top
+                    }, 2000);
                     break;
                 case "q5":
-                    $('body').scrollTo('#fantasies-q');
+                    $('html, body').animate(
+                    {scrollTop: $("#fantasies-q").offset().top
+                    }, 2000);
                     break;
             }
         });

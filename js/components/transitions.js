@@ -42,9 +42,17 @@ $(document).ready(function() {
         controller.addTween('#fantasy-transition', TweenMax.from( $('#fantasy-transition'), .5, {css:{opacity: 0}}));
         controller.addTween('#mast', TweenMax.from( $('#mast'), .5, {css:{opacity: 0}}));
         controller.addTween('#parents', TweenMax.from( $('#parents'), .5, {css:{opacity: 0}}));
-        controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}));
+        // controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}));
         controller.addTween('.graph', TweenMax.from( $('.graph'), .5, {css:{opacity: 0}}));
+        controller.addTween('.satisfied-fade-out', TweenMax.from( $('.satisfied-fade-out'), 1, {css:{opacity: 0}}),0,170);
+        controller.addTween('.satisfied-fade-in', TweenMax.from( $('.satisfied-fade-in'), 1, {css:{opacity: 1}}),0,270);
 
+
+        controller.addTween('#fade', 
+        TweenMax.from($('#fade'),.5,{
+        css:{opacity:0}}),
+        0, // scroll duration of tween (0 means autoplay)
+        200); // offset the start of the tween by 200 pixels
 
         // set duration, in pixels scrolled, for pinned element
         // var pinDur = 1600;

@@ -304,13 +304,13 @@ margin-top: 250px;}
 	/* MOOSE */
 
 #moose_head, #moose_antlers {
-    margin:0 0 0 -200px; /* where 400px is width offset is / 2) */
+    margin:0 0 0 -270px; /* where 400px is width offset is / 2) */
     position:absolute;
     top:0;left:50%;
 }
 
 #moose_antlers{
-    margin:0 0 0 -206px; /* let's guess second image was 200px wide */
+    margin:0 0 0 -274px; /* let's guess second image was 200px wide */
 }
 
 form output{

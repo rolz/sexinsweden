@@ -7,14 +7,14 @@ var age=18;
 		  if(age%7==0){
 		    var number=age/7
 
-			$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='300px'>" );
+			$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='400px'>" );
 		  }
 		}
 	else{
 		if(age%10==0){
 			var number=age/10+2
 
-			$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='300px'>" );
+			$( "#moose_antlers" ).html( "<img src='assets/img/moose/moosehead"+number+".svg' height='400px'>" );
 		}
 	}
 	  }).trigger("change");

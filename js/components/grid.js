@@ -62,6 +62,7 @@ $(document).ready(function ($) {
     var postCardCity=$('.postCard img').attr('alt');
     console.log(postCardCity);
 
+console.log($(this))
     var className=$(this)[0].className;
     console.log(className);
 

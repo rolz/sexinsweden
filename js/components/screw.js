@@ -120,7 +120,6 @@ function resetThem() {
 }
 
 function resetScrew() {
-  console.log("reset")
   window.clearInterval(rotSpeed);
   // window.cancelAnimationFrame(render);
   times = 0;

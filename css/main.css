@@ -574,9 +574,15 @@ h3{
   width:6000px;
 }*/
 
-/*#enough-sex-1{
-  margin-bottom:1000px;
-}*/
+#enough-sex-1{
+  width:400px;
+  height: 400px;
+}
+
+#enough-text {
+  font-size: 20px;
+  text-align: center;
+}
 
 
 /*******************************************/

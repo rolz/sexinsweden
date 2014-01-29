@@ -626,4 +626,24 @@ min-width: 1400px;
   margin: 0 auto;
 }
 
+/*DROP DOWN MENU*/
+.dropdown p {
+  display: inline-block;
+  font-weight: bold;
+}
 
+.dropdown select {
+      border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none; /* Removes Default Firefox style*/
+      width: auto; /*Width of select dropdown to give space for arrow image*/
+      text-indent: 0.01px; /* Removes default arrow from firefox*/
+      text-overflow: "";  /*Removes default arrow from firefox*/
+      padding-left: 30px;
+      cursor: pointer;
+}
+
+select option {
+  text-align: right;
+  padding-left: 20px;
+}

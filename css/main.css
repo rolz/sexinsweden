@@ -22,7 +22,7 @@ body {
 
 .section-sweden {
   height:600px;
-  
+
 }
 
 .lingonberry-section {
@@ -691,6 +691,10 @@ min-width: 1400px;
 .postCard img {
   width:800px;
   height:520px;
+}
+
+#noSeriously {
+  display:none;
 }
 
 /*HELP DUDES*/

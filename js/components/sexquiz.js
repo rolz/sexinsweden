@@ -562,6 +562,7 @@ $(document).ready(function() {
             $('#postCardSection').show();
             $('.sendCity .headline').show();
             $('.sendCity .mapCardContainer').show();
+            $('.sendCity #noSeriously').show();
             $('.sendCity .headlineError').hide();
             $('#goToUnansweredQuestions').hide();
 

@@ -566,6 +566,7 @@ h3{
 /*CITY POSTCARD*/
 
 .sendCity {
+min-width: 1400px;
 
 }
 
@@ -581,8 +582,12 @@ h3{
   color: white;
   font-size: 20px;
   margin: 5px;
+  width: 750px;
+  overflow: hidden;
   cursor: pointer;
   background: #ffffff;
+  background-repeat: no-repeat;
+
 }
 
 .postCard img {

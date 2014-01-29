@@ -1,4 +1,19 @@
 $(document).ready(function() {
+        (new TimelineLite({onComplete:initScrollAnimations}))
+        .from( $('#intro-screen'), .4, {delay: .5, css:{right:'1200px'}, ease:Back.easeOut})
+        // .from( $('#title-line2'), .4, {css:{top:'1000px',opacity:'0'}, ease:Expo.easeOut})
+        // .append([
+        //   TweenMax.from( $('#title-line3 .char1'), .25+Math.random(), {css:{top: '-200px', right:'1000px'}, ease:Elastic.easeOut}),
+        //   TweenMax.from( $('#title-line3 .char2'), .25+Math.random(), {css:{top: '300px', right:'1000px'}, ease:Elastic.easeOut}),
+        //   TweenMax.from( $('#title-line3 .char3'), .25+Math.random(), {css:{top: '-400px', right:'1000px'}, ease:Elastic.easeOut}),
+        //   TweenMax.from( $('#title-line3 .char4'), .25+Math.random(), {css:{top: '-200px', left:'1000px'}, ease:Elastic.easeOut}),
+        //   TweenMax.from( $('#title-line3 .char5'), .25+Math.random(), {css:{top: '200px', left:'1000px'}, ease:Elastic.easeOut})
+        // ])
+        // .to( $('#title-info'), .5, {css:{opacity:.99, 'margin-top':0}, delay:-1, ease:Quad.easeOut});
+      
+
+
+        function initScrollAnimations() {
         var controller = $.superscrollorama();
         // var cityAnim = new TimelineLite();
         // cityAnim
@@ -13,6 +28,8 @@ $(document).ready(function() {
         // }
 
         // individual element tween examples
+        // controller.addTween('#intro-screen', TweenMax.from( $('#intro-screen'), .5, {css:{opacity: 0}}));
+        controller.addTween('#gender', TweenMax.from( $('#gender'), .5, {css:{opacity: 0}}));
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-headline', TweenMax.from( $('#fantasy-headline'), .25, {css:{opacity: 0}}));
         controller.addTween('#fantasy-container', TweenMax.from( $('#fantasy-container'), .25, {css:{opacity: 0}}));
@@ -23,7 +40,7 @@ $(document).ready(function() {
                 TweenMax.to($('#lingonberry'), .5,
                     {css:{left: -2800}})
                 )
-        });
+        })};
 
 
    //controller.pin($('#satisfied'), 700, {

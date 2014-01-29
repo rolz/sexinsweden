@@ -1,4 +1,21 @@
 $(document).ready(function() {
+
+    // Submit Stop
+    $('#finalfinal').waypoint(function(direction) {
+
+        if (direction === 'down') {
+          $("body").css("overflow", "hidden");        }
+        else {
+          $("body").css("overflow", "scroll");         }
+
+    });
+
+    $('#slutOut').click(function() {
+        $('#finalfinal').waypoint(function(direction) {
+              $("body").css("overflow", "scroll");
+        });
+    });
+
     //Gender
     // $('#genderSection').waypoint(function(direction) {
 

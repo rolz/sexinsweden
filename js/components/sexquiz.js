@@ -261,11 +261,11 @@ $(document).ready(function() {
         console.log(userResponse);
 
         //Enable Scrolling and Move down
-        $("body").css("overflow", "scroll");
+        // $("body").css("overflow", "scroll");
 
-        $('html, body').animate(
-        {scrollTop: $("#sexSounds").offset().top
-        }, 1000);
+        // $('html, body').animate(
+        // {scrollTop: $("#sexSounds").offset().top
+        // }, 1000);
     });
 
     // No Answer
@@ -279,11 +279,11 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
-        $("body").css("overflow", "scroll");
+        // $("body").css("overflow", "scroll");
 
-        $('html, body').animate(
-        {scrollTop: $("#sexSounds").offset().top
-        }, 1000);
+        // $('html, body').animate(
+        // {scrollTop: $("#sexSounds").offset().top
+        // }, 1000);
     });
 
 
@@ -299,12 +299,13 @@ $(document).ready(function() {
             "f": female[4].q5[valueQ5]
         };
 
+        console.log(userResponse);
         //Enable Scrolling and Move down
-        $("body").css("overflow", "scroll");
+        // $("body").css("overflow", "scroll");
 
-        $('html, body').animate(
-        {scrollTop: $("#mast").offset().top
-        }, 1000);
+        // $('html, body').animate(
+        // {scrollTop: $("#mast").offset().top
+        // }, 1000);
     });
 
     // No Answer
@@ -318,11 +319,11 @@ $(document).ready(function() {
         };
 
         console.log(userResponse);
-        $("body").css("overflow", "scroll");
+        // $("body").css("overflow", "scroll");
 
-        $('html, body').animate(
-        {scrollTop: $("#mast").offset().top
-        }, 1000);
+        // $('html, body').animate(
+        // {scrollTop: $("#mast").offset().top
+        // }, 1000);
     });
 
 
@@ -561,8 +562,16 @@ $(document).ready(function() {
             $('#postCardSection').show();
             $('.sendCity .headline').show();
             $('.sendCity .mapCardContainer').show();
+            $('.sendCity #noSeriously').show();
             $('.sendCity .headlineError').hide();
             $('#goToUnansweredQuestions').hide();
+
+            // Animate to postcard
+
+            $("body").css("overflow", "scroll");
+            $('html, body').animate(
+            {scrollTop: $("#postCardSection").offset().top
+            }, 1000);
         }
         catch(e) {
             console.log("error");
@@ -590,6 +599,12 @@ $(document).ready(function() {
             $('#goToUnansweredQuestions').show();
             $('.sendCity .headline').hide();
             $('.sendCity .mapCardContainer').hide();
+
+
+            $("body").css("overflow", "scroll");
+            $('html, body').animate(
+            {scrollTop: $("#postCardSection").offset().top
+            }, 1000);
         }
     });
 
@@ -629,6 +644,8 @@ $(document).ready(function() {
                     }, 2000);
                     break;
             }
+            //scrolling work
+            $("body").css("overflow", "scroll");
         });
     };
 });

@@ -19,55 +19,55 @@ $(document).ready(function() {
 
     });
 
-    //Prudeness
-    $('#average-amount-of-sexpartners').waypoint(function(direction) {
+    // //Prudeness
+    // $('#average-amount-of-sexpartners').waypoint(function(direction) {
 
-        if (direction === 'down') {
-          $("body").css("overflow", "hidden");        }
-        else {
-          $("body").css("overflow", "scroll");         }
+    //     if (direction === 'down') {
+    //       $("body").css("overflow", "hidden");        }
+    //     else {
+    //       $("body").css("overflow", "scroll");         }
 
-    });
+    // });
 
-    //Virginity
-    $('#lingonberry-q').waypoint(function(direction) {
+    // //Virginity
+    // $('#lingonberry-q').waypoint(function(direction) {
 
-        if (direction === 'down') {
-          $("body").css("overflow", "hidden");        }
-        else {
-          $("body").css("overflow", "scroll");         }
+    //     if (direction === 'down') {
+    //       $("body").css("overflow", "hidden");        }
+    //     else {
+    //       $("body").css("overflow", "scroll");         }
 
-    });
+    // });
 
-    //Sex each month
-    $('#sex-per-month-q').waypoint(function(direction) {
+    // //Sex each month
+    // $('#sex-per-month-q').waypoint(function(direction) {
 
-        if (direction === 'down') {
-          $("body").css("overflow", "hidden");        }
-        else {
-          $("body").css("overflow", "scroll");         }
+    //     if (direction === 'down') {
+    //       $("body").css("overflow", "hidden");        }
+    //     else {
+    //       $("body").css("overflow", "scroll");         }
 
-    });
+    // });
 
-    //Sex each month
-    $('#positions-q').waypoint(function(direction) {
+    // //Sex each month
+    // $('#positions-q').waypoint(function(direction) {
 
-        if (direction === 'down') {
-          $("body").css("overflow", "hidden");        }
-        else {
-          $("body").css("overflow", "scroll");         }
+    //     if (direction === 'down') {
+    //       $("body").css("overflow", "hidden");        }
+    //     else {
+    //       $("body").css("overflow", "scroll");         }
 
-    });
+    // });
 
-    //Sex each month
-    $('#fantasies-q').waypoint(function(direction) {
+    // //Sex each month
+    // $('#fantasies-q').waypoint(function(direction) {
 
-        if (direction === 'down') {
-          $("body").css("overflow", "hidden");        }
-        else {
-          $("body").css("overflow", "scroll");         }
+    //     if (direction === 'down') {
+    //       $("body").css("overflow", "hidden");        }
+    //     else {
+    //       $("body").css("overflow", "scroll");         }
 
-    });
+    // });
 
 
 });

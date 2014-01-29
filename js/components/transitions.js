@@ -43,8 +43,63 @@ $(document).ready(function() {
         controller.addTween('#mast', TweenMax.from( $('#mast'), .5, {css:{opacity: 0}}));
         controller.addTween('#parents', TweenMax.from( $('#parents'), .5, {css:{opacity: 0}}));
         controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}));
-        controller.addTween('#graph', TweenMax.from( $('#graph'), .5, {css:{opacity: 0}}));
+        controller.addTween('.graph', TweenMax.from( $('.graph'), .5, {css:{opacity: 0}}));
 
+
+        // set duration, in pixels scrolled, for pinned element
+        // var pinDur = 1600;
+        // // create animation timeline for pinned element
+        // var pinAnimations = new TimelineLite();
+        // pinAnimations
+        //   .append(TweenMax.from($('#enough-sex-section'), .5, {css:{marginTop:0}, ease: Quad.easeInOut}))
+        //   .append([
+        //     TweenMax.to($('#enough-sex-section'), 1, {css:{marginLeft:'200px'}}),
+        //     // TweenMax.to($('#pin-frame-pin'), 1, {css:{marginLeft:'100%'}})
+        //   ], .5)
+        //   .append([
+        //     TweenMax.to($('#enough-sex-2'), .5, {css:{marginRight:'200px'}}),
+        //     TweenMax.from($('#enough-sex-2'), .5, {css:{marginTop:'1px'}})
+        //   ], .5)
+        //   // .append(TweenMax.from($('#pin-frame-bounce'), 5, {css:{marginTop:'-100%'}, ease:Bounce.easeOut}), .5)
+        //   // .append(TweenMax.from($('#pin-frame-color'), .25, {css:{opacity:0}}), .5)
+        //   // .append([
+        //   //   TweenMax.to($('#pin-fraenoume-color'), .25, {css:{backgroundColor:'blue'}}),
+        //   //   TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'orange'}})
+        //   // ])
+        //   // .append([
+        //   //   TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'green'}}),
+        //   //   TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'red'}})
+        //   // ])
+        //   // .append([
+        //   //   TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'yellow'}}),
+        //   //   TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'purple'}})
+        //   // ])
+        //   // .append([
+        //   //   TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'orange'}}),
+        //   //   TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'blue'}})
+        //   // ])
+        //   // .append([
+        //   //   TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'red'}}),
+        //   //   TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'green'}})
+        //   // ])
+        //   // .append([
+        //   //   TweenMax.to($('#pin-frame-color'), .25, {css:{backgroundColor:'#222438'}}),
+        //   //   TweenMax.to($('#pin-frame-color h2'), .25, {css:{color:'#FFB000'}})
+        //   // ])
+        //   .append(TweenMax.to($('#pin-frame-unpin'), .5, {css:{top:'100px'}}));
+        
+        // pin element, use onPin and onUnpin to adjust the height of the element
+
+        // controller.pin($('#enough-sex-1'), pinDur, {
+        //   anim:pinAnimations, 
+        //   onPin: function() {
+        //     $('#enough-sex-1').css('height','100%');
+        //   }, 
+        //   onUnpin: function() {
+        //     // $('#enough-sex-1').scrollTo(0, 800);
+        //     // $('#enough-sex-1').scrollTo( $('#calc'), 800 );
+        //   }
+        // });
 
 
         controller.addTween('#sex-sounds', TweenMax.from( $('#sex-sounds'), .5, {css:{opacity: 0}}));

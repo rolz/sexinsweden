@@ -14,6 +14,7 @@ body {
 }
 
 .section {
+  padding-top: 20px;
 	margin: 50px 20px 20px 20px;
 	position: relative;
 	height:600px;
@@ -21,7 +22,13 @@ body {
 }
 
 .section-sweden {
+  /*padding-top: 20px;*/
   height:600px;
+
+}
+
+.section-average {
+  height:200px;
 
 }
 
@@ -266,7 +273,7 @@ margin-top: 250px;}
 	left:0; right:0; bottom:0;top:0;
 }
 .lingonberry-section{
-	height:3300px;
+	height:2760px;
 }
 
 /*Fantasy*/
@@ -327,6 +334,7 @@ margin-top: 250px;}
 	/* MOOSE */
 
 #moose_head, #moose_antlers {
+    padding-top: 60px;
     margin:0 0 0 -270px; /* where 400px is width offset is / 2) */
     position:absolute;
     top:0;left:50%;

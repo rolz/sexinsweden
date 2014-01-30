@@ -35,18 +35,23 @@ $(document).ready(function() {
         controller.addTween('#lingonberry-q', TweenMax.from( $('#lingonberry-q'), .5, {css:{opacity: 0}}));
         controller.addTween('#lingonberry-f', TweenMax.from( $('#lingonberry-f'), .5, {css:{opacity: 0}}));
         controller.addTween('#screwYou', TweenMax.from( $('#sex-per-month-q'), .5, {css:{opacity: 0}}));
-        controller.addTween('#swScrew', TweenMax.from( $('#swScrew'), .5, {css:{opacity: 0}}));
+        controller.addTween('#swScrew', TweenMax.from( $('#swScrew'), .5, {css:{opacity: 0}}),0,windowSize/3);
         controller.addTween('#missionary', TweenMax.from( $('#missionary'), .5, {css:{opacity: 0}}));
         controller.addTween('#smaken', TweenMax.from( $('#smaken'), .5, {css:{opacity: 0}}));
         controller.addTween('#how', TweenMax.from( $('#positions-q'), .5, {css:{opacity: 0}}));
         controller.addTween('#fantasy-transition', TweenMax.from( $('#fantasies-q'), .5, {css:{opacity: 0}}));
-        controller.addTween('#mast', TweenMax.from( $('#mast'), .5, {css:{opacity: 0}}));
+        controller.addTween('.mast', TweenMax.from( $('.mast'), .5, {css:{opacity: 0}}));
+        controller.addTween('.mast-1', TweenMax.from( $('.mast-1'), .5, {css:{opacity: 0}}),0,200);
         controller.addTween('#masturbate-most', TweenMax.from( $('#masturbate-most'), 0.5, {css:{opacity: 0}}));
         controller.addTween('#parents', TweenMax.from( $('#parents'), 3, {css:{opacity: 0}},0,200));
         // controller.addTween('#satisfied', TweenMax.from( $('#satisfied'), .5, {css:{opacity: 0}}));
         controller.addTween('.graph', TweenMax.from( $('.graph'), .5, {css:{opacity: 0}}));
-        controller.addTween('.satisfied-fade-out', TweenMax.from( $('.satisfied-fade-out'), 1, {css:{opacity: 0}}),0,170);
-        controller.addTween('.satisfied-fade-in', TweenMax.from( $('.satisfied-fade-in'), 1, {css:{opacity: 1}}),0,270);
+        controller.addTween('.satisfied-fade-out', TweenMax.from( $('.satisfied-fade-out'), 1, {css:{opacity: 0}}),0,200);
+        controller.addTween('.satisfied-fade-in', TweenMax.from( $('.satisfied-fade-in'), 1, {css:{opacity: 1}}),0,300);
+        controller.addTween('.fact', TweenMax.from( $('.fact'), .5, {css:{opacity: 0}}),0,-200);
+        controller.addTween('#enough', TweenMax.from( $('#enough'), .5, {css:{opacity: 0}}));
+        controller.addTween('#conclusions', TweenMax.from( $('#conclusions'), .5, {css:{opacity: 0}}));
+        controller.addTween('#calc', TweenMax.from( $('#calc'), .5, {css:{opacity: 0}}),0,200);
 
 
         controller.addTween('#fade', 

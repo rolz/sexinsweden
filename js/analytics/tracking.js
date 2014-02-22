@@ -30,7 +30,7 @@ $('.q2').find('button')
 $('.q3').find('button')
     .each(function(){
         $(this).on('click', function() {
-          ga('send', 'event', 'Quiz', 'Q2 - Virginity', $(this).attr('id'));
+          ga('send', 'event', 'Quiz', 'Q3 - Sex Per Month', $(this).attr('id'));
     });
 });
 
